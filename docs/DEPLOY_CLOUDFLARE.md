@@ -57,7 +57,8 @@
 含义：
 
 - 构建出 `dist` 后，由 Wrangler 把静态文件挂到 Worker 上  
-- `single-page-application`：未匹配文件时回退 `index.html`（SPA）
+- `single-page-application`：未匹配文件时回退 `index.html`（SPA）  
+- **不要**再放 Pages 风格的 `public/_redirects`（`/* /index.html 200`），Workers 会报无限重定向错误 `100324`
 
 ---
 

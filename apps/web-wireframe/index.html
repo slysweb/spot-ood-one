@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Spot Odd One — Web Wireframe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <header class="wf-banner" aria-label="Wireframe notice">
+        <span class="wf-dot"></span>
+        WIREFRAME · Phase A (Share only, no ads) · Demo levels 1–5
+      </header>
+
+      <!-- HOME -->
+      <section class="screen" data-screen="home" hidden>
+        <div class="home-stage">
+          <p class="eyebrow">Odd one out</p>
+          <h1 class="brand">Spot Odd One</h1>
+          <p class="tagline">Find the one that doesn’t belong.</p>
+          <div class="home-preview" aria-hidden="true">
+            <div class="mini-grid">
+              <span>🐶</span><span>🐶</span><span>🐱</span>
+              <span>🐶</span><span>🐶</span><span>🐶</span>
+              <span>🐶</span><span>🐶</span><span>🐶</span>
+            </div>
+          </div>
+          <div class="cta-stack">
+            <button class="btn btn-primary" data-action="play">Play</button>
+            <button class="btn btn-ghost" data-action="continue" hidden>Continue · Level <span data-bind="currentLevel">1</span></button>
+          </div>
+          <p class="meta-line">Best: Level <span data-bind="bestLevel">1</span> / 80</p>
+          <button class="linkish" data-action="open-settings">Settings</button>
+        </div>
+        <p class="anno">Home · brand + single CTA</p>
+      </section>
+
+      <!-- PLAY -->
+      <section class="screen" data-screen="play" hidden>
+        <div class="hud">
+          <div class="hud-left">
+            <button class="icon-btn" data-action="pause" aria-label="Pause">Ⅱ</button>
+            <span class="hud-level">Level <span data-bind="currentLevel">1</span> / 80</span>
+          </div>
+          <div class="timer" data-bind-class="timer">
+            <div class="timer-ring">
+              <span class="timer-num" data-bind="timerSec">10</span>
+              <span class="timer-unit">s</span>
+            </div>
+          </div>
+        </div>
+        <div class="board-wrap">
+          <div class="board" id="board" role="grid" aria-label="Emoji grid"></div>
+        </div>
+        <p class="hint-line" data-bind="playHint">Tap the odd one.</p>
+        <p class="anno">Play · 10s timer · wrong/timeout → Fail</p>
+      </section>
+
+      <!-- FAIL -->
+      <section class="screen screen-overlay" data-screen="fail" hidden>
+        <div class="sheet">
+          <p class="sheet-kicker">Level failed</p>
+          <h2 class="sheet-title" data-bind="failReason">Not that one!</h2>
+          <p class="sheet-body">Share to keep your progress on Level <span data-bind="currentLevel">1</span>.</p>
+          <div class="cta-stack">
+            <button class="btn btn-primary" data-action="share">Share to Continue</button>
+            <button class="btn btn-danger-ghost" data-action="start-over-ask">Start Over</button>
+          </div>
+          <p class="anno-inline">No Watch Ad in Phase A</p>
+        </div>
+      </section>
+
+      <!-- SHARE FALLBACK -->
+      <section class="screen screen-overlay" data-screen="share-fallback" hidden>
+        <div class="sheet">
+          <p class="sheet-kicker">Share to continue</p>
+          <h2 class="sheet-title">Copy &amp; send</h2>
+          <p class="sheet-body">Copy this message and send it to a friend:</p>
+          <div class="share-box" data-bind="shareText"></div>
+          <div class="cta-stack">
+            <button class="btn btn-primary" data-action="copy-share">Copy Link</button>
+            <button class="btn btn-secondary" data-action="confirm-shared">I’ve shared it</button>
+            <button class="btn btn-ghost" data-action="share-back">Back</button>
+          </div>
+          <p class="toast" data-bind="toast" hidden></p>
+        </div>
+      </section>
+
+      <!-- START OVER CONFIRM -->
+      <section class="screen screen-overlay" data-screen="start-over" hidden>
+        <div class="sheet sheet-narrow">
+          <h2 class="sheet-title">Start over from Level 1?</h2>
+          <p class="sheet-body">Your current progress on Level <span data-bind="currentLevel">1</span> will be lost.</p>
+          <div class="cta-row">
+            <button class="btn btn-ghost" data-action="start-over-cancel">Cancel</button>
+            <button class="btn btn-danger" data-action="start-over-confirm">Start Over</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAUSE -->
+      <section class="screen screen-overlay" data-screen="pause" hidden>
+        <div class="sheet sheet-narrow">
+          <h2 class="sheet-title">Paused</h2>
+          <div class="cta-stack">
+            <button class="btn btn-primary" data-action="resume">Resume</button>
+            <button class="btn btn-ghost" data-action="quit-home">Quit to Home</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TUTORIAL -->
+      <section class="screen screen-overlay" data-screen="tutorial" hidden>
+        <div class="sheet">
+          <p class="sheet-kicker">How to play</p>
+          <h2 class="sheet-title">Spot the odd one</h2>
+          <p class="sheet-body">Tap the emoji that doesn’t match the rest. You have 10 seconds.</p>
+          <button class="btn btn-primary" data-action="tutorial-ok">Got it</button>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="screen screen-overlay" data-screen="settings" hidden>
+        <div class="sheet">
+          <h2 class="sheet-title">Settings</h2>
+          <label class="toggle-row">
+            <span>Sound</span>
+            <input type="checkbox" data-setting="sound" checked />
+          </label>
+          <label class="toggle-row">
+            <span>Color-blind assist</span>
+            <input type="checkbox" data-setting="colorblind" />
+          </label>
+          <p class="sheet-body muted">Wireframe toggles are visual only.</p>
+          <button class="btn btn-secondary" data-action="close-settings">Close</button>
+        </div>
+      </section>
+
+      <!-- CLEAR (demo) -->
+      <section class="screen" data-screen="clear" hidden>
+        <div class="home-stage">
+          <p class="eyebrow">Demo clear</p>
+          <h1 class="brand">Nice run!</h1>
+          <p class="tagline">You cleared the wireframe demo (5 levels). Full game has 80.</p>
+          <button class="btn btn-primary" data-action="quit-home">Back to Home</button>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

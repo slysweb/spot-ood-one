@@ -1,0 +1,3670 @@
+{
+  "version": 4,
+  "theme": "monster",
+  "campaignLevels": 120,
+  "assetPack": {
+    "required": [
+      "M01",
+      "M02",
+      "M03",
+      "M04",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09",
+      "M10",
+      "M11",
+      "M12"
+    ],
+    "optionalTwins": [
+      "M01b",
+      "M05b",
+      "M06b",
+      "M10b"
+    ],
+    "note": "1–45 different; transforms from 46; hell uses overt size/hue/flip/180° — no wobble+tilt"
+  },
+  "transforms": [
+    "none",
+    "flipX",
+    "rot12",
+    "rot20",
+    "rot30",
+    "rot45",
+    "rot180",
+    "scale75",
+    "scale88",
+    "scale112",
+    "scale125",
+    "hue15",
+    "hue30",
+    "hue40",
+    "darker",
+    "flipX+rot20",
+    "hue40+rot30",
+    "hue40+scale88",
+    "scale75+hue40",
+    "flipX+hue30",
+    "scale88+hue30"
+  ],
+  "fx": [
+    "none",
+    "wobble",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-20": "easy — different monster, 3x3",
+    "21-45": "easy_plus — different monsters only, 3x3→4x4",
+    "46-60": "medium — strong same-monster transform",
+    "61-80": "medium — readable transforms",
+    "81-100": "hard — 5x5 readable transforms",
+    "101-120": "hell — strong diffs; teleport on even levels (no board wobble)"
+  },
+  "levels": [
+    {
+      "id": "M-001",
+      "index": 1,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3001
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-002",
+      "index": 2,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3002
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-003",
+      "index": 3,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3003
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-004",
+      "index": 4,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3004
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-005",
+      "index": 5,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3005
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-006",
+      "index": 6,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3006
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-007",
+      "index": 7,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3007
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-008",
+      "index": 8,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3008
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-009",
+      "index": 9,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3009
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-010",
+      "index": 10,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3010
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-011",
+      "index": 11,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3011
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-012",
+      "index": 12,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3012
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-013",
+      "index": 13,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3013
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-014",
+      "index": 14,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3014
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-015",
+      "index": 15,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3015
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-016",
+      "index": 16,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3016
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-017",
+      "index": 17,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3017
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-018",
+      "index": 18,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3018
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-019",
+      "index": 19,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3019
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-020",
+      "index": 20,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3020
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-021",
+      "index": 21,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3021
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-022",
+      "index": 22,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3022
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-023",
+      "index": 23,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3023
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-024",
+      "index": 24,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3024
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-025",
+      "index": 25,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3025
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-026",
+      "index": 26,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3026
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-027",
+      "index": 27,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3027
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-028",
+      "index": 28,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3028
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-029",
+      "index": 29,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3029
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-030",
+      "index": 30,
+      "theme": "monster",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3030
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-031",
+      "index": 31,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3031
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-032",
+      "index": 32,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3032
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-033",
+      "index": 33,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3033
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-034",
+      "index": 34,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3034
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-035",
+      "index": 35,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3035
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-036",
+      "index": 36,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3036
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-037",
+      "index": 37,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3037
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-038",
+      "index": 38,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3038
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-039",
+      "index": 39,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3039
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-040",
+      "index": 40,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3040
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-041",
+      "index": 41,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3041
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-042",
+      "index": 42,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3042
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-043",
+      "index": 43,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3043
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-044",
+      "index": 44,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3044
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-045",
+      "index": 45,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3045
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "different"
+      }
+    },
+    {
+      "id": "M-046",
+      "index": 46,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3046
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-047",
+      "index": 47,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3047
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-048",
+      "index": 48,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3048
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-049",
+      "index": 49,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3049
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-050",
+      "index": 50,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3050
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-051",
+      "index": 51,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3051
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-052",
+      "index": 52,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3052
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-053",
+      "index": 53,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3053
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-054",
+      "index": 54,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3054
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-055",
+      "index": 55,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3055
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-056",
+      "index": 56,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3056
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-057",
+      "index": 57,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3057
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-058",
+      "index": 58,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3058
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-059",
+      "index": 59,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3059
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-060",
+      "index": 60,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3060
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "obvious_transform"
+      }
+    },
+    {
+      "id": "M-061",
+      "index": 61,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3061
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-062",
+      "index": 62,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3062
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-063",
+      "index": 63,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3063
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-064",
+      "index": 64,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3064
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-065",
+      "index": 65,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3065
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-066",
+      "index": 66,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3066
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-067",
+      "index": 67,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3067
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-068",
+      "index": 68,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3068
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-069",
+      "index": 69,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3069
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-070",
+      "index": 70,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3070
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-071",
+      "index": 71,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3071
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-072",
+      "index": 72,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3072
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-073",
+      "index": 73,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3073
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-074",
+      "index": 74,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3074
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-075",
+      "index": 75,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3075
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-076",
+      "index": 76,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3076
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-077",
+      "index": 77,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3077
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-078",
+      "index": 78,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "rot45"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3078
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-079",
+      "index": 79,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3079
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-080",
+      "index": 80,
+      "theme": "monster",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3080
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "transform"
+      }
+    },
+    {
+      "id": "M-081",
+      "index": 81,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3081
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-082",
+      "index": 82,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3082
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-083",
+      "index": 83,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3083
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-084",
+      "index": 84,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "rot30"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3084
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-085",
+      "index": 85,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3085
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-086",
+      "index": 86,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3086
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-087",
+      "index": 87,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3087
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-088",
+      "index": 88,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3088
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-089",
+      "index": 89,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3089
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-090",
+      "index": 90,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "rot30"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3090
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-091",
+      "index": 91,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3091
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-092",
+      "index": 92,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3092
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-093",
+      "index": 93,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3093
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-094",
+      "index": 94,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3094
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-095",
+      "index": 95,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3095
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-096",
+      "index": 96,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "rot30"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3096
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-097",
+      "index": 97,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3097
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-098",
+      "index": 98,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3098
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-099",
+      "index": 99,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3099
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-100",
+      "index": 100,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3100
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "subtle"
+      }
+    },
+    {
+      "id": "M-101",
+      "index": 101,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3101
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-102",
+      "index": 102,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3102
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-103",
+      "index": 103,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3103
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-104",
+      "index": 104,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3104
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-105",
+      "index": 105,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3105
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-106",
+      "index": 106,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3106
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-107",
+      "index": 107,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3107
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-108",
+      "index": 108,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3108
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-109",
+      "index": 109,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M09",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M09",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3109
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-110",
+      "index": 110,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M10",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M10",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3110
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-111",
+      "index": 111,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M11",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M11",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3111
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-112",
+      "index": 112,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M12",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M12",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3112
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-113",
+      "index": 113,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M01",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M01",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3113
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-114",
+      "index": 114,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M02",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M02",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3114
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-115",
+      "index": 115,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M03",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M03",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3115
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-116",
+      "index": 116,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M04",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M04",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3116
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "M-117",
+      "index": 117,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M05",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M05b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3117
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "M-118",
+      "index": 118,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M06",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M06b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3118
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "M-119",
+      "index": 119,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M07",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M07",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3119
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "M-120",
+      "index": 120,
+      "theme": "monster",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "monsterId": "M08",
+        "transform": "none"
+      },
+      "odd": {
+        "monsterId": "M08",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 3120
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    }
+  ]
+}

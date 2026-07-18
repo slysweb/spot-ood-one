@@ -1,10 +1,12 @@
 import { Board } from "./Board";
+import type { CellView } from "@/game/types";
 
 interface PlayProps {
   levelIndex: number;
   totalLevels: number;
   cols: number;
-  cells: string[];
+  cells: CellView[];
+  boardFx: string;
   timerSec: number;
   urgent: boolean;
   locked: boolean;
@@ -13,6 +15,7 @@ interface PlayProps {
   flashKind: "correct" | "wrong" | null;
   onPause: () => void;
   onTap: (index: number) => void;
+  onPointerDownCell?: () => void;
 }
 
 export function Play({
@@ -20,6 +23,7 @@ export function Play({
   totalLevels,
   cols,
   cells,
+  boardFx,
   timerSec,
   urgent,
   locked,
@@ -28,6 +32,7 @@ export function Play({
   flashKind,
   onPause,
   onTap,
+  onPointerDownCell,
 }: PlayProps) {
   return (
     <section className="play">
@@ -56,9 +61,11 @@ export function Play({
           cells={cells}
           locked={locked}
           colorblind={colorblind}
+          boardFx={boardFx}
           flashIndex={flashIndex}
           flashKind={flashKind}
           onTap={onTap}
+          onPointerDownCell={onPointerDownCell}
         />
       </div>
 

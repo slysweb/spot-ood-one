@@ -1,11 +1,16 @@
+import type { CellView } from "@/game/types";
+
 interface BoardProps {
   cols: number;
-  cells: string[];
+  cells: CellView[];
   locked: boolean;
   colorblind: boolean;
+  boardFx: string;
   flashIndex: number | null;
   flashKind: "correct" | "wrong" | null;
   onTap: (index: number) => void;
+  /** Freeze teleport before click so the odd cell can't move mid-tap */
+  onPointerDownCell?: () => void;
 }
 
 export function Board({
@@ -13,30 +18,56 @@ export function Board({
   cells,
   locked,
   colorblind,
+  boardFx,
   flashIndex,
   flashKind,
   onTap,
+  onPointerDownCell,
 }: BoardProps) {
   return (
     <div
-      className={`board${locked ? " is-locked" : ""}${colorblind ? " colorblind" : ""}`}
+      className={`board${locked ? " is-locked" : ""}${colorblind ? " colorblind" : ""}${boardFx === "wobble" ? " board-wobble" : ""}`}
       style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}
       role="grid"
-      aria-label="Emoji grid"
+      aria-label="Odd one grid"
     >
-      {cells.map((emoji, index) => {
+      {cells.map((cell, index) => {
         const flash =
           flashIndex === index && flashKind ? ` is-${flashKind}` : "";
         return (
           <button
-            key={`${index}-${emoji}`}
+            key={cell.key}
             type="button"
             className={`cell${flash}`}
             role="gridcell"
+            onPointerDown={() => onPointerDownCell?.()}
             onClick={() => onTap(index)}
             aria-label={`Cell ${index + 1}`}
           >
-            {emoji}
+            <span className="cell-art-wrap">
+              {cell.kind === "monster" && cell.src ? (
+                <img
+                  className="cell-art"
+                  src={cell.src}
+                  alt=""
+                  draggable={false}
+                  style={{
+                    transform: cell.cssTransform,
+                    filter: cell.cssFilter,
+                  }}
+                />
+              ) : (
+                <span
+                  className="cell-emoji"
+                  style={{
+                    transform: cell.cssTransform,
+                    filter: cell.cssFilter,
+                  }}
+                >
+                  {cell.emoji}
+                </span>
+              )}
+            </span>
           </button>
         );
       })}

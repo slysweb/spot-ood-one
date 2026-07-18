@@ -1,5 +1,7 @@
 export type FailReason = "wrong" | "timeout";
 
+export type ThemeId = "emoji" | "monster";
+
 export type LevelCategory =
   | "animals"
   | "food"
@@ -40,6 +42,58 @@ export interface CampaignData {
   levels: LevelDef[];
 }
 
+export type MonsterTransform = string;
+
+export interface MonsterRef {
+  monsterId: string;
+  transform: MonsterTransform;
+}
+
+export interface MonsterLevelDef {
+  id: string;
+  index: number;
+  theme: "monster";
+  grid: { cols: number; rows: number };
+  base: MonsterRef;
+  odd: MonsterRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface MonsterCampaignData {
+  version: number;
+  theme: "monster";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: MonsterLevelDef[];
+}
+
+export interface CellView {
+  key: string;
+  kind: "emoji" | "monster";
+  emoji?: string;
+  monsterId?: string;
+  src?: string;
+  transformKey: string;
+  cssTransform: string;
+  cssFilter: string;
+  /** Moves with the cell when teleport swaps positions */
+  isOdd: boolean;
+}
+
+export interface ThemeProgress {
+  currentLevel: number;
+  bestLevel: number;
+  tutorialSeen: boolean;
+  campaignCleared: boolean;
+}
+
+/** @deprecated use AppSave; kept for migration typing */
 export interface ProgressSave {
   currentLevel: number;
   bestLevel: number;
@@ -49,10 +103,15 @@ export interface ProgressSave {
   campaignCleared: boolean;
 }
 
-export type Screen =
-  | "home"
-  | "play"
-  | "clear";
+export interface AppSave {
+  version: 2;
+  theme: ThemeId;
+  sound: boolean;
+  colorblind: boolean;
+  themes: Record<ThemeId, ThemeProgress>;
+}
+
+export type Screen = "home" | "play" | "clear";
 
 export type Overlay =
   | "tutorial"

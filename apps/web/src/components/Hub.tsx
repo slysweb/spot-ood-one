@@ -1,0 +1,81 @@
+import { Link } from "react-router-dom";
+import { THEMES } from "@/game/themeMeta";
+import { getContinueLevel, getTotalLevels } from "@/game/campaign";
+import type { AppSave } from "@/game/types";
+
+interface HubProps {
+  save: AppSave;
+  onSettings: () => void;
+}
+
+export function Hub({ save, onSettings }: HubProps) {
+  return (
+    <section className="home hub">
+      <div className="panel home-hero">
+        <p className="eyebrow">Odd one out</p>
+        <h1 className="display">
+          Spot Odd <span style={{ color: "var(--orange-deep)" }}>One</span>
+        </h1>
+        <p className="body-text tagline">
+          Pick a pack. Find the one that doesn’t belong.
+        </p>
+      </div>
+
+      <div className="pack-grid">
+        {THEMES.map((theme) => {
+          const progress = save.themes[theme.id];
+          const total = getTotalLevels(theme.id);
+          const continueLevel = getContinueLevel(theme.id, progress);
+          const hasProgress = progress.bestLevel > 1 || continueLevel > 1;
+
+          return (
+            <Link
+              key={theme.id}
+              to={theme.path}
+              className={`pack-card pack-${theme.id}`}
+            >
+              <div className="pack-preview" aria-hidden="true">
+                {theme.id === "monster" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/monsters/monster_m01.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/monsters/monster_m01.png" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd">
+                      <img src="/monsters/monster_m03.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/monsters/monster_m01.png" alt="" />
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <span className="pack-cell emoji">🐶</span>
+                    <span className="pack-cell emoji">🐶</span>
+                    <span className="pack-cell emoji is-odd">🐱</span>
+                    <span className="pack-cell emoji">🐶</span>
+                  </>
+                )}
+              </div>
+              <div className="pack-copy">
+                <h2 className="pack-title">{theme.label}</h2>
+                <p className="pack-tag">{theme.findLine}</p>
+                <p className="pack-meta">
+                  {hasProgress
+                    ? `Best ${progress.bestLevel}/${total}`
+                    : `${total} levels`}
+                </p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      <button type="button" className="link-btn" onClick={onSettings}>
+        Settings
+      </button>
+    </section>
+  );
+}

@@ -10,13 +10,19 @@ function OverlayShell({ children }: OverlayShellProps) {
   return <div className="overlay">{children}</div>;
 }
 
-export function TutorialOverlay({ onOk }: { onOk: () => void }) {
+export function TutorialOverlay({
+  onOk,
+  body = "Tap the emoji that doesn’t match the rest. You have 10 seconds.",
+}: {
+  onOk: () => void;
+  body?: string;
+}) {
   return (
     <OverlayShell>
       <div className="sheet center">
         <p className="kicker">How to play</p>
         <h2>Spot the odd one</h2>
-        <p>Tap the emoji that doesn’t match the rest. You have 10 seconds.</p>
+        <p>{body}</p>
         <button type="button" className="btn btn-primary" onClick={onOk}>
           Got it
         </button>

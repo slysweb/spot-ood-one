@@ -1,40 +1,107 @@
-import type { ProgressSave } from "./types";
-import { clampLevel, TOTAL_LEVELS } from "./levels";
+import type { AppSave, ThemeId, ThemeProgress } from "./types";
+import { clampLevel, getTotalLevels } from "./campaign";
 
-const KEY = "spot_odd_one_v1";
+const KEY = "spot_odd_one_v2";
+const LEGACY_KEY = "spot_odd_one_v1";
 
-const DEFAULTS: ProgressSave = {
+const emptyTheme = (): ThemeProgress => ({
   currentLevel: 1,
   bestLevel: 1,
   tutorialSeen: false,
-  sound: true,
-  colorblind: false,
   campaignCleared: false,
-};
+});
 
-export function loadProgress(): ProgressSave {
-  try {
-    const raw = localStorage.getItem(KEY);
-    if (!raw) return { ...DEFAULTS };
-    const parsed = JSON.parse(raw) as Partial<ProgressSave>;
-    return {
-      ...DEFAULTS,
-      ...parsed,
-      currentLevel: clampLevel(parsed.currentLevel ?? 1),
-      bestLevel: clampLevel(parsed.bestLevel ?? 1),
-    };
-  } catch {
-    return { ...DEFAULTS };
-  }
+function defaults(): AppSave {
+  return {
+    version: 2,
+    theme: "emoji",
+    sound: true,
+    colorblind: false,
+    themes: {
+      emoji: emptyTheme(),
+      monster: emptyTheme(),
+    },
+  };
 }
 
-export function saveProgress(save: ProgressSave): void {
-  localStorage.setItem(
-    KEY,
-    JSON.stringify({
-      ...save,
-      currentLevel: clampLevel(save.currentLevel),
-      bestLevel: Math.min(Math.max(1, save.bestLevel), TOTAL_LEVELS),
-    }),
-  );
+export function loadSave(): AppSave {
+  try {
+    const raw = localStorage.getItem(KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw) as AppSave;
+      return normalize(parsed);
+    }
+
+    const legacy = localStorage.getItem(LEGACY_KEY);
+    if (legacy) {
+      const old = JSON.parse(legacy) as {
+        currentLevel?: number;
+        bestLevel?: number;
+        tutorialSeen?: boolean;
+        sound?: boolean;
+        colorblind?: boolean;
+        campaignCleared?: boolean;
+      };
+      const migrated = defaults();
+      migrated.sound = old.sound ?? true;
+      migrated.colorblind = old.colorblind ?? false;
+      migrated.themes.emoji = {
+        currentLevel: old.currentLevel ?? 1,
+        bestLevel: old.bestLevel ?? 1,
+        tutorialSeen: !!old.tutorialSeen,
+        campaignCleared: !!old.campaignCleared,
+      };
+      saveSave(migrated);
+      return migrated;
+    }
+  } catch {
+    /* ignore */
+  }
+  return defaults();
+}
+
+function normalize(save: AppSave): AppSave {
+  const base = defaults();
+  return {
+    version: 2,
+    theme: save.theme === "monster" ? "monster" : "emoji",
+    sound: save.sound ?? true,
+    colorblind: save.colorblind ?? false,
+    themes: {
+      emoji: {
+        ...base.themes.emoji,
+        ...save.themes?.emoji,
+      },
+      monster: {
+        ...base.themes.monster,
+        ...save.themes?.monster,
+      },
+    },
+  };
+}
+
+export function saveSave(save: AppSave): void {
+  const next: AppSave = {
+    ...save,
+    version: 2,
+    themes: {
+      emoji: clampTheme("emoji", save.themes.emoji),
+      monster: clampTheme("monster", save.themes.monster),
+    },
+  };
+  localStorage.setItem(KEY, JSON.stringify(next));
+}
+
+function clampTheme(theme: ThemeId, t: ThemeProgress): ThemeProgress {
+  const total = getTotalLevels(theme);
+  return {
+    currentLevel: clampLevel(theme, t.currentLevel),
+    bestLevel: Math.min(Math.max(1, t.bestLevel), total),
+    tutorialSeen: !!t.tutorialSeen,
+    campaignCleared: !!t.campaignCleared,
+  };
+}
+
+export function getThemeProgress(save: AppSave, theme: ThemeId): ThemeProgress {
+  return save.themes[theme] ?? emptyTheme();
 }

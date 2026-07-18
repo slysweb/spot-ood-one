@@ -42,6 +42,39 @@ export async function tryNativeShare(
   }
 }
 
+/** Wait until the page is visible/focused again (native share sheet dismissed). */
+export function waitUntilPageActive(timeoutMs = 60_000): Promise<void> {
+  if (document.visibilityState === "visible" && document.hasFocus()) {
+    return new Promise((resolve) => {
+      // Let the OS share sheet fully close even if the page stayed "visible".
+      window.setTimeout(resolve, 200);
+    });
+  }
+
+  return new Promise((resolve) => {
+    let settled = false;
+    const finish = () => {
+      if (settled) return;
+      if (document.visibilityState !== "visible") return;
+      settled = true;
+      window.removeEventListener("focus", onEvent);
+      document.removeEventListener("visibilitychange", onEvent);
+      window.clearTimeout(timer);
+      window.setTimeout(resolve, 150);
+    };
+    const onEvent = () => finish();
+    window.addEventListener("focus", onEvent);
+    document.addEventListener("visibilitychange", onEvent);
+    const timer = window.setTimeout(() => {
+      if (settled) return;
+      settled = true;
+      window.removeEventListener("focus", onEvent);
+      document.removeEventListener("visibilitychange", onEvent);
+      resolve();
+    }, timeoutMs);
+  });
+}
+
 export async function copyText(text: string): Promise<boolean> {
   try {
     await navigator.clipboard.writeText(text);

@@ -22,6 +22,7 @@ import {
   buildSharePayload,
   copyText,
   tryNativeShare,
+  waitUntilPageActive,
 } from "@/game/share";
 import type { FailReason, Overlay, ProgressSave, Screen } from "@/game/types";
 
@@ -45,11 +46,16 @@ export default function App() {
   const endsAtRef = useRef(0);
   const rafRef = useRef(0);
   const pauseRemainRef = useRef(TIME_LIMIT_MS);
+  const frozenRemainRef = useRef<number | null>(null);
   const oddIndexRef = useRef(0);
   const lockedRef = useRef(false);
   const retryRef = useRef(0);
+  const overlayRef = useRef<Overlay>(null);
+  const sharingRef = useRef(false);
   const progressRef = useRef(progress);
   progressRef.current = progress;
+  overlayRef.current = overlay;
+  sharingRef.current = sharing;
 
   const persist = useCallback((next: ProgressSave) => {
     setProgress(next);
@@ -59,27 +65,55 @@ export default function App() {
   const stopTimer = useCallback(() => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
     rafRef.current = 0;
+    frozenRemainRef.current = null;
   }, []);
 
   const openFail = useCallback((reason: FailReason) => {
+    stopTimer();
+    setRemainingMs(0);
     setFailReason(reason);
     setFailSessionId(
       `fail_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
     );
     setOverlay("fail");
-  }, []);
+  }, [stopTimer]);
 
   const startTimer = useCallback(
     (ms: number) => {
       stopTimer();
-      setRemainingMs(ms);
-      endsAtRef.current = performance.now() + ms;
+      const capped = Math.max(0, ms);
+      setRemainingMs(capped);
+      endsAtRef.current = performance.now() + capped;
+      frozenRemainRef.current = null;
 
       const tick = (now: number) => {
-        if (document.hidden) {
+        // Never run countdown under fail/share overlays or while native share is open.
+        if (
+          sharingRef.current ||
+          overlayRef.current === "fail" ||
+          overlayRef.current === "share-fallback" ||
+          overlayRef.current === "start-over" ||
+          overlayRef.current === "tutorial" ||
+          overlayRef.current === "settings"
+        ) {
+          rafRef.current = 0;
+          return;
+        }
+
+        if (document.hidden || overlayRef.current === "pause") {
+          if (frozenRemainRef.current == null) {
+            frozenRemainRef.current = Math.max(0, endsAtRef.current - now);
+            setRemainingMs(frozenRemainRef.current);
+          }
           rafRef.current = requestAnimationFrame(tick);
           return;
         }
+
+        if (frozenRemainRef.current != null) {
+          endsAtRef.current = now + frozenRemainRef.current;
+          frozenRemainRef.current = null;
+        }
+
         const left = Math.max(0, endsAtRef.current - now);
         setRemainingMs(left);
         if (left <= 0) {
@@ -99,7 +133,7 @@ export default function App() {
   );
 
   const loadLevel = useCallback(
-    (levelIndex: number, retry: number) => {
+    (levelIndex: number, retry: number, opts?: { startTimer?: boolean }) => {
       const level = getLevel(clampLevel(levelIndex));
       const built = buildCells(level, retry);
       setCols(level.grid.cols);
@@ -112,9 +146,14 @@ export default function App() {
       setFlashIndex(null);
       setFlashKind(null);
       setFailSessionId(null);
+      setRemainingMs(TIME_LIMIT_MS);
+      if (opts?.startTimer === false) {
+        stopTimer();
+        return;
+      }
       startTimer(TIME_LIMIT_MS);
     },
-    [startTimer],
+    [startTimer, stopTimer],
   );
 
   const enterPlay = (levelIndex: number) => {
@@ -192,15 +231,17 @@ export default function App() {
   };
 
   const onCellTap = (index: number) => {
-    if (lockedRef.current || overlay) return;
+    if (lockedRef.current || overlayRef.current) return;
     if (index === oddIndexRef.current) onCorrect();
     else onWrong(index);
   };
 
   const pause = () => {
     if (screen !== "play" || lockedRef.current) return;
-    pauseRemainRef.current = remainingMs;
+    pauseRemainRef.current =
+      frozenRemainRef.current ?? Math.max(0, endsAtRef.current - performance.now());
     stopTimer();
+    setRemainingMs(pauseRemainRef.current);
     setOverlay("pause");
   };
 
@@ -215,24 +256,44 @@ export default function App() {
     setScreen("home");
   };
 
-  const grantContinue = () => {
+  /** Resume the failed level only after share UI is fully gone; always full 10s. */
+  const grantContinue = async () => {
     if (!failSessionId) return;
-    setFailSessionId(null);
     const nextRetry = retryRef.current + 1;
+    const level = progressRef.current.currentLevel;
+    // Claim this fail session immediately to prevent double continue.
+    setFailSessionId(null);
+    stopTimer();
+    setRemainingMs(TIME_LIMIT_MS);
+
+    // Keep fail sheet up until the native share sheet is dismissed.
+    await waitUntilPageActive();
+
+    setSharing(false);
+    sharingRef.current = false;
     setOverlay(null);
-    loadLevel(progressRef.current.currentLevel, nextRetry);
+    loadLevel(level, nextRetry);
   };
 
   const handleShare = async () => {
     if (sharing || !failSessionId) return;
     setSharing(true);
+    sharingRef.current = true;
+    stopTimer();
+    setRemainingMs(0);
+
     const payload = buildSharePayload(progressRef.current.currentLevel);
     const result = await tryNativeShare(payload);
-    setSharing(false);
+
     if (result === "shared") {
-      grantContinue();
+      // Do NOT start the clock until the native sheet is closed.
+      await grantContinue();
       return;
     }
+
+    setSharing(false);
+    sharingRef.current = false;
+
     if (result === "cancelled") {
       setOverlay("fail");
       return;
@@ -253,6 +314,8 @@ export default function App() {
     const prev = progressRef.current;
     persist({ ...prev, currentLevel: 1 });
     setFailSessionId(null);
+    setSharing(false);
+    sharingRef.current = false;
     setOverlay(null);
     loadLevel(1, 0);
   };
@@ -263,16 +326,21 @@ export default function App() {
         document.hidden &&
         screen === "play" &&
         !lockedRef.current &&
-        overlay === null
+        !sharingRef.current &&
+        overlayRef.current === null
       ) {
-        pauseRemainRef.current = remainingMs;
+        pauseRemainRef.current = Math.max(
+          0,
+          endsAtRef.current - performance.now(),
+        );
         stopTimer();
+        setRemainingMs(pauseRemainRef.current);
         setOverlay("pause");
       }
     };
     document.addEventListener("visibilitychange", onVis);
     return () => document.removeEventListener("visibilitychange", onVis);
-  }, [overlay, remainingMs, screen, stopTimer]);
+  }, [screen, stopTimer]);
 
   useEffect(() => () => stopTimer(), [stopTimer]);
 
@@ -281,6 +349,14 @@ export default function App() {
     () => buildSharePayload(progress.currentLevel).combined,
     [progress.currentLevel],
   );
+
+  const timerFrozen =
+    locked ||
+    sharing ||
+    overlay === "fail" ||
+    overlay === "share-fallback" ||
+    overlay === "start-over" ||
+    overlay === "pause";
 
   return (
     <div className="app-shell">
@@ -311,8 +387,8 @@ export default function App() {
           cols={cols}
           cells={cells}
           timerSec={timerSec}
-          urgent={remainingMs <= 3000 && !locked}
-          locked={locked}
+          urgent={remainingMs <= 3000 && !timerFrozen}
+          locked={locked || Boolean(overlay)}
           colorblind={progress.colorblind}
           flashIndex={flashIndex}
           flashKind={flashKind}
@@ -346,7 +422,9 @@ export default function App() {
           shareText={shareText}
           toast={shareToast}
           onCopy={handleCopy}
-          onConfirm={grantContinue}
+          onConfirm={() => {
+            void grantContinue();
+          }}
           onBack={() => setOverlay("fail")}
         />
       )}
@@ -370,7 +448,6 @@ export default function App() {
         />
       )}
 
-      {/* keep retryCount referenced for future HUD if needed */}
       <span hidden data-retry={retryCount} />
     </div>
   );

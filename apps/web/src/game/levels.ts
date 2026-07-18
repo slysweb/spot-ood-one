@@ -1,5 +1,5 @@
-import raw from "@level-data/levels_80.json";
-import type { CampaignData, LevelDef } from "./types";
+import raw from "@level-data/levels.json";
+import type { CampaignData, LevelDef, ProgressSave } from "./types";
 
 const data = raw as CampaignData;
 
@@ -16,6 +16,16 @@ export function getLevel(index: number): LevelDef {
 
 export function clampLevel(index: number): number {
   return Math.min(Math.max(1, index), TOTAL_LEVELS);
+}
+
+/** Resume point for Continue CTA (supports players who cleared an older 80-level build). */
+export function getContinueLevel(progress: ProgressSave): number {
+  if (progress.currentLevel > 1) return clampLevel(progress.currentLevel);
+  if (progress.campaignCleared || progress.bestLevel >= TOTAL_LEVELS) {
+    return clampLevel(Math.min(progress.bestLevel + 1, TOTAL_LEVELS));
+  }
+  if (progress.bestLevel > 1) return clampLevel(progress.bestLevel);
+  return 1;
 }
 
 /** Deterministic odd-cell index from seed + retry. */

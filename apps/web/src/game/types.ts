@@ -1,6 +1,19 @@
 export type FailReason = "wrong" | "timeout";
 
-export type LevelCategory = "animals" | "food" | "gestures";
+export type LevelCategory =
+  | "animals"
+  | "food"
+  | "gestures"
+  | "faces"
+  | "vehicles"
+  | "sports"
+  | "weather"
+  | "symbols"
+  | "objects"
+  | "clothing"
+  | "nature"
+  | "travel"
+  | string;
 
 export interface LevelDef {
   id: string;

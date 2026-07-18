@@ -15,6 +15,7 @@ import {
   TOTAL_LEVELS,
   buildCells,
   clampLevel,
+  getContinueLevel,
   getLevel,
 } from "@/game/levels";
 import { loadProgress, saveProgress } from "@/game/storage";
@@ -371,11 +372,11 @@ export default function App() {
 
       {screen === "home" && (
         <Home
-          currentLevel={progress.currentLevel}
+          currentLevel={getContinueLevel(progress)}
           bestLevel={progress.bestLevel}
           totalLevels={TOTAL_LEVELS}
           onPlay={() => enterPlay(1)}
-          onContinue={() => enterPlay(progress.currentLevel)}
+          onContinue={() => enterPlay(getContinueLevel(progress))}
           onSettings={() => setOverlay("settings")}
         />
       )}

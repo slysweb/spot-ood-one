@@ -42,12 +42,13 @@ Dashboard → **Import a repository** 时：
 |------|---------|
 | `apps/web` | Production web app (Vite + React + TS) |
 | `apps/web-wireframe` | Early clickable wireframe |
-| `packages/level_data` | 80-level pair JSON |
+| `packages/level_data` | 120-level pair JSON |
 | `docs` | Product / fail-share / deploy docs |
 
 ## Product rules (MVP)
 
-- 80 levels, 10s each
+- 120 levels, 10s each
+- Categories beyond animals / food / hands (faces, vehicles, sports, weather, objects, …)
 - Wrong tap or timeout → fail
 - Continue via **Share** (no ads yet) or **Start Over** from Level 1
 - System emoji, free to play

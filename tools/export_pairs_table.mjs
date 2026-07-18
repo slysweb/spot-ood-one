@@ -1,9 +1,10 @@
 import fs from "fs";
 
 const data = JSON.parse(
-  fs.readFileSync("packages/level_data/levels_80.json", "utf8"),
+  fs.readFileSync("packages/level_data/levels.json", "utf8"),
 );
 const levels = data.levels;
+const total = data.campaignLevels;
 
 const byCat = {};
 const byRisk = {};
@@ -21,9 +22,9 @@ const fmtEntries = (obj) =>
     .join(" · ");
 
 const lines = [];
-lines.push("# Spot Odd One — 80 关 Pair 表");
+lines.push(`# Spot Odd One — ${total} 关 Pair 表`);
 lines.push("");
-lines.push("> 数据源：`packages/level_data/levels_80.json`  ");
+lines.push("> 数据源：`packages/level_data/levels.json`  ");
 lines.push("> 全关限时 10s；点错/超时即败");
 lines.push("");
 lines.push("## 分布概览");
@@ -38,11 +39,11 @@ lines.push("## 难度曲线");
 lines.push("");
 lines.push("| 关卡 | 网格 | 难度重心 |");
 lines.push("|------|------|----------|");
-lines.push("| 1–10 | 3×3 | L1 易辨识 |");
+lines.push("| 1–10 | 3×3 | L1 教学 |");
 lines.push("| 11–25 | 3×3→4×4 | L2 |");
-lines.push("| 26–45 | 4×4 | L3–L4 |");
-lines.push("| 46–65 | 4×4→5×5 | L4–L5 |");
-lines.push("| 66–80 | 5×5 | L5–L6 |");
+lines.push("| 26–50 | 4×4→5×5 | L3–L5 |");
+lines.push("| 51–80 | 5×5 | L4–L6 |");
+lines.push("| 81–120 | 5×5 | L5–L7 多品类专家关 |");
 lines.push("");
 lines.push("## 完整 Pair 表");
 lines.push("");
@@ -68,12 +69,12 @@ for (const l of levels.filter((x) => x.platformRisk === "high")) {
 lines.push("");
 lines.push("## 校验");
 lines.push("");
-lines.push("- 关卡数：80");
+lines.push(`- 关卡数：${levels.length}`);
 lines.push("- base ≠ odd：通过");
-lines.push("- index 连续 1–80：通过");
+lines.push(`- index 连续 1–${total}：通过`);
 
 fs.mkdirSync("docs/levels", { recursive: true });
-fs.writeFileSync("docs/levels/PAIRS_80.md", lines.join("\n"), "utf8");
+fs.writeFileSync("docs/levels/PAIRS_120.md", lines.join("\n"), "utf8");
 
 const csvRows = [
   "index,id,grid,base,odd,category,diffType,difficulty,platformRisk,shuffleSeed,notes",
@@ -98,9 +99,9 @@ for (const l of levels) {
   );
 }
 fs.writeFileSync(
-  "packages/level_data/levels_80.csv",
+  "packages/level_data/levels.csv",
   csvRows.join("\n"),
   "utf8",
 );
 
-console.log({ byCat, byGrid, byRisk, high: byRisk.high || 0 });
+console.log({ total: levels.length, byCat, byGrid, byRisk });

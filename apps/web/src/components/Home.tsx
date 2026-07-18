@@ -15,7 +15,7 @@ export function Home({
   onContinue,
   onSettings,
 }: HomeProps) {
-  const showContinue = currentLevel > 1;
+  const showContinue = currentLevel > 1 || bestLevel > 1;
 
   return (
     <section className="home">

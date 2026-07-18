@@ -1,84 +1,92 @@
-# 部署到 Cloudflare Pages
+# 部署到 Cloudflare（Workers 统一入口）
 
 仓库：https://github.com/slysweb/spot-ood-one  
-应用目录：`apps/web`（Vite + React）  
+应用目录：`apps/web`  
 产物目录：`apps/web/dist`
+
+> 2025–2026 起，Dashboard 里 **Pages 已并入 Workers**。  
+> 静态站用 **Workers + Static Assets**（`wrangler.jsonc` 里的 `assets.directory`），不再找单独的 “Pages” 入口。
 
 ---
 
-## 方式一：Dashboard 连接 GitHub（推荐）
+## Dashboard：Import a repository（你现在的界面）
 
-1. 打开 [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-2. 授权并选择仓库 `slysweb/spot-ood-one`
-3. 构建设置：
+路径大致是：
+
+**Workers & Pages → Create → Import a repository → 选 `slysweb/spot-ood-one`**
+
+### 必填项
+
+| 项 | 填什么 |
+|----|--------|
+| Project name | `spot-ood-one`（需与 `apps/web/wrangler.jsonc` 里 `name` 一致） |
+| Build command | `npm ci && npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Builds for non-production branches | 可勾选（预览用） |
+
+### Advanced settings（很重要）
+
+展开 **Advanced settings**，设置：
 
 | 项 | 值 |
 |----|-----|
-| Production branch | `main`（若默认仍是 `master` 则填 `master`） |
-| Root directory | `apps/web` |
-| Framework preset | `Vite`（或 None） |
-| Build command | `npm ci && npm run build` |
-| Build output directory | `dist` |
-| Node.js version | `20`（Settings → Environment variables → `NODE_VERSION=20`） |
+| **Root directory** | `apps/web` |
+| **Node version** / 环境变量 | `NODE_VERSION` = `20` |
 
-4. **Save and Deploy**
-5. 部署成功后会得到 `*.pages.dev` 域名；可在 **Custom domains** 绑定自己的域名
+不设 Root directory 的话，根目录跑 `npm run build` 会失败（根 `package.json` 只是转发脚本，且没有 `wrangler.jsonc`）。
 
-> 说明：Pages 会克隆整个仓库，Root 设为 `apps/web` 后，构建仍能通过相对路径读取 `packages/level_data`。
-
-### 环境变量（可选）
-
-在 Pages 项目 → **Settings** → **Environment variables** 添加：
-
-- `NODE_VERSION` = `20`
+然后点 **Deploy / Create and deploy**。
 
 ---
 
-## 方式二：Wrangler CLI 手动上传
+## 仓库里已准备的配置
 
-适合本地先验证产物，或不想立刻接 Git。
+`apps/web/wrangler.jsonc`：
+
+```jsonc
+{
+  "name": "spot-ood-one",
+  "compatibility_date": "2026-07-18",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}
+```
+
+含义：
+
+- 构建出 `dist` 后，由 Wrangler 把静态文件挂到 Worker 上  
+- `single-page-application`：未匹配文件时回退 `index.html`（SPA）
+
+---
+
+## 本地验证（可选）
 
 ```bash
-# 1) 构建
 cd apps/web
 npm ci
 npm run build
-
-# 2) 登录 Cloudflare（首次）
 npx wrangler login
-
-# 3) 创建项目并上传（项目名可自定）
-npx wrangler pages project create spot-ood-one
-npx wrangler pages deploy dist --project-name=spot-ood-one
+npx wrangler deploy
 ```
 
-之后可用 Git 集成做持续部署，或继续用 CLI 上传。
-
----
-
-## 方式三：GitHub 推送后自动部署
-
-接好方式一之后：
+或：
 
 ```bash
-git add .
-git commit -m "your message"
-git push origin main
+npm run deploy
 ```
-
-每次推送到生产分支会自动触发 Pages 构建。
 
 ---
 
-## SPA 路由
+## 和旧「Pages」的对应关系
 
-`apps/web/public/_redirects` 已包含：
-
-```
-/*    /index.html   200
-```
-
-保证刷新深链时仍回到应用（当前以单页状态机为主，预留即可）。
+| 以前 Pages | 现在 Workers |
+|------------|--------------|
+| Build output directory = `dist` | `wrangler.jsonc` → `assets.directory: "./dist"` |
+| SPA `_redirects` | `not_found_handling: "single-page-application"` |
+| 无 Deploy command | Deploy command = `npx wrangler deploy` |
+| Root directory = `apps/web` | Advanced → Root directory = `apps/web` |
 
 ---
 
@@ -86,17 +94,7 @@ git push origin main
 
 | 问题 | 处理 |
 |------|------|
-| Build 找不到依赖 | Root 确认是 `apps/web`，命令用 `npm ci && npm run build` |
-| 找不到关卡 JSON | 确认仓库含 `packages/level_data/levels_80.json`，且未把 `packages/` 写进 `.gitignore` |
-| 页面空白 | 打开浏览器控制台；检查构建是否成功、`dist/index.html` 是否存在 |
-| 旧缓存 | Pages → Deployments 里 Retry deployment，或浏览器强刷 |
-
----
-
-## 本地预览生产构建
-
-```bash
-cd apps/web
-npm run build
-npm run preview
-```
+| `Missing entry-point to Worker script or to assets directory` | 确认 Root 是 `apps/web`，且已推送含 `wrangler.jsonc` 的提交 |
+| Build 失败 / 找不到 vite | Root 必须是 `apps/web`；命令用 `npm ci && npm run build` |
+| 找不到关卡 JSON | 完整仓库需含 `packages/level_data`（构建时相对路径会读到） |
+| 域名 | 部署后是 `*.workers.dev`；可在项目 Settings 绑自定义域名 |

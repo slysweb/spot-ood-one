@@ -22,18 +22,19 @@ npm run build    # production build
 npm run preview  # preview build
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare (Workers)
 
-See **[docs/DEPLOY_CLOUDFLARE.md](docs/DEPLOY_CLOUDFLARE.md)**.
+Pages 已并入 Workers 入口。详见 **[docs/DEPLOY_CLOUDFLARE.md](docs/DEPLOY_CLOUDFLARE.md)**。
 
-Short version (Dashboard → Pages → Connect Git):
+Dashboard → **Import a repository** 时：
 
 | Setting | Value |
 |---------|--------|
-| Root directory | `apps/web` |
+| Project name | `spot-ood-one` |
+| Root directory（Advanced） | `apps/web` |
 | Build command | `npm ci && npm run build` |
-| Build output directory | `dist` |
-| Node version | `20` (`NODE_VERSION=20`) |
+| Deploy command | `npx wrangler deploy` |
+| Node | `NODE_VERSION=20` |
 
 ## Structure
 

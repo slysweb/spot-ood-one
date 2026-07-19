@@ -38,61 +38,61 @@ export function Hub({ save, onSettings }: HubProps) {
                 {theme.id === "monster" ? (
                   <>
                     <span className="pack-cell">
-                      <img src="/monsters/monster_m01.png" alt="" />
+                      <img src="/monsters/monster_m01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/monsters/monster_m01.png" alt="" />
+                      <img src="/monsters/monster_m01.webp" alt="" />
                     </span>
                     <span className="pack-cell is-odd">
-                      <img src="/monsters/monster_m03.png" alt="" />
+                      <img src="/monsters/monster_m03.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/monsters/monster_m01.png" alt="" />
+                      <img src="/monsters/monster_m01.webp" alt="" />
                     </span>
                   </>
                 ) : theme.id === "cat" ? (
                   <>
                     <span className="pack-cell">
-                      <img src="/cats/cat_c01.png" alt="" />
+                      <img src="/cats/cat_c01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/cats/cat_c01.png" alt="" />
+                      <img src="/cats/cat_c01.webp" alt="" />
                     </span>
                     <span className="pack-cell is-odd">
-                      <img src="/cats/cat_a01.png" alt="" />
+                      <img src="/cats/cat_a01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/cats/cat_c01.png" alt="" />
+                      <img src="/cats/cat_c01.webp" alt="" />
                     </span>
                   </>
                 ) : theme.id === "dog" ? (
                   <>
                     <span className="pack-cell">
-                      <img src="/dogs/dog_d01.png" alt="" />
+                      <img src="/dogs/dog_d01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/dogs/dog_d01.png" alt="" />
+                      <img src="/dogs/dog_d01.webp" alt="" />
                     </span>
                     <span className="pack-cell is-odd">
-                      <img src="/cats/cat_c01.png" alt="" />
+                      <img src="/cats/cat_c01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/dogs/dog_d01.png" alt="" />
+                      <img src="/dogs/dog_d01.webp" alt="" />
                     </span>
                   </>
                 ) : theme.id === "fairy" ? (
                   <>
                     <span className="pack-cell">
-                      <img src="/fairies/fairy_f01.png" alt="" />
+                      <img src="/fairies/fairy_f01.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/fairies/fairy_f01.png" alt="" />
+                      <img src="/fairies/fairy_f01.webp" alt="" />
                     </span>
                     <span className="pack-cell is-odd">
-                      <img src="/fairies/fairy_f02.png" alt="" />
+                      <img src="/fairies/fairy_f02.webp" alt="" />
                     </span>
                     <span className="pack-cell">
-                      <img src="/fairies/fairy_f01.png" alt="" />
+                      <img src="/fairies/fairy_f01.webp" alt="" />
                     </span>
                   </>
                 ) : (

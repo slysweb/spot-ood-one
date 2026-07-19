@@ -36,121 +36,121 @@ export function ThemeHome({
           {meta.id === "monster" ? (
             <>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art is-odd">
-                <img src="/monsters/monster_m03.png" alt="" />
+                <img src="/monsters/monster_m03.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/monsters/monster_m01.png" alt="" />
+                <img src="/monsters/monster_m01.webp" alt="" />
               </span>
             </>
           ) : meta.id === "cat" ? (
             <>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art is-odd">
-                <img src="/cats/cat_a01.png" alt="" />
+                <img src="/cats/cat_a01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
             </>
           ) : meta.id === "dog" ? (
             <>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art is-odd">
-                <img src="/cats/cat_c01.png" alt="" />
+                <img src="/cats/cat_c01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/dogs/dog_d01.png" alt="" />
+                <img src="/dogs/dog_d01.webp" alt="" />
               </span>
             </>
           ) : meta.id === "fairy" ? (
             <>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art is-odd">
-                <img src="/fairies/fairy_f02.png" alt="" />
+                <img src="/fairies/fairy_f02.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
               <span className="cell preview-art">
-                <img src="/fairies/fairy_f01.png" alt="" />
+                <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
             </>
           ) : (

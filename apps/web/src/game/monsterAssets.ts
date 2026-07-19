@@ -1,3 +1,5 @@
+import { IMAGE_EXT } from "./imageExt";
+
 /** Files present in /public/monsters (no twins yet). */
 const AVAILABLE = new Set([
   "M01",
@@ -16,7 +18,7 @@ const AVAILABLE = new Set([
 
 export function monsterSrc(monsterId: string): string {
   const id = monsterId.toLowerCase();
-  return `/monsters/monster_${id}.png`;
+  return `/monsters/monster_${id}.${IMAGE_EXT}`;
 }
 
 /** Map twin IDs (M01b) to base art + extra transform when twin PNG is missing. */

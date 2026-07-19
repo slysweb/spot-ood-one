@@ -1,4 +1,5 @@
 import { mergeTransformKey, parseTransform } from "./monsterAssets";
+import { IMAGE_EXT } from "./imageExt";
 
 const DOGS = new Set([
   "D01",
@@ -15,18 +16,18 @@ const AVAILABLE_TWINS = new Set<string>(["D01b", "D02b", "D05b", "D07b"]);
 
 /** Borrow illustrated animals/cats from the Cats pack */
 const BORROWED: Record<string, string> = {
-  A02: "/cats/cat_a02.png",
-  A03: "/cats/cat_a03.png",
-  A04: "/cats/cat_a04.png",
-  A05: "/cats/cat_a05.png",
-  A06: "/cats/cat_a06.png",
-  A07: "/cats/cat_a07.png",
-  A08: "/cats/cat_a08.png",
-  A09: "/cats/cat_a09.png",
-  A10: "/cats/cat_a10.png",
-  C01: "/cats/cat_c01.png",
-  C03: "/cats/cat_c03.png",
-  C05: "/cats/cat_c05.png",
+  A02: `/cats/cat_a02.${IMAGE_EXT}`,
+  A03: `/cats/cat_a03.${IMAGE_EXT}`,
+  A04: `/cats/cat_a04.${IMAGE_EXT}`,
+  A05: `/cats/cat_a05.${IMAGE_EXT}`,
+  A06: `/cats/cat_a06.${IMAGE_EXT}`,
+  A07: `/cats/cat_a07.${IMAGE_EXT}`,
+  A08: `/cats/cat_a08.${IMAGE_EXT}`,
+  A09: `/cats/cat_a09.${IMAGE_EXT}`,
+  A10: `/cats/cat_a10.${IMAGE_EXT}`,
+  C01: `/cats/cat_c01.${IMAGE_EXT}`,
+  C03: `/cats/cat_c03.${IMAGE_EXT}`,
+  C05: `/cats/cat_c05.${IMAGE_EXT}`,
 };
 
 const TWIN_FALLBACK: Record<string, string[]> = {
@@ -37,7 +38,7 @@ const TWIN_FALLBACK: Record<string, string[]> = {
 };
 
 export function dogSrc(id: string): string {
-  return `/dogs/dog_${id.toLowerCase()}.png`;
+  return `/dogs/dog_${id.toLowerCase()}.${IMAGE_EXT}`;
 }
 
 export function resolveDogArt(id: string): {

@@ -1,4 +1,5 @@
 import { mergeTransformKey, parseTransform } from "./monsterAssets";
+import { IMAGE_EXT } from "./imageExt";
 
 const KNOWN = new Set([
   "F01",
@@ -39,7 +40,7 @@ const TWIN_TO_BASE: Record<string, { base: string; extra: string[] }> = {
 };
 
 export function fairySrc(id: string): string {
-  return `/fairies/fairy_${id.toLowerCase()}.png`;
+  return `/fairies/fairy_${id.toLowerCase()}.${IMAGE_EXT}`;
 }
 
 export function resolveFairyArt(id: string): {

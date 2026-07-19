@@ -32,7 +32,7 @@ button {
 }
 
 .app-shell {
-  width: min(440px, 100%);
+  width: min(520px, 100%);
   min-height: 100dvh;
   margin: 0 auto;
   padding: 12px 14px 24px;
@@ -434,15 +434,37 @@ a.link-btn {
 
 .board-stage {
   flex: 1;
-  display: grid;
-  place-items: center;
-  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  min-height: 0;
+  padding: 8px 0;
+  -webkit-overflow-scrolling: touch;
 }
 
 .board {
-  width: min(100%, 360px);
+  /* Fixed cell size for 3×3 / 4×4 / 5×5 — board grows with cols */
+  --cell-size: 108px;
+  --board-gap: 10px;
+  width: max-content;
+  max-width: none;
   display: grid;
-  gap: 10px;
+  gap: var(--board-gap);
+  margin: auto;
+}
+
+@media (max-width: 380px) {
+  .board {
+    --cell-size: 100px;
+    --board-gap: 8px;
+  }
+}
+
+@media (min-width: 480px) {
+  .board {
+    --cell-size: 116px;
+  }
 }
 
 .board.is-locked .cell {
@@ -450,19 +472,21 @@ a.link-btn {
 }
 
 .cell {
-  aspect-ratio: 1;
+  width: var(--cell-size);
+  height: var(--cell-size);
   border: 3px solid var(--ink);
   border-radius: 16px;
   background: #fffef8;
   box-shadow: 0 3px 0 rgba(44, 33, 24, 0.16);
-  font-size: clamp(1.7rem, 7.5vw, 2.5rem);
+  font-size: calc(var(--cell-size) * 0.42);
   display: grid;
   place-items: center;
   user-select: none;
   -webkit-user-select: none;
   transition: transform 0.08s ease, background 0.12s ease;
   overflow: hidden;
-  padding: 6%;
+  padding: 5%;
+  flex: none;
 }
 
 .cell-art-wrap {
@@ -484,7 +508,7 @@ a.link-btn {
 .cell-emoji {
   display: grid;
   place-items: center;
-  font-size: clamp(1.5rem, 6.5vw, 2.3rem);
+  font-size: calc(var(--cell-size) * 0.48);
   line-height: 1;
 }
 

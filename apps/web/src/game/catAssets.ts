@@ -1,4 +1,5 @@
 import { mergeTransformKey, parseTransform } from "./monsterAssets";
+import { IMAGE_EXT } from "./imageExt";
 
 const AVAILABLE = new Set([
   "C01",
@@ -32,7 +33,7 @@ const TWIN_FALLBACK: Record<string, string[]> = {
 };
 
 export function catSrc(id: string): string {
-  return `/cats/cat_${id.toLowerCase()}.png`;
+  return `/cats/cat_${id.toLowerCase()}.${IMAGE_EXT}`;
 }
 
 export function resolveCatArt(id: string): {

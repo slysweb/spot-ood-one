@@ -35,32 +35,122 @@ export function ThemeHome({
         <div className="preview-board" aria-hidden="true">
           {meta.id === "monster" ? (
             <>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster is-odd">
+              <span className="cell preview-art is-odd">
                 <img src="/monsters/monster_m03.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
               </span>
-              <span className="cell preview-monster">
+              <span className="cell preview-art">
                 <img src="/monsters/monster_m01.png" alt="" />
+              </span>
+            </>
+          ) : meta.id === "cat" ? (
+            <>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art is-odd">
+                <img src="/cats/cat_a01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+            </>
+          ) : meta.id === "dog" ? (
+            <>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art is-odd">
+                <img src="/cats/cat_c01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/dogs/dog_d01.png" alt="" />
+              </span>
+            </>
+          ) : meta.id === "fairy" ? (
+            <>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art is-odd">
+                <img src="/fairies/fairy_f02.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fairies/fairy_f01.png" alt="" />
               </span>
             </>
           ) : (

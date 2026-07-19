@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { THEMES } from "@/game/themeMeta";
+import { difficultyLabel, THEMES } from "@/game/themeMeta";
 import { getContinueLevel, getTotalLevels } from "@/game/campaign";
 import type { AppSave } from "@/game/types";
 
@@ -58,9 +58,41 @@ export function Hub({ save, onSettings }: HubProps) {
                     <span className="pack-cell">
                       <img src="/cats/cat_c01.png" alt="" />
                     </span>
-                    <span className="pack-cell is-odd emoji">🐶</span>
+                    <span className="pack-cell is-odd">
+                      <img src="/cats/cat_a01.png" alt="" />
+                    </span>
                     <span className="pack-cell">
                       <img src="/cats/cat_c01.png" alt="" />
+                    </span>
+                  </>
+                ) : theme.id === "dog" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/dogs/dog_d01.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/dogs/dog_d01.png" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd">
+                      <img src="/cats/cat_c01.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/dogs/dog_d01.png" alt="" />
+                    </span>
+                  </>
+                ) : theme.id === "fairy" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/fairies/fairy_f01.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/fairies/fairy_f01.png" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd">
+                      <img src="/fairies/fairy_f02.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/fairies/fairy_f01.png" alt="" />
                     </span>
                   </>
                 ) : (
@@ -74,6 +106,7 @@ export function Hub({ save, onSettings }: HubProps) {
               </div>
               <div className="pack-copy">
                 <h2 className="pack-title">{theme.label}</h2>
+                <p className="pack-diff">{difficultyLabel(theme.difficulty)}</p>
                 <p className="pack-tag">{theme.findLine}</p>
                 <p className="pack-meta">
                   {hasProgress

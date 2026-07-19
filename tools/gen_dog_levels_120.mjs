@@ -1,50 +1,49 @@
 import fs from "fs";
 
-/** Illustrated cats */
-const CAT_IDS = ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08"];
+const DOG_IDS = ["D01", "D02", "D03", "D04", "D05", "D06", "D07", "D08"];
 
-/** Cat “categories” for medium: same group vs different group */
-const CAT_GROUPS = {
-  orange: ["C01", "C07"],
-  light: ["C02", "C05"],
-  dark: ["C03"],
-  patterned: ["C04", "C08"],
-  gray: ["C06"],
+const DOG_GROUPS = {
+  fluffy: ["D01", "D05"],
+  short: ["D02", "D08"],
+  spotted: ["D03", "D06"],
+  northern: ["D04", "D07"],
 };
-const GROUP_KEYS = Object.keys(CAT_GROUPS);
+const GROUP_KEYS = Object.keys(DOG_GROUPS);
 
-/** Other animals (illustrated) — odd one in easy bands */
-const ANIMAL_IDS = [
-  "A01", // dog
-  "A02", // rabbit
-  "A03", // bear
-  "A04", // fox
-  "A05", // panda
-  "A06", // pig
-  "A07", // frog
-  "A08", // monkey
-  "A09", // tiger cub
-  "A10", // koala
+/** Non-dog animals (reuse cat pack art via dogAssets path map) */
+const OTHER_IDS = [
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
+  "C01",
+  "C03",
+  "C05",
 ];
 
 const TWINS = {
-  C01: "C01b",
-  C02: "C02b",
-  C03: "C03b",
-  C05: "C05b",
+  D01: "D01b",
+  D02: "D02b",
+  D05: "D05b",
+  D07: "D07b",
 };
 
-const FLIP_OK = new Set(["C01", "C04", "C05", "C07", "C08", "A01", "A04", "A09"]);
+const FLIP_OK = new Set(["D01", "D02", "D03", "D06", "D07", "D08"]);
 
 function imageRef(id, transform = "none") {
-  return { render: "image", catId: id, transform };
+  return { render: "image", dogId: id, transform };
 }
 
 function level(index, cols, base, odd, band, diffType, fx) {
   return {
-    id: `C-${String(index).padStart(3, "0")}`,
+    id: `D-${String(index).padStart(3, "0")}`,
     index,
-    theme: "cat",
+    theme: "dog",
     grid: { cols, rows: cols },
     base,
     odd,
@@ -52,7 +51,7 @@ function level(index, cols, base, odd, band, diffType, fx) {
     rules: {
       timeLimitMs: 10000,
       failOnWrongTap: true,
-      shuffleSeed: 5000 + index,
+      shuffleSeed: 7000 + index,
     },
     meta: { band, diffType },
   };
@@ -90,58 +89,53 @@ function transformTeleport(id, i) {
 
 const levels = [];
 
-// 1–30 Easy: same illustrated cat + one other animal, 3x3
 for (let i = 1; i <= 30; i++) {
-  const cat = pick(CAT_IDS, i - 1);
-  const animal = pick(ANIMAL_IDS, i);
   levels.push(
-    level(i, 3, imageRef(cat), imageRef(animal), "easy", "cat_vs_animal", {
-      board: "none",
-      odd: "none",
-    }),
+    level(
+      i,
+      3,
+      imageRef(pick(DOG_IDS, i - 1)),
+      imageRef(pick(OTHER_IDS, i)),
+      "easy",
+      "dog_vs_animal",
+      { board: "none", odd: "none" },
+    ),
   );
 }
 
-// 31–50 Easy+: still cat vs animal, 3→4
 for (let i = 31; i <= 50; i++) {
   const cols = i <= 40 ? 3 : 4;
-  const cat = pick(CAT_IDS, i + 2);
-  const animal = pick(ANIMAL_IDS, i + 4);
   levels.push(
     level(
       i,
       cols,
-      imageRef(cat),
-      imageRef(animal),
+      imageRef(pick(DOG_IDS, i + 2)),
+      imageRef(pick(OTHER_IDS, i + 4)),
       "easy_plus",
-      "cat_vs_animal",
+      "dog_vs_animal",
       { board: "none", odd: "none" },
     ),
   );
 }
 
-// 51–80 Medium: same cat category vs different cat category
 for (let i = 51; i <= 80; i++) {
   const baseKey = pick(GROUP_KEYS, i);
   const oddKey = otherGroup(baseKey, i + 3);
-  const baseCat = pick(CAT_GROUPS[baseKey], i);
-  const oddCat = pick(CAT_GROUPS[oddKey], i + 1);
   levels.push(
     level(
       i,
       4,
-      imageRef(baseCat),
-      imageRef(oddCat),
+      imageRef(pick(DOG_GROUPS[baseKey], i)),
+      imageRef(pick(DOG_GROUPS[oddKey], i + 1)),
       "medium",
-      "cat_category",
+      "dog_category",
       { board: "none", odd: "none" },
     ),
   );
 }
 
-// 81–100 Hard: same cat, twin decoration OR color transform
 for (let i = 81; i <= 100; i++) {
-  const id = pick(CAT_IDS, i - 81);
+  const id = pick(DOG_IDS, i - 81);
   const twin = TWINS[id];
   if (twin && i % 3 === 0) {
     levels.push(
@@ -165,9 +159,8 @@ for (let i = 81; i <= 100; i++) {
   }
 }
 
-// 101–120 Hell
 for (let i = 101; i <= 120; i++) {
-  const id = pick(CAT_IDS, i - 101);
+  const id = pick(DOG_IDS, i - 101);
   const twin = TWINS[id];
   if (i >= 113 && twin) {
     levels.push(
@@ -209,15 +202,15 @@ if (levels.length !== 120) {
 }
 
 const out = {
-  version: 2,
-  theme: "cat",
+  version: 1,
+  theme: "dog",
   campaignLevels: 120,
   assetPack: {
-    requiredCats: CAT_IDS,
+    requiredDogs: DOG_IDS,
     optionalTwins: Object.values(TWINS),
-    requiredAnimals: ANIMAL_IDS,
-    catGroups: CAT_GROUPS,
-    note: "All 120 levels use illustrated PNGs — no emoji",
+    borrowedOthers: OTHER_IDS,
+    dogGroups: DOG_GROUPS,
+    note: "All illustrated; non-dog odds reuse /cats assets; dogs are 1024x1024",
   },
   transforms: [
     "none",
@@ -235,32 +228,32 @@ const out = {
   fx: ["none", "teleport"],
   defaults: { timeLimitMs: 10000, failOnWrongTap: true },
   bands: {
-    "1-30": "easy — illustrated cat vs animal, 3x3",
-    "31-50": "easy_plus — cat vs animal, 3x3→4x4",
-    "51-80": "medium — cat category mix",
-    "81-100": "hard — same cat, fur tint / decoration twin",
+    "1-30": "easy — dog vs other animal, 3x3",
+    "31-50": "easy_plus — dog vs animal, 3→4",
+    "51-80": "medium — dog category mix",
+    "81-100": "hard — same dog tint/twin",
     "101-120": "hell — subtle + teleport",
   },
   levels,
 };
 
-fs.mkdirSync("packages/level_data/cat", { recursive: true });
+fs.mkdirSync("packages/level_data/dog", { recursive: true });
 fs.writeFileSync(
-  "packages/level_data/cat/levels_cat_120.json",
+  "packages/level_data/dog/levels_dog_120.json",
   JSON.stringify(out, null, 2) + "\n",
 );
 
 const lines = [
-  "# Cats 120 关一览",
+  "# Dogs 120 关一览",
   "",
-  "> v2：全关精致插画（无 emoji）；1–50 猫 vs 其他动物；51–80 猫类混搭",
+  "> v1：全关插画；异类动物复用 cats 资源",
   "",
   "| # | Grid | Base | Odd | Band | FX |",
   "|---|------|------|-----|------|----|",
 ];
 for (const l of levels) {
   const fmt = (r) =>
-    `${r.catId}${r.transform && r.transform !== "none" ? `:${r.transform}` : ""}`;
+    `${r.dogId}${r.transform && r.transform !== "none" ? `:${r.transform}` : ""}`;
   const fx =
     l.fx.board === "none" && l.fx.odd === "none"
       ? "—"
@@ -269,11 +262,6 @@ for (const l of levels) {
     `| ${l.index} | ${l.grid.cols}×${l.grid.rows} | ${fmt(l.base)} | ${fmt(l.odd)} | ${l.meta.band} | ${fx} |`,
   );
 }
-fs.writeFileSync("docs/levels/CAT_PAIRS_120.md", lines.join("\n") + "\n");
+fs.writeFileSync("docs/levels/DOG_PAIRS_120.md", lines.join("\n") + "\n");
 
-console.log("OK", {
-  len: levels.length,
-  L1: levels[0],
-  L55: levels[54],
-  L85: levels[84],
-});
+console.log("OK", { len: levels.length, L1: levels[0], L55: levels[54] });

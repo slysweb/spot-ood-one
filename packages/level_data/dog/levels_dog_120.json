@@ -1,26 +1,25 @@
 {
-  "version": 2,
-  "theme": "cat",
+  "version": 1,
+  "theme": "dog",
   "campaignLevels": 120,
   "assetPack": {
-    "requiredCats": [
-      "C01",
-      "C02",
-      "C03",
-      "C04",
-      "C05",
-      "C06",
-      "C07",
-      "C08"
+    "requiredDogs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D05",
+      "D06",
+      "D07",
+      "D08"
     ],
     "optionalTwins": [
-      "C01b",
-      "C02b",
-      "C03b",
-      "C05b"
+      "D01b",
+      "D02b",
+      "D05b",
+      "D07b"
     ],
-    "requiredAnimals": [
-      "A01",
+    "borrowedOthers": [
       "A02",
       "A03",
       "A04",
@@ -29,29 +28,30 @@
       "A07",
       "A08",
       "A09",
-      "A10"
+      "A10",
+      "C01",
+      "C03",
+      "C05"
     ],
-    "catGroups": {
-      "orange": [
-        "C01",
-        "C07"
+    "dogGroups": {
+      "fluffy": [
+        "D01",
+        "D05"
       ],
-      "light": [
-        "C02",
-        "C05"
+      "short": [
+        "D02",
+        "D08"
       ],
-      "dark": [
-        "C03"
+      "spotted": [
+        "D03",
+        "D06"
       ],
-      "patterned": [
-        "C04",
-        "C08"
-      ],
-      "gray": [
-        "C06"
+      "northern": [
+        "D04",
+        "D07"
       ]
     },
-    "note": "All 120 levels use illustrated PNGs — no emoji"
+    "note": "All illustrated; non-dog odds reuse /cats assets; dogs are 1024x1024"
   },
   "transforms": [
     "none",
@@ -75,29 +75,29 @@
     "failOnWrongTap": true
   },
   "bands": {
-    "1-30": "easy — illustrated cat vs animal, 3x3",
-    "31-50": "easy_plus — cat vs animal, 3x3→4x4",
-    "51-80": "medium — cat category mix",
-    "81-100": "hard — same cat, fur tint / decoration twin",
+    "1-30": "easy — dog vs other animal, 3x3",
+    "31-50": "easy_plus — dog vs animal, 3→4",
+    "51-80": "medium — dog category mix",
+    "81-100": "hard — same dog tint/twin",
     "101-120": "hell — subtle + teleport"
   },
   "levels": [
     {
-      "id": "C-001",
+      "id": "D-001",
       "index": 1,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A02",
+        "dogId": "A03",
         "transform": "none"
       },
       "fx": {
@@ -107,29 +107,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5001
+        "shuffleSeed": 7001
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-002",
+      "id": "D-002",
       "index": 2,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A03",
+        "dogId": "A04",
         "transform": "none"
       },
       "fx": {
@@ -139,29 +139,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5002
+        "shuffleSeed": 7002
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-003",
+      "id": "D-003",
       "index": 3,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A04",
+        "dogId": "A05",
         "transform": "none"
       },
       "fx": {
@@ -171,29 +171,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5003
+        "shuffleSeed": 7003
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-004",
+      "id": "D-004",
       "index": 4,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A05",
+        "dogId": "A06",
         "transform": "none"
       },
       "fx": {
@@ -203,29 +203,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5004
+        "shuffleSeed": 7004
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-005",
+      "id": "D-005",
       "index": 5,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A06",
+        "dogId": "A07",
         "transform": "none"
       },
       "fx": {
@@ -235,29 +235,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5005
+        "shuffleSeed": 7005
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-006",
+      "id": "D-006",
       "index": 6,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A07",
+        "dogId": "A08",
         "transform": "none"
       },
       "fx": {
@@ -267,29 +267,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5006
+        "shuffleSeed": 7006
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-007",
+      "id": "D-007",
       "index": 7,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A08",
+        "dogId": "A09",
         "transform": "none"
       },
       "fx": {
@@ -299,29 +299,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5007
+        "shuffleSeed": 7007
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-008",
+      "id": "D-008",
       "index": 8,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A09",
+        "dogId": "A10",
         "transform": "none"
       },
       "fx": {
@@ -331,29 +331,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5008
+        "shuffleSeed": 7008
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-009",
+      "id": "D-009",
       "index": 9,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A10",
+        "dogId": "C01",
         "transform": "none"
       },
       "fx": {
@@ -363,29 +363,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5009
+        "shuffleSeed": 7009
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-010",
+      "id": "D-010",
       "index": 10,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A01",
+        "dogId": "C03",
         "transform": "none"
       },
       "fx": {
@@ -395,29 +395,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5010
+        "shuffleSeed": 7010
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-011",
+      "id": "D-011",
       "index": 11,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A02",
+        "dogId": "C05",
         "transform": "none"
       },
       "fx": {
@@ -427,29 +427,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5011
+        "shuffleSeed": 7011
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-012",
+      "id": "D-012",
       "index": 12,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A03",
+        "dogId": "A02",
         "transform": "none"
       },
       "fx": {
@@ -459,29 +459,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5012
+        "shuffleSeed": 7012
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-013",
+      "id": "D-013",
       "index": 13,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A04",
+        "dogId": "A03",
         "transform": "none"
       },
       "fx": {
@@ -491,29 +491,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5013
+        "shuffleSeed": 7013
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-014",
+      "id": "D-014",
       "index": 14,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A05",
+        "dogId": "A04",
         "transform": "none"
       },
       "fx": {
@@ -523,29 +523,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5014
+        "shuffleSeed": 7014
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-015",
+      "id": "D-015",
       "index": 15,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A06",
+        "dogId": "A05",
         "transform": "none"
       },
       "fx": {
@@ -555,29 +555,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5015
+        "shuffleSeed": 7015
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-016",
+      "id": "D-016",
       "index": 16,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A07",
+        "dogId": "A06",
         "transform": "none"
       },
       "fx": {
@@ -587,29 +587,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5016
+        "shuffleSeed": 7016
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-017",
+      "id": "D-017",
       "index": 17,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A08",
+        "dogId": "A07",
         "transform": "none"
       },
       "fx": {
@@ -619,29 +619,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5017
+        "shuffleSeed": 7017
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-018",
+      "id": "D-018",
       "index": 18,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A09",
+        "dogId": "A08",
         "transform": "none"
       },
       "fx": {
@@ -651,29 +651,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5018
+        "shuffleSeed": 7018
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-019",
+      "id": "D-019",
       "index": 19,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A10",
+        "dogId": "A09",
         "transform": "none"
       },
       "fx": {
@@ -683,29 +683,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5019
+        "shuffleSeed": 7019
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-020",
+      "id": "D-020",
       "index": 20,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A01",
+        "dogId": "A10",
         "transform": "none"
       },
       "fx": {
@@ -715,29 +715,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5020
+        "shuffleSeed": 7020
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-021",
+      "id": "D-021",
       "index": 21,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A02",
+        "dogId": "C01",
         "transform": "none"
       },
       "fx": {
@@ -747,29 +747,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5021
+        "shuffleSeed": 7021
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-022",
+      "id": "D-022",
       "index": 22,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A03",
+        "dogId": "C03",
         "transform": "none"
       },
       "fx": {
@@ -779,29 +779,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5022
+        "shuffleSeed": 7022
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-023",
+      "id": "D-023",
       "index": 23,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A04",
+        "dogId": "C05",
         "transform": "none"
       },
       "fx": {
@@ -811,29 +811,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5023
+        "shuffleSeed": 7023
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-024",
+      "id": "D-024",
       "index": 24,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A05",
+        "dogId": "A02",
         "transform": "none"
       },
       "fx": {
@@ -843,29 +843,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5024
+        "shuffleSeed": 7024
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-025",
+      "id": "D-025",
       "index": 25,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A06",
+        "dogId": "A03",
         "transform": "none"
       },
       "fx": {
@@ -875,29 +875,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5025
+        "shuffleSeed": 7025
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-026",
+      "id": "D-026",
       "index": 26,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A07",
+        "dogId": "A04",
         "transform": "none"
       },
       "fx": {
@@ -907,29 +907,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5026
+        "shuffleSeed": 7026
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-027",
+      "id": "D-027",
       "index": 27,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A08",
+        "dogId": "A05",
         "transform": "none"
       },
       "fx": {
@@ -939,29 +939,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5027
+        "shuffleSeed": 7027
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-028",
+      "id": "D-028",
       "index": 28,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A09",
+        "dogId": "A06",
         "transform": "none"
       },
       "fx": {
@@ -971,29 +971,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5028
+        "shuffleSeed": 7028
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-029",
+      "id": "D-029",
       "index": 29,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A10",
+        "dogId": "A07",
         "transform": "none"
       },
       "fx": {
@@ -1003,29 +1003,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5029
+        "shuffleSeed": 7029
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-030",
+      "id": "D-030",
       "index": 30,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A01",
+        "dogId": "A08",
         "transform": "none"
       },
       "fx": {
@@ -1035,29 +1035,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5030
+        "shuffleSeed": 7030
       },
       "meta": {
         "band": "easy",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-031",
+      "id": "D-031",
       "index": 31,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A06",
+        "dogId": "C05",
         "transform": "none"
       },
       "fx": {
@@ -1067,29 +1067,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5031
+        "shuffleSeed": 7031
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-032",
+      "id": "D-032",
       "index": 32,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A07",
+        "dogId": "A02",
         "transform": "none"
       },
       "fx": {
@@ -1099,29 +1099,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5032
+        "shuffleSeed": 7032
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-033",
+      "id": "D-033",
       "index": 33,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A08",
+        "dogId": "A03",
         "transform": "none"
       },
       "fx": {
@@ -1131,29 +1131,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5033
+        "shuffleSeed": 7033
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-034",
+      "id": "D-034",
       "index": 34,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A09",
+        "dogId": "A04",
         "transform": "none"
       },
       "fx": {
@@ -1163,29 +1163,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5034
+        "shuffleSeed": 7034
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-035",
+      "id": "D-035",
       "index": 35,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A10",
+        "dogId": "A05",
         "transform": "none"
       },
       "fx": {
@@ -1195,29 +1195,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5035
+        "shuffleSeed": 7035
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-036",
+      "id": "D-036",
       "index": 36,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A01",
+        "dogId": "A06",
         "transform": "none"
       },
       "fx": {
@@ -1227,29 +1227,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5036
+        "shuffleSeed": 7036
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-037",
+      "id": "D-037",
       "index": 37,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A02",
+        "dogId": "A07",
         "transform": "none"
       },
       "fx": {
@@ -1259,29 +1259,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5037
+        "shuffleSeed": 7037
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-038",
+      "id": "D-038",
       "index": 38,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A03",
+        "dogId": "A08",
         "transform": "none"
       },
       "fx": {
@@ -1291,29 +1291,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5038
+        "shuffleSeed": 7038
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-039",
+      "id": "D-039",
       "index": 39,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A04",
+        "dogId": "A09",
         "transform": "none"
       },
       "fx": {
@@ -1323,29 +1323,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5039
+        "shuffleSeed": 7039
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-040",
+      "id": "D-040",
       "index": 40,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 3,
         "rows": 3
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A05",
+        "dogId": "A10",
         "transform": "none"
       },
       "fx": {
@@ -1355,29 +1355,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5040
+        "shuffleSeed": 7040
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-041",
+      "id": "D-041",
       "index": 41,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A06",
+        "dogId": "C01",
         "transform": "none"
       },
       "fx": {
@@ -1387,29 +1387,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5041
+        "shuffleSeed": 7041
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-042",
+      "id": "D-042",
       "index": 42,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A07",
+        "dogId": "C03",
         "transform": "none"
       },
       "fx": {
@@ -1419,29 +1419,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5042
+        "shuffleSeed": 7042
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-043",
+      "id": "D-043",
       "index": 43,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A08",
+        "dogId": "C05",
         "transform": "none"
       },
       "fx": {
@@ -1451,29 +1451,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5043
+        "shuffleSeed": 7043
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-044",
+      "id": "D-044",
       "index": 44,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A09",
+        "dogId": "A02",
         "transform": "none"
       },
       "fx": {
@@ -1483,29 +1483,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5044
+        "shuffleSeed": 7044
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-045",
+      "id": "D-045",
       "index": 45,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A10",
+        "dogId": "A03",
         "transform": "none"
       },
       "fx": {
@@ -1515,29 +1515,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5045
+        "shuffleSeed": 7045
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-046",
+      "id": "D-046",
       "index": 46,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A01",
+        "dogId": "A04",
         "transform": "none"
       },
       "fx": {
@@ -1547,29 +1547,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5046
+        "shuffleSeed": 7046
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-047",
+      "id": "D-047",
       "index": 47,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A02",
+        "dogId": "A05",
         "transform": "none"
       },
       "fx": {
@@ -1579,29 +1579,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5047
+        "shuffleSeed": 7047
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-048",
+      "id": "D-048",
       "index": 48,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A03",
+        "dogId": "A06",
         "transform": "none"
       },
       "fx": {
@@ -1611,29 +1611,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5048
+        "shuffleSeed": 7048
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-049",
+      "id": "D-049",
       "index": 49,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A04",
+        "dogId": "A07",
         "transform": "none"
       },
       "fx": {
@@ -1643,29 +1643,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5049
+        "shuffleSeed": 7049
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-050",
+      "id": "D-050",
       "index": 50,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "A05",
+        "dogId": "A08",
         "transform": "none"
       },
       "fx": {
@@ -1675,29 +1675,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5050
+        "shuffleSeed": 7050
       },
       "meta": {
         "band": "easy_plus",
-        "diffType": "cat_vs_animal"
+        "diffType": "dog_vs_animal"
       }
     },
     {
-      "id": "C-051",
+      "id": "D-051",
       "index": 51,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D01",
         "transform": "none"
       },
       "fx": {
@@ -1707,29 +1707,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5051
+        "shuffleSeed": 7051
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-052",
+      "id": "D-052",
       "index": 52,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "fx": {
@@ -1739,29 +1739,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5052
+        "shuffleSeed": 7052
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-053",
+      "id": "D-053",
       "index": 53,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D04",
         "transform": "none"
       },
       "fx": {
@@ -1771,29 +1771,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5053
+        "shuffleSeed": 7053
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-054",
+      "id": "D-054",
       "index": 54,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "fx": {
@@ -1803,29 +1803,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5054
+        "shuffleSeed": 7054
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-055",
+      "id": "D-055",
       "index": 55,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D02",
         "transform": "none"
       },
       "fx": {
@@ -1835,29 +1835,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5055
+        "shuffleSeed": 7055
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-056",
+      "id": "D-056",
       "index": 56,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D07",
         "transform": "none"
       },
       "fx": {
@@ -1867,29 +1867,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5056
+        "shuffleSeed": 7056
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-057",
+      "id": "D-057",
       "index": 57,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "fx": {
@@ -1899,29 +1899,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5057
+        "shuffleSeed": 7057
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-058",
+      "id": "D-058",
       "index": 58,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D08",
         "transform": "none"
       },
       "fx": {
@@ -1931,29 +1931,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5058
+        "shuffleSeed": 7058
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-059",
+      "id": "D-059",
       "index": 59,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "fx": {
@@ -1963,29 +1963,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5059
+        "shuffleSeed": 7059
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-060",
+      "id": "D-060",
       "index": 60,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D08",
         "transform": "none"
       },
       "fx": {
@@ -1995,29 +1995,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5060
+        "shuffleSeed": 7060
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-061",
+      "id": "D-061",
       "index": 61,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D03",
         "transform": "none"
       },
       "fx": {
@@ -2027,29 +2027,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5061
+        "shuffleSeed": 7061
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-062",
+      "id": "D-062",
       "index": 62,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D07",
         "transform": "none"
       },
       "fx": {
@@ -2059,29 +2059,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5062
+        "shuffleSeed": 7062
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-063",
+      "id": "D-063",
       "index": 63,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D01",
         "transform": "none"
       },
       "fx": {
@@ -2091,29 +2091,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5063
+        "shuffleSeed": 7063
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-064",
+      "id": "D-064",
       "index": 64,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D06",
         "transform": "none"
       },
       "fx": {
@@ -2123,29 +2123,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5064
+        "shuffleSeed": 7064
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-065",
+      "id": "D-065",
       "index": 65,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D04",
         "transform": "none"
       },
       "fx": {
@@ -2155,29 +2155,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5065
+        "shuffleSeed": 7065
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-066",
+      "id": "D-066",
       "index": 66,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D05",
         "transform": "none"
       },
       "fx": {
@@ -2187,29 +2187,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5066
+        "shuffleSeed": 7066
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-067",
+      "id": "D-067",
       "index": 67,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D02",
         "transform": "none"
       },
       "fx": {
@@ -2219,29 +2219,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5067
+        "shuffleSeed": 7067
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-068",
+      "id": "D-068",
       "index": 68,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D07",
         "transform": "none"
       },
       "fx": {
@@ -2251,29 +2251,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5068
+        "shuffleSeed": 7068
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-069",
+      "id": "D-069",
       "index": 69,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "fx": {
@@ -2283,29 +2283,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5069
+        "shuffleSeed": 7069
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-070",
+      "id": "D-070",
       "index": 70,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D08",
         "transform": "none"
       },
       "fx": {
@@ -2315,29 +2315,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5070
+        "shuffleSeed": 7070
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-071",
+      "id": "D-071",
       "index": 71,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D03",
         "transform": "none"
       },
       "fx": {
@@ -2347,29 +2347,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5071
+        "shuffleSeed": 7071
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-072",
+      "id": "D-072",
       "index": 72,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D08",
         "transform": "none"
       },
       "fx": {
@@ -2379,29 +2379,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5072
+        "shuffleSeed": 7072
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-073",
+      "id": "D-073",
       "index": 73,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D03",
         "transform": "none"
       },
       "fx": {
@@ -2411,29 +2411,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5073
+        "shuffleSeed": 7073
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-074",
+      "id": "D-074",
       "index": 74,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D07",
         "transform": "none"
       },
       "fx": {
@@ -2443,29 +2443,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5074
+        "shuffleSeed": 7074
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-075",
+      "id": "D-075",
       "index": 75,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D01",
         "transform": "none"
       },
       "fx": {
@@ -2475,29 +2475,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5075
+        "shuffleSeed": 7075
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-076",
+      "id": "D-076",
       "index": 76,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "fx": {
@@ -2507,29 +2507,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5076
+        "shuffleSeed": 7076
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-077",
+      "id": "D-077",
       "index": 77,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D04",
         "transform": "none"
       },
       "fx": {
@@ -2539,29 +2539,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5077
+        "shuffleSeed": 7077
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-078",
+      "id": "D-078",
       "index": 78,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "fx": {
@@ -2571,29 +2571,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5078
+        "shuffleSeed": 7078
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-079",
+      "id": "D-079",
       "index": 79,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D02",
         "transform": "none"
       },
       "fx": {
@@ -2603,29 +2603,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5079
+        "shuffleSeed": 7079
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-080",
+      "id": "D-080",
       "index": 80,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 4,
         "rows": 4
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D07",
         "transform": "none"
       },
       "fx": {
@@ -2635,29 +2635,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5080
+        "shuffleSeed": 7080
       },
       "meta": {
         "band": "medium",
-        "diffType": "cat_category"
+        "diffType": "dog_category"
       }
     },
     {
-      "id": "C-081",
+      "id": "D-081",
       "index": 81,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01b",
+        "dogId": "D01b",
         "transform": "none"
       },
       "fx": {
@@ -2667,7 +2667,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5081
+        "shuffleSeed": 7081
       },
       "meta": {
         "band": "hard",
@@ -2675,22 +2675,22 @@
       }
     },
     {
-      "id": "C-082",
+      "id": "D-082",
       "index": 82,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02",
-        "transform": "hue40+scale88"
+        "dogId": "D02",
+        "transform": "rot30"
       },
       "fx": {
         "board": "none",
@@ -2699,7 +2699,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5082
+        "shuffleSeed": 7082
       },
       "meta": {
         "band": "hard",
@@ -2707,22 +2707,22 @@
       }
     },
     {
-      "id": "C-083",
+      "id": "D-083",
       "index": 83,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
-        "transform": "scale75"
+        "dogId": "D03",
+        "transform": "hue40+scale88"
       },
       "fx": {
         "board": "none",
@@ -2731,7 +2731,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5083
+        "shuffleSeed": 7083
       },
       "meta": {
         "band": "hard",
@@ -2739,21 +2739,21 @@
       }
     },
     {
-      "id": "C-084",
+      "id": "D-084",
       "index": 84,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "hue40"
       },
       "fx": {
@@ -2763,7 +2763,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5084
+        "shuffleSeed": 7084
       },
       "meta": {
         "band": "hard",
@@ -2771,21 +2771,21 @@
       }
     },
     {
-      "id": "C-085",
+      "id": "D-085",
       "index": 85,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "darker"
       },
       "fx": {
@@ -2795,7 +2795,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5085
+        "shuffleSeed": 7085
       },
       "meta": {
         "band": "hard",
@@ -2803,21 +2803,21 @@
       }
     },
     {
-      "id": "C-086",
+      "id": "D-086",
       "index": 86,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "scale88"
       },
       "fx": {
@@ -2827,7 +2827,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5086
+        "shuffleSeed": 7086
       },
       "meta": {
         "band": "hard",
@@ -2835,22 +2835,22 @@
       }
     },
     {
-      "id": "C-087",
+      "id": "D-087",
       "index": 87,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C07",
-        "transform": "flipX"
+        "dogId": "D07b",
+        "transform": "none"
       },
       "fx": {
         "board": "none",
@@ -2859,29 +2859,29 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5087
+        "shuffleSeed": 7087
       },
       "meta": {
         "band": "hard",
-        "diffType": "fur_tint_or_pose"
+        "diffType": "decoration_or_fur"
       }
     },
     {
-      "id": "C-088",
+      "id": "D-088",
       "index": 88,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "rot30"
       },
       "fx": {
@@ -2891,7 +2891,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5088
+        "shuffleSeed": 7088
       },
       "meta": {
         "band": "hard",
@@ -2899,21 +2899,21 @@
       }
     },
     {
-      "id": "C-089",
+      "id": "D-089",
       "index": 89,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "hue40+scale88"
       },
       "fx": {
@@ -2923,7 +2923,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5089
+        "shuffleSeed": 7089
       },
       "meta": {
         "band": "hard",
@@ -2931,21 +2931,21 @@
       }
     },
     {
-      "id": "C-090",
+      "id": "D-090",
       "index": 90,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02b",
+        "dogId": "D02b",
         "transform": "none"
       },
       "fx": {
@@ -2955,7 +2955,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5090
+        "shuffleSeed": 7090
       },
       "meta": {
         "band": "hard",
@@ -2963,21 +2963,21 @@
       }
     },
     {
-      "id": "C-091",
+      "id": "D-091",
       "index": 91,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "darker"
       },
       "fx": {
@@ -2987,7 +2987,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5091
+        "shuffleSeed": 7091
       },
       "meta": {
         "band": "hard",
@@ -2995,21 +2995,21 @@
       }
     },
     {
-      "id": "C-092",
+      "id": "D-092",
       "index": 92,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "scale88"
       },
       "fx": {
@@ -3019,7 +3019,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5092
+        "shuffleSeed": 7092
       },
       "meta": {
         "band": "hard",
@@ -3027,21 +3027,21 @@
       }
     },
     {
-      "id": "C-093",
+      "id": "D-093",
       "index": 93,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05b",
+        "dogId": "D05b",
         "transform": "none"
       },
       "fx": {
@@ -3051,7 +3051,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5093
+        "shuffleSeed": 7093
       },
       "meta": {
         "band": "hard",
@@ -3059,22 +3059,22 @@
       }
     },
     {
-      "id": "C-094",
+      "id": "D-094",
       "index": 94,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
-        "transform": "hue40+scale88"
+        "dogId": "D06",
+        "transform": "rot30"
       },
       "fx": {
         "board": "none",
@@ -3083,7 +3083,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5094
+        "shuffleSeed": 7094
       },
       "meta": {
         "band": "hard",
@@ -3091,21 +3091,21 @@
       }
     },
     {
-      "id": "C-095",
+      "id": "D-095",
       "index": 95,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D07",
         "transform": "hue40+scale88"
       },
       "fx": {
@@ -3115,7 +3115,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5095
+        "shuffleSeed": 7095
       },
       "meta": {
         "band": "hard",
@@ -3123,21 +3123,21 @@
       }
     },
     {
-      "id": "C-096",
+      "id": "D-096",
       "index": 96,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D08",
         "transform": "hue40"
       },
       "fx": {
@@ -3147,7 +3147,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5096
+        "shuffleSeed": 7096
       },
       "meta": {
         "band": "hard",
@@ -3155,21 +3155,21 @@
       }
     },
     {
-      "id": "C-097",
+      "id": "D-097",
       "index": 97,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "darker"
       },
       "fx": {
@@ -3179,7 +3179,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5097
+        "shuffleSeed": 7097
       },
       "meta": {
         "band": "hard",
@@ -3187,21 +3187,21 @@
       }
     },
     {
-      "id": "C-098",
+      "id": "D-098",
       "index": 98,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "scale88"
       },
       "fx": {
@@ -3211,7 +3211,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5098
+        "shuffleSeed": 7098
       },
       "meta": {
         "band": "hard",
@@ -3219,22 +3219,22 @@
       }
     },
     {
-      "id": "C-099",
+      "id": "D-099",
       "index": 99,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03b",
-        "transform": "none"
+        "dogId": "D03",
+        "transform": "flipX"
       },
       "fx": {
         "board": "none",
@@ -3243,39 +3243,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5099
-      },
-      "meta": {
-        "band": "hard",
-        "diffType": "decoration_or_fur"
-      }
-    },
-    {
-      "id": "C-100",
-      "index": 100,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C04",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C04",
-        "transform": "rot30"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "none"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5100
+        "shuffleSeed": 7099
       },
       "meta": {
         "band": "hard",
@@ -3283,21 +3251,53 @@
       }
     },
     {
-      "id": "C-101",
+      "id": "D-100",
+      "index": 100,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7100
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "D-101",
       "index": 101,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D01",
         "transform": "scale125"
       },
       "fx": {
@@ -3307,7 +3307,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5101
+        "shuffleSeed": 7101
       },
       "meta": {
         "band": "hell",
@@ -3315,21 +3315,21 @@
       }
     },
     {
-      "id": "C-102",
+      "id": "D-102",
       "index": 102,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D02",
         "transform": "scale75"
       },
       "fx": {
@@ -3339,7 +3339,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5102
+        "shuffleSeed": 7102
       },
       "meta": {
         "band": "hell",
@@ -3347,21 +3347,21 @@
       }
     },
     {
-      "id": "C-103",
+      "id": "D-103",
       "index": 103,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C03",
+        "dogId": "D03",
         "transform": "scale75"
       },
       "fx": {
@@ -3371,7 +3371,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5103
+        "shuffleSeed": 7103
       },
       "meta": {
         "band": "hell",
@@ -3379,21 +3379,21 @@
       }
     },
     {
-      "id": "C-104",
+      "id": "D-104",
       "index": 104,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C04",
+        "dogId": "D04",
         "transform": "rot180"
       },
       "fx": {
@@ -3403,7 +3403,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5104
+        "shuffleSeed": 7104
       },
       "meta": {
         "band": "hell",
@@ -3411,22 +3411,22 @@
       }
     },
     {
-      "id": "C-105",
+      "id": "D-105",
       "index": 105,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05",
-        "transform": "darker"
+        "dogId": "D05",
+        "transform": "rot180"
       },
       "fx": {
         "board": "none",
@@ -3435,7 +3435,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5105
+        "shuffleSeed": 7105
       },
       "meta": {
         "band": "hell",
@@ -3443,213 +3443,21 @@
       }
     },
     {
-      "id": "C-106",
+      "id": "D-106",
       "index": 106,
-      "theme": "cat",
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
-        "transform": "darker"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "teleport"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5106
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "teleport_overt"
-      }
-    },
-    {
-      "id": "C-107",
-      "index": 107,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C07",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C07",
-        "transform": "scale125"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "none"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5107
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "hard_diff"
-      }
-    },
-    {
-      "id": "C-108",
-      "index": 108,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C08",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C08",
-        "transform": "scale75"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "teleport"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5108
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "teleport_overt"
-      }
-    },
-    {
-      "id": "C-109",
-      "index": 109,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C01",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C01",
-        "transform": "scale75"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "none"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5109
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "hard_diff"
-      }
-    },
-    {
-      "id": "C-110",
-      "index": 110,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C02",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C02",
-        "transform": "rot180"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "teleport"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5110
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "teleport_overt"
-      }
-    },
-    {
-      "id": "C-111",
-      "index": 111,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C03",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C03",
-        "transform": "rot180"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "none"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5111
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "hard_diff"
-      }
-    },
-    {
-      "id": "C-112",
-      "index": 112,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C04",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C04",
+        "dogId": "D06",
         "transform": "flipX"
       },
       "fx": {
@@ -3659,7 +3467,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5112
+        "shuffleSeed": 7106
       },
       "meta": {
         "band": "hell",
@@ -3667,53 +3475,53 @@
       }
     },
     {
-      "id": "C-113",
-      "index": 113,
-      "theme": "cat",
+      "id": "D-107",
+      "index": 107,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C05",
+        "dogId": "D07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C05b",
-        "transform": "none"
+        "dogId": "D07",
+        "transform": "scale125"
       },
       "fx": {
         "board": "none",
-        "odd": "teleport"
+        "odd": "none"
       },
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5113
+        "shuffleSeed": 7107
       },
       "meta": {
         "band": "hell",
-        "diffType": "twin"
+        "diffType": "hard_diff"
       }
     },
     {
-      "id": "C-114",
-      "index": 114,
-      "theme": "cat",
+      "id": "D-108",
+      "index": 108,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D08",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C06",
+        "dogId": "D08",
         "transform": "scale75"
       },
       "fx": {
@@ -3723,7 +3531,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5114
+        "shuffleSeed": 7108
       },
       "meta": {
         "band": "hell",
@@ -3731,21 +3539,21 @@
       }
     },
     {
-      "id": "C-115",
-      "index": 115,
-      "theme": "cat",
+      "id": "D-109",
+      "index": 109,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D01",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C07",
+        "dogId": "D01",
         "transform": "scale75"
       },
       "fx": {
@@ -3755,7 +3563,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5115
+        "shuffleSeed": 7109
       },
       "meta": {
         "band": "hell",
@@ -3763,21 +3571,21 @@
       }
     },
     {
-      "id": "C-116",
-      "index": 116,
-      "theme": "cat",
+      "id": "D-110",
+      "index": 110,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C08",
+        "dogId": "D02",
         "transform": "rot180"
       },
       "fx": {
@@ -3787,7 +3595,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5116
+        "shuffleSeed": 7110
       },
       "meta": {
         "band": "hell",
@@ -3795,21 +3603,85 @@
       }
     },
     {
-      "id": "C-117",
-      "index": 117,
-      "theme": "cat",
+      "id": "D-111",
+      "index": 111,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C01",
+        "dogId": "D03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C01b",
+        "dogId": "D03",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7111
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "D-112",
+      "index": 112,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7112
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "D-113",
+      "index": 113,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D05b",
         "transform": "none"
       },
       "fx": {
@@ -3819,7 +3691,7 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5117
+        "shuffleSeed": 7113
       },
       "meta": {
         "band": "hell",
@@ -3827,85 +3699,21 @@
       }
     },
     {
-      "id": "C-118",
-      "index": 118,
-      "theme": "cat",
+      "id": "D-114",
+      "index": 114,
+      "theme": "dog",
       "grid": {
         "cols": 5,
         "rows": 5
       },
       "base": {
         "render": "image",
-        "catId": "C02",
+        "dogId": "D06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "catId": "C02b",
-        "transform": "none"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "teleport"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5118
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "twin"
-      }
-    },
-    {
-      "id": "C-119",
-      "index": 119,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C03",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C03b",
-        "transform": "none"
-      },
-      "fx": {
-        "board": "none",
-        "odd": "teleport"
-      },
-      "rules": {
-        "timeLimitMs": 10000,
-        "failOnWrongTap": true,
-        "shuffleSeed": 5119
-      },
-      "meta": {
-        "band": "hell",
-        "diffType": "twin"
-      }
-    },
-    {
-      "id": "C-120",
-      "index": 120,
-      "theme": "cat",
-      "grid": {
-        "cols": 5,
-        "rows": 5
-      },
-      "base": {
-        "render": "image",
-        "catId": "C04",
-        "transform": "none"
-      },
-      "odd": {
-        "render": "image",
-        "catId": "C04",
+        "dogId": "D06",
         "transform": "scale75"
       },
       "fx": {
@@ -3915,7 +3723,199 @@
       "rules": {
         "timeLimitMs": 10000,
         "failOnWrongTap": true,
-        "shuffleSeed": 5120
+        "shuffleSeed": 7114
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "D-115",
+      "index": 115,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D07b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7115
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "D-116",
+      "index": 116,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D08",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7116
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "D-117",
+      "index": 117,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D01b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7117
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "D-118",
+      "index": 118,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D02b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7118
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "D-119",
+      "index": 119,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D03",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7119
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "D-120",
+      "index": 120,
+      "theme": "dog",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "dogId": "D04",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7120
       },
       "meta": {
         "band": "hell",

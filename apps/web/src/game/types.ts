@@ -1,6 +1,8 @@
 export type FailReason = "wrong" | "timeout";
 
-export type ThemeId = "emoji" | "monster" | "cat";
+export type ThemeId = "emoji" | "monster" | "cat" | "dog" | "fairy";
+
+export type PackDifficulty = "easy" | "medium" | "hard";
 
 export type LevelCategory =
   | "animals"
@@ -104,12 +106,74 @@ export interface CatCampaignData {
   levels: CatLevelDef[];
 }
 
+export interface DogRef {
+  render: "image";
+  dogId: string;
+  transform: string;
+}
+
+export interface DogLevelDef {
+  id: string;
+  index: number;
+  theme: "dog";
+  grid: { cols: number; rows: number };
+  base: DogRef;
+  odd: DogRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface DogCampaignData {
+  version: number;
+  theme: "dog";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: DogLevelDef[];
+}
+
+export interface FairyRef {
+  render: "image";
+  fairyId: string;
+  transform: string;
+}
+
+export interface FairyLevelDef {
+  id: string;
+  index: number;
+  theme: "fairy";
+  grid: { cols: number; rows: number };
+  base: FairyRef;
+  odd: FairyRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface FairyCampaignData {
+  version: number;
+  theme: "fairy";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: FairyLevelDef[];
+}
+
 export interface CellView {
   key: string;
   kind: "emoji" | "monster" | "image";
   emoji?: string;
   monsterId?: string;
   catId?: string;
+  dogId?: string;
+  fairyId?: string;
   src?: string;
   transformKey: string;
   cssTransform: string;

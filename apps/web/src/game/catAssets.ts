@@ -9,6 +9,16 @@ const AVAILABLE = new Set([
   "C06",
   "C07",
   "C08",
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08",
+  "A09",
+  "A10",
 ]);
 
 /** Twin PNGs present in /public/cats */
@@ -21,26 +31,27 @@ const TWIN_FALLBACK: Record<string, string[]> = {
   C05b: ["hue40"],
 };
 
-export function catSrc(catId: string): string {
-  return `/cats/cat_${catId.toLowerCase()}.png`;
+export function catSrc(id: string): string {
+  return `/cats/cat_${id.toLowerCase()}.png`;
 }
 
-export function resolveCatArt(catId: string): {
+export function resolveCatArt(id: string): {
   catId: string;
   extraParts: string[];
 } {
-  if (AVAILABLE_TWINS.has(catId)) {
-    return { catId, extraParts: [] };
+  const key = id.toUpperCase();
+  if (AVAILABLE_TWINS.has(key)) {
+    return { catId: key, extraParts: [] };
   }
-  const twin = /^(C\d{2})b$/i.exec(catId);
+  const twin = /^(C\d{2})b$/i.exec(key);
   if (twin) {
     const base = twin[1].toUpperCase();
     if (AVAILABLE.has(base)) {
-      return { catId: base, extraParts: TWIN_FALLBACK[catId] ?? ["hue40"] };
+      return { catId: base, extraParts: TWIN_FALLBACK[key] ?? ["hue40"] };
     }
   }
-  if (AVAILABLE.has(catId)) {
-    return { catId, extraParts: [] };
+  if (AVAILABLE.has(key)) {
+    return { catId: key, extraParts: [] };
   }
   return { catId: "C01", extraParts: [] };
 }

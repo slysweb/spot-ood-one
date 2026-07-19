@@ -1,0 +1,2771 @@
+{
+  "version": 1,
+  "theme": "fairy",
+  "difficulty": "medium",
+  "campaignLevels": 85,
+  "assetPack": {
+    "required": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08"
+    ],
+    "partTwins": [
+      "F01h",
+      "F02d",
+      "F03p",
+      "F04e",
+      "F05h",
+      "F06d",
+      "F07p",
+      "F08e"
+    ],
+    "microTwins": [
+      "F01m",
+      "F02m",
+      "F03m",
+      "F04m"
+    ],
+    "note": "Medium pack: 15 easy + 40 part + 10 bridge + 20 micro/teleport"
+  },
+  "fx": [
+    "none",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-15": "easy — different fairy silhouette/color",
+    "16-55": "medium — one part different (painted twin)",
+    "56-65": "bridge — clearer part diffs, no teleport",
+    "66-85": "hard — micro twin; teleport from 71"
+  },
+  "levels": [
+    {
+      "id": "F-001",
+      "index": 1,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9001
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-002",
+      "index": 2,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9002
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-003",
+      "index": 3,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9003
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-004",
+      "index": 4,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9004
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-005",
+      "index": 5,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9005
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-006",
+      "index": 6,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9006
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-007",
+      "index": 7,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9007
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-008",
+      "index": 8,
+      "theme": "fairy",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9008
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-009",
+      "index": 9,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9009
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-010",
+      "index": 10,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9010
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-011",
+      "index": 11,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9011
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-012",
+      "index": 12,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9012
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-013",
+      "index": 13,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9013
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-014",
+      "index": 14,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9014
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-015",
+      "index": 15,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9015
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "different_fairy"
+      }
+    },
+    {
+      "id": "F-016",
+      "index": 16,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9016
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-017",
+      "index": 17,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9017
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-018",
+      "index": 18,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9018
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-019",
+      "index": 19,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9019
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-020",
+      "index": 20,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9020
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-021",
+      "index": 21,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9021
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-022",
+      "index": 22,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9022
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-023",
+      "index": 23,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9023
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-024",
+      "index": 24,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9024
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-025",
+      "index": 25,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9025
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-026",
+      "index": 26,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9026
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-027",
+      "index": 27,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9027
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-028",
+      "index": 28,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9028
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-029",
+      "index": 29,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9029
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-030",
+      "index": 30,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9030
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-031",
+      "index": 31,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9031
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-032",
+      "index": 32,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9032
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-033",
+      "index": 33,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9033
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-034",
+      "index": 34,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9034
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-035",
+      "index": 35,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9035
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-036",
+      "index": 36,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9036
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-037",
+      "index": 37,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9037
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-038",
+      "index": 38,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9038
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-039",
+      "index": 39,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9039
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-040",
+      "index": 40,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9040
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-041",
+      "index": 41,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9041
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-042",
+      "index": 42,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9042
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-043",
+      "index": 43,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9043
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-044",
+      "index": 44,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9044
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-045",
+      "index": 45,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9045
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-046",
+      "index": 46,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9046
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-047",
+      "index": 47,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9047
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-048",
+      "index": 48,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9048
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-049",
+      "index": 49,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9049
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-050",
+      "index": 50,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9050
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-051",
+      "index": 51,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9051
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-052",
+      "index": 52,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9052
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-053",
+      "index": 53,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9053
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-054",
+      "index": 54,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9054
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-055",
+      "index": 55,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F08e",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9055
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "part_diff"
+      }
+    },
+    {
+      "id": "F-056",
+      "index": 56,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9056
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-057",
+      "index": 57,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9057
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-058",
+      "index": 58,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9058
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-059",
+      "index": 59,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9059
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-060",
+      "index": 60,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9060
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-061",
+      "index": 61,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9061
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-062",
+      "index": 62,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9062
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-063",
+      "index": 63,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F05h",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9063
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-064",
+      "index": 64,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F06d",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9064
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-065",
+      "index": 65,
+      "theme": "fairy",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F07p",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9065
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "part_diff_easy"
+      }
+    },
+    {
+      "id": "F-066",
+      "index": 66,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9066
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-067",
+      "index": 67,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9067
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-068",
+      "index": 68,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9068
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-069",
+      "index": 69,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9069
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-070",
+      "index": 70,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9070
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-071",
+      "index": 71,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9071
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-072",
+      "index": 72,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9072
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-073",
+      "index": 73,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9073
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-074",
+      "index": 74,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9074
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-075",
+      "index": 75,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9075
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-076",
+      "index": 76,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9076
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-077",
+      "index": 77,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9077
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-078",
+      "index": 78,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9078
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-079",
+      "index": 79,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9079
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-080",
+      "index": 80,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9080
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-081",
+      "index": 81,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9081
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-082",
+      "index": 82,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F01m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9082
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-083",
+      "index": 83,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F02m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9083
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-084",
+      "index": 84,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F03m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9084
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    },
+    {
+      "id": "F-085",
+      "index": 85,
+      "theme": "fairy",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "fairyId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "fairyId": "F04m",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9085
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "micro_diff"
+      }
+    }
+  ]
+}

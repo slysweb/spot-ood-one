@@ -36,6 +36,27 @@ realistic photo, scary, horror, bloody, complex background, multiple cats, text,
 
 ---
 
+## 其他动物 A01–A10（与猫同风格）
+
+在风格锚点后接造型；务必与猫包同一套描边/阴影语言。
+
+| ID | 造型 |
+|----|------|
+| A01 | cute cartoon dog puppy mascot |
+| A02 | cute cartoon rabbit bunny mascot |
+| A03 | cute cartoon teddy bear mascot |
+| A04 | cute cartoon fox mascot, orange fur white chest |
+| A05 | cute cartoon panda mascot |
+| A06 | cute cartoon pink pig mascot |
+| A07 | cute cartoon green frog mascot |
+| A08 | cute cartoon brown monkey mascot |
+| A09 | cute cartoon baby tiger cub mascot, friendly not scary |
+| A10 | cute cartoon gray koala mascot |
+
+导出：`cat_a01.png` … `cat_a10.png`
+
+---
+
 ## Twin（困难/地狱）
 
 在对应主图提示词后追加差异，**其余完全一致**：

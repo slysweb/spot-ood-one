@@ -1,4 +1,4 @@
-import type { ThemeId } from "./types";
+import type { PackDifficulty, ThemeId } from "./types";
 
 export interface ThemeMeta {
   id: ThemeId;
@@ -9,6 +9,7 @@ export interface ThemeMeta {
   tagline: string;
   findLine: string;
   tutorialBody: string;
+  difficulty: PackDifficulty;
 }
 
 export const THEMES: ThemeMeta[] = [
@@ -22,6 +23,7 @@ export const THEMES: ThemeMeta[] = [
     findLine: "Find the different emoji.",
     tutorialBody:
       "Tap the emoji that doesn’t match the rest. You have 10 seconds.",
+    difficulty: "easy",
   },
   {
     id: "monster",
@@ -33,6 +35,7 @@ export const THEMES: ThemeMeta[] = [
     findLine: "Find the different monster.",
     tutorialBody:
       "Tap the monster that doesn’t match the rest. Later levels twist, tint, and even jump around. You have 10 seconds.",
+    difficulty: "easy",
   },
   {
     id: "cat",
@@ -43,14 +46,55 @@ export const THEMES: ThemeMeta[] = [
     tagline: "Find the different cat.",
     findLine: "Find the odd one among the cats.",
     tutorialBody:
-      "Tap the one that doesn’t belong. Early levels hide another animal among cats; later levels use look-alike kitties, tints, bells, and jump-arounds. You have 10 seconds.",
+      "Tap the one that doesn’t belong. Early levels hide another animal among cute cats; later levels use look-alike kitties, tints, bells, and jump-arounds. You have 10 seconds.",
+    difficulty: "easy",
+  },
+  {
+    id: "dog",
+    path: "/dog",
+    label: "Dogs",
+    eyebrow: "Dog pack",
+    headline: "Dogs",
+    tagline: "Find the different dog.",
+    findLine: "Find the odd one among the dogs.",
+    tutorialBody:
+      "Tap the one that doesn’t belong. Early levels hide another animal among cute dogs; later levels use look-alike pups, tints, collars, and jump-arounds. You have 10 seconds.",
+    difficulty: "easy",
+  },
+  {
+    id: "fairy",
+    path: "/fairy",
+    label: "Fairies",
+    eyebrow: "Fairy pack · Medium",
+    headline: "Fairies",
+    tagline: "Find the different fairy.",
+    findLine: "Spot the fairy that doesn’t match — watch the details.",
+    tutorialBody:
+      "Tap the fairy that doesn’t belong. Early levels look clearly different; later levels change hair, dress, props, or tiny details — and some jump around. You have 10 seconds.",
+    difficulty: "medium",
   },
 ];
+
+const DIFFICULTY_LABEL: Record<PackDifficulty, string> = {
+  easy: "Easy",
+  medium: "Medium",
+  hard: "Hard",
+};
+
+export function difficultyLabel(d: PackDifficulty): string {
+  return DIFFICULTY_LABEL[d];
+}
 
 export function getThemeMeta(id: ThemeId): ThemeMeta {
   return THEMES.find((t) => t.id === id) ?? THEMES[0];
 }
 
 export function isThemeId(value: string | undefined): value is ThemeId {
-  return value === "emoji" || value === "monster" || value === "cat";
+  return (
+    value === "emoji" ||
+    value === "monster" ||
+    value === "cat" ||
+    value === "dog" ||
+    value === "fairy"
+  );
 }

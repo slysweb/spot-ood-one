@@ -152,6 +152,15 @@ button {
   letter-spacing: -0.02em;
 }
 
+.pack-diff {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+}
+
 .pack-tag {
   margin: 0 0 8px;
   color: var(--muted);
@@ -515,11 +524,11 @@ a.link-btn {
   color: #fffaf0;
 }
 
-.preview-monster {
+.preview-art {
   padding: 8% !important;
 }
 
-.preview-monster img {
+.preview-art img {
   width: 100%;
   height: 100%;
   object-fit: contain;

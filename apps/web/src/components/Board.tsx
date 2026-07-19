@@ -28,7 +28,8 @@ export function Board({
     <div
       className={`board${locked ? " is-locked" : ""}${colorblind ? " colorblind" : ""}${boardFx === "wobble" ? " board-wobble" : ""}`}
       style={{
-        gridTemplateColumns: `repeat(${cols}, var(--cell-size))`,
+        ["--cols" as string]: String(cols),
+        gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
       }}
       role="grid"
       aria-label="Odd one grid"

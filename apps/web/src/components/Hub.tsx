@@ -21,7 +21,7 @@ export function Hub({ save, onSettings }: HubProps) {
         </p>
       </div>
 
-      <div className="pack-grid">
+      <div className="pack-grid pack-grid-tile">
         {THEMES.map((theme) => {
           const progress = save.themes[theme.id];
           const total = getTotalLevels(theme.id);

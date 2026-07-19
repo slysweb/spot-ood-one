@@ -35,23 +35,34 @@ import type {
   Screen,
   ThemeId,
 } from "@/game/types";
+import { usePageMeta } from "@/hooks/usePageMeta";
+import { getThemePageMeta, getThemePlayTitle } from "@/seo/pageMeta";
 
 export function ThemeGamePage() {
   const { themeId } = useParams();
   if (!isThemeId(themeId)) {
     return <Navigate to="/" replace />;
   }
-  return <ThemeGame theme={themeId} />;
+  // Remount on theme change so in-progress play/timer/overlays don't linger
+  // across Other packs navigation (same route, different param).
+  return <ThemeGame key={themeId} theme={themeId} />;
 }
 
 function ThemeGame({ theme }: { theme: ThemeId }) {
   const meta = getThemeMeta(theme);
+  const landingMeta = getThemePageMeta(theme);
   const [save, setSave] = useState<AppSave>(() => {
     const s = loadSave();
     return s.theme === theme ? s : { ...s, theme };
   });
   const [screen, setScreen] = useState<Screen>("home");
   const [overlay, setOverlay] = useState<Overlay>(null);
+
+  usePageMeta({
+    title: screen === "play" ? getThemePlayTitle(theme) : landingMeta.title,
+    description: landingMeta.description,
+    path: landingMeta.path,
+  });
 
   const [cells, setCells] = useState<CellView[]>([]);
   const [cols, setCols] = useState(3);
@@ -483,6 +494,7 @@ function ThemeGame({ theme }: { theme: ThemeId }) {
 
       {screen === "play" && cells.length > 0 && (
         <Play
+          themeId={theme}
           levelIndex={themeProgress.currentLevel}
           totalLevels={totalLevels}
           cols={cols}

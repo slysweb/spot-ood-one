@@ -11,6 +11,8 @@ body,
 #root {
   margin: 0;
   min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -32,13 +34,15 @@ button {
 }
 
 .app-shell {
-  width: min(520px, 100%);
+  width: 100%;
+  max-width: none;
   min-height: 100dvh;
   margin: 0 auto;
-  padding: 12px 14px 24px;
+  padding: 12px clamp(12px, 2.5vw, 28px) 28px;
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
 }
 
 .top-bar {
@@ -46,12 +50,14 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 14px;
   background: var(--sun);
   border: 3px solid var(--ink);
   border-radius: 999px;
   padding: 8px 14px;
   box-shadow: var(--shadow);
-  margin-bottom: 14px;
 }
 
 .brand-mark {
@@ -88,6 +94,13 @@ button {
   gap: 12px;
 }
 
+.pack-grid-tile {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 14px;
+  width: 100%;
+}
+
 .pack-card {
   display: grid;
   grid-template-columns: 118px 1fr;
@@ -101,6 +114,16 @@ button {
   box-shadow: var(--shadow);
   padding: 12px;
   transition: transform 0.08s ease, box-shadow 0.08s ease;
+  min-width: 0;
+}
+
+.pack-card-compact .pack-title {
+  font-size: 1.2rem;
+}
+
+.pack-card-compact .pack-tag {
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
 
 .pack-card:active {
@@ -298,8 +321,31 @@ a.link-btn {
   padding-bottom: 20px;
 }
 
+/* Hub: top-align content so hero sits under the top bar (not vertically centered). */
+.home.hub {
+  justify-content: flex-start;
+  padding-top: 4px;
+}
+
+.home.hub > .link-btn {
+  margin-top: auto;
+}
+
+.home .stack,
+.home .meta,
+.home .home-links {
+  width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .home-hero {
   text-align: center;
+  width: 100%;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .eyebrow {
@@ -361,6 +407,9 @@ a.link-btn {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
 }
 
 .icon-btn {
@@ -433,37 +482,36 @@ a.link-btn {
 }
 
 .board-stage {
-  flex: 1;
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
   min-height: 0;
   padding: 8px 0;
-  -webkit-overflow-scrolling: touch;
 }
 
 .board {
-  /* Fixed cell size for 3×3 / 4×4 / 5×5 — board grows with cols */
-  --cell-size: 108px;
-  --board-gap: 10px;
-  width: max-content;
-  max-width: none;
+  --cols: 3;
+  --board-gap: 8px;
+  --cell-ideal: 108px;
+  width: min(
+    100%,
+    calc(var(--cols) * var(--cell-ideal) + (var(--cols) - 1) * var(--board-gap))
+  );
+  max-width: 100%;
   display: grid;
   gap: var(--board-gap);
-  margin: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-@media (max-width: 380px) {
+@media (min-width: 720px) {
   .board {
-    --cell-size: 100px;
-    --board-gap: 8px;
-  }
-}
-
-@media (min-width: 480px) {
-  .board {
-    --cell-size: 116px;
+    --cell-ideal: 120px;
+    --board-gap: 10px;
   }
 }
 
@@ -472,13 +520,15 @@ a.link-btn {
 }
 
 .cell {
-  width: var(--cell-size);
-  height: var(--cell-size);
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  max-width: none;
   border: 3px solid var(--ink);
   border-radius: 16px;
   background: #fffef8;
   box-shadow: 0 3px 0 rgba(44, 33, 24, 0.16);
-  font-size: calc(var(--cell-size) * 0.42);
+  font-size: clamp(1.2rem, 4.5vw, 2.2rem);
   display: grid;
   place-items: center;
   user-select: none;
@@ -486,7 +536,7 @@ a.link-btn {
   transition: transform 0.08s ease, background 0.12s ease;
   overflow: hidden;
   padding: 5%;
-  flex: none;
+  min-width: 0;
 }
 
 .cell-art-wrap {
@@ -508,8 +558,21 @@ a.link-btn {
 .cell-emoji {
   display: grid;
   place-items: center;
-  font-size: calc(var(--cell-size) * 0.48);
+  font-size: clamp(1.3rem, 5vw, 2.4rem);
   line-height: 1;
+}
+
+.other-packs {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.other-packs-title {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .board-wobble .cell-art-wrap {

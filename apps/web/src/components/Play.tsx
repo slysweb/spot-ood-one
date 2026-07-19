@@ -1,7 +1,9 @@
 import { Board } from "./Board";
-import type { CellView } from "@/game/types";
+import { OtherPacks } from "./OtherPacks";
+import type { CellView, ThemeId } from "@/game/types";
 
 interface PlayProps {
+  themeId: ThemeId;
   levelIndex: number;
   totalLevels: number;
   cols: number;
@@ -19,6 +21,7 @@ interface PlayProps {
 }
 
 export function Play({
+  themeId,
   levelIndex,
   totalLevels,
   cols,
@@ -70,6 +73,8 @@ export function Play({
       </div>
 
       <p className="play-hint">Tap the odd one.</p>
+
+      <OtherPacks excludeId={themeId} title="Other games" />
     </section>
   );
 }

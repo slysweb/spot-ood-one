@@ -36,9 +36,9 @@ single character centered, plain white background, no text, no watermark,
 | F07p | holds a small lantern instead of flowers |
 | F08e | wing tip color / small moon earring change |
 
-> **可辨度备注（2026-07-19）**：`F01h`（金发→浅粉）在 4×4 缩略下对比偏弱；`F04e` / `F08e` 接近微差，中等段已暂不排入，需重画出更大部件差后再用。中等段优先：`F02d` / `F05h` / `F06d` / `F03p` / `F07p`，`F01h` 靠后。
+> **可辨度备注（2026-07-19）**：`F01h`（金发→浅粉）在 4×4 缩略下几乎不可辨；`F04e` / `F08e` 接近微差。三者均已从中等段剔除，需重画出更大部件差（例如无翅膀 twin）后再用。中等段只用：`F02d` / `F05h` / `F06d` / `F03p` / `F07p`。
 
-微差 twin（高难）：
+微差 twin（原高难；**暂不排关**）：
 
 | ID | 差异 |
 |----|------|
@@ -46,3 +46,5 @@ single character centered, plain white background, no text, no watermark,
 | F02m | only tiny star on skirt different color |
 | F03m | only bow center gem different |
 | F04m | only one flower in crown different color |
+
+> **可辨度备注（2026-07-19）**：`F01m`–`F04m` 在 ~80px 棋盘格上像素差 <1%，肉眼等同「全一样」。高难段 66–85 已改用中等段高对比 twin（`F05h` / `F06d` / `F03p` / `F07p` / `F02d`）+ 5×5 / teleport 加压。重画 micro 时需做成缩略可见的大部件差后再排关。

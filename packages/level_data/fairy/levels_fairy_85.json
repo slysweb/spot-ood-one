@@ -19,20 +19,20 @@
       "F05h",
       "F06d",
       "F03p",
-      "F07p",
-      "F01h"
+      "F07p"
     ],
     "reservedSubtleTwins": [
+      "F01h",
       "F04e",
       "F08e"
     ],
-    "microTwins": [
+    "reservedMicroTwins": [
       "F01m",
       "F02m",
       "F03m",
       "F04m"
     ],
-    "note": "Medium pack: 15 easy + 40 part + 10 bridge + 20 micro/teleport. F04e/F08e omitted from medium (too subtle at thumb); redraw before reuse."
+    "note": "Medium pack: 15 easy + 40 part + 10 bridge + 20 hard part/teleport. F01h/F04e/F08e omitted (thumb-invisible). F01m–F04m reserved (micro <1% at 80px); hard uses same clear part twins as medium on 5×5."
   },
   "fx": [
     "none",
@@ -46,7 +46,7 @@
     "1-15": "easy — different fairy silhouette/color",
     "16-55": "medium — one part different (painted twin)",
     "56-65": "bridge — clearer part diffs, no teleport",
-    "66-85": "hard — micro twin; teleport from 71"
+    "66-85": "hard — clear part twin on 5×5; teleport from 71 (micro twins reserved)"
   },
   "levels": [
     {
@@ -699,12 +699,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -731,12 +731,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02d",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -763,12 +763,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F05",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F05h",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -795,12 +795,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -827,12 +827,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -859,12 +859,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F07",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F07p",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -891,12 +891,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -923,12 +923,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02d",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -955,12 +955,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F05",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F05h",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -987,12 +987,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -1019,12 +1019,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -1051,12 +1051,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F07",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F07p",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -1083,12 +1083,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -1115,12 +1115,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02d",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -1147,12 +1147,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F05",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F05h",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -1179,12 +1179,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -1211,12 +1211,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -1243,12 +1243,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F07",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F07p",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -1275,12 +1275,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -1307,12 +1307,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02d",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -1339,12 +1339,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F05",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F05h",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -1371,12 +1371,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -1403,12 +1403,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -1435,12 +1435,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F07",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F07p",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -1467,12 +1467,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -1659,12 +1659,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -1691,12 +1691,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02d",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -1723,12 +1723,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F05",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F05h",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -1755,12 +1755,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -1787,12 +1787,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -1819,12 +1819,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F06",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F06d",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -1851,12 +1851,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03p",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -1883,12 +1883,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F07",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F07p",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -1915,12 +1915,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -2107,12 +2107,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01h",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -2139,12 +2139,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01m",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -2158,7 +2158,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2171,12 +2171,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02m",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -2190,7 +2190,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2208,7 +2208,7 @@
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03m",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -2222,7 +2222,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2235,12 +2235,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F04",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F04m",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -2254,7 +2254,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2267,12 +2267,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01m",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -2286,7 +2286,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2299,12 +2299,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02m",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -2318,7 +2318,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2331,12 +2331,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03m",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -2350,7 +2350,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2363,12 +2363,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F04",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F04m",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -2382,7 +2382,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2395,12 +2395,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01m",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -2414,7 +2414,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2432,7 +2432,7 @@
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02m",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -2446,7 +2446,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2459,12 +2459,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03m",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -2478,7 +2478,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2491,12 +2491,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F04",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F04m",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -2510,7 +2510,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2523,12 +2523,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01m",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -2542,7 +2542,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2555,12 +2555,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02m",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -2574,7 +2574,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2587,12 +2587,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03m",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -2606,7 +2606,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2619,12 +2619,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F04",
+        "fairyId": "F05",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F04m",
+        "fairyId": "F05h",
         "transform": "none"
       },
       "fx": {
@@ -2638,7 +2638,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2651,12 +2651,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F01",
+        "fairyId": "F06",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F01m",
+        "fairyId": "F06d",
         "transform": "none"
       },
       "fx": {
@@ -2670,7 +2670,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2683,12 +2683,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F02",
+        "fairyId": "F03",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F02m",
+        "fairyId": "F03p",
         "transform": "none"
       },
       "fx": {
@@ -2702,7 +2702,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2715,12 +2715,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F03",
+        "fairyId": "F07",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F03m",
+        "fairyId": "F07p",
         "transform": "none"
       },
       "fx": {
@@ -2734,7 +2734,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     },
     {
@@ -2747,12 +2747,12 @@
       },
       "base": {
         "render": "image",
-        "fairyId": "F04",
+        "fairyId": "F02",
         "transform": "none"
       },
       "odd": {
         "render": "image",
-        "fairyId": "F04m",
+        "fairyId": "F02d",
         "transform": "none"
       },
       "fx": {
@@ -2766,7 +2766,7 @@
       },
       "meta": {
         "band": "hard",
-        "diffType": "micro_diff"
+        "diffType": "part_diff"
       }
     }
   ]

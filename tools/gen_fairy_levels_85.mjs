@@ -16,20 +16,26 @@ const PART_TWIN = {
 
 /**
  * Medium-band base order by thumbnail visibility (96px board cells).
- * F02d/F05h/F06d are high-contrast; F03p/F07p are prop swaps; F01h is
- * blonde→soft pink (low contrast on pink dress — do not lead the band).
- * F04e / F08e (earring / wing-tip) are near-micro at thumb size — omit from
- * medium until redrawn with a larger part change.
+ * F02d/F05h/F06d are high-contrast; F03p/F07p are prop swaps.
+ * F01h (blonde→soft pink) blends into the pink dress at 4×4 thumb — omit
+ * like F04e / F08e until redrawn with a larger part change (e.g. no wings).
  */
-const MEDIUM_BASES = ["F02", "F05", "F06", "F03", "F07", "F01"];
+const MEDIUM_BASES = ["F02", "F05", "F06", "F03", "F07"];
 
-/** Smaller detail twins (hard band) */
+/**
+ * Micro twins (hard band intent) — shoe buckle / skirt star / bow gem / crown
+ * flower. At 5×5 board thumbs (~80px) changed pixels stay <1% — unplayable.
+ * Keep files for future redraw; do not schedule until contrast matches part twins.
+ */
 const MICRO_TWIN = {
   F01: "F01m",
   F02: "F02m",
   F03: "F03m",
   F04: "F04m",
 };
+
+/** Hard-band rotation: same clear part twins as medium, offset so L66 ≠ L65 */
+const HARD_BASES = MEDIUM_BASES;
 
 function imageRef(id, transform = "none") {
   return { render: "image", fairyId: id, transform };
@@ -102,13 +108,14 @@ for (let i = 56; i <= 65; i++) {
   );
 }
 
-// 66–85 Hard: micro twin; teleport from 71
+// 66–85 Hard: clear part twin on denser 5×5; teleport from 71
+// (+1 offset → L66 = F05/F05h, not F02/F02d which closes the bridge)
 for (let i = 66; i <= 85; i++) {
-  const id = pick(Object.keys(MICRO_TWIN), i - 66);
-  const twin = MICRO_TWIN[id];
+  const id = pick(HARD_BASES, i - 66 + 1);
+  const twin = PART_TWIN[id];
   const teleport = i >= 71;
   levels.push(
-    level(i, 5, imageRef(id), imageRef(twin), "hard", "micro_diff", {
+    level(i, 5, imageRef(id), imageRef(twin), "hard", "part_diff", {
       board: "none",
       odd: teleport ? "teleport" : "none",
     }),
@@ -128,10 +135,10 @@ const out = {
   assetPack: {
     required: FAIRY_IDS,
     partTwins: MEDIUM_BASES.map((id) => PART_TWIN[id]),
-    reservedSubtleTwins: ["F04e", "F08e"],
-    microTwins: Object.values(MICRO_TWIN),
+    reservedSubtleTwins: ["F01h", "F04e", "F08e"],
+    reservedMicroTwins: Object.values(MICRO_TWIN),
     note:
-      "Medium pack: 15 easy + 40 part + 10 bridge + 20 micro/teleport. F04e/F08e omitted from medium (too subtle at thumb); redraw before reuse.",
+      "Medium pack: 15 easy + 40 part + 10 bridge + 20 hard part/teleport. F01h/F04e/F08e omitted (thumb-invisible). F01m–F04m reserved (micro <1% at 80px); hard uses same clear part twins as medium on 5×5.",
   },
   fx: ["none", "teleport"],
   defaults: { timeLimitMs: 10000, failOnWrongTap: true },
@@ -139,7 +146,7 @@ const out = {
     "1-15": "easy — different fairy silhouette/color",
     "16-55": "medium — one part different (painted twin)",
     "56-65": "bridge — clearer part diffs, no teleport",
-    "66-85": "hard — micro twin; teleport from 71",
+    "66-85": "hard — clear part twin on 5×5; teleport from 71 (micro twins reserved)",
   },
   levels,
 };

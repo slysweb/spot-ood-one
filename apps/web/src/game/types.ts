@@ -1,6 +1,6 @@
 export type FailReason = "wrong" | "timeout";
 
-export type ThemeId = "emoji" | "monster";
+export type ThemeId = "emoji" | "monster" | "cat";
 
 export type LevelCategory =
   | "animals"
@@ -73,11 +73,43 @@ export interface MonsterCampaignData {
   levels: MonsterLevelDef[];
 }
 
+export interface CatRef {
+  render: "emoji" | "image";
+  emoji?: string;
+  catId?: string;
+  transform: string;
+}
+
+export interface CatLevelDef {
+  id: string;
+  index: number;
+  theme: "cat";
+  grid: { cols: number; rows: number };
+  base: CatRef;
+  odd: CatRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface CatCampaignData {
+  version: number;
+  theme: "cat";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: CatLevelDef[];
+}
+
 export interface CellView {
   key: string;
-  kind: "emoji" | "monster";
+  kind: "emoji" | "monster" | "image";
   emoji?: string;
   monsterId?: string;
+  catId?: string;
   src?: string;
   transformKey: string;
   cssTransform: string;

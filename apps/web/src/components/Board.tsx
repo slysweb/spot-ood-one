@@ -45,7 +45,8 @@ export function Board({
             aria-label={`Cell ${index + 1}`}
           >
             <span className="cell-art-wrap">
-              {cell.kind === "monster" && cell.src ? (
+              {(cell.kind === "monster" || cell.kind === "image") &&
+              cell.src ? (
                 <img
                   className="cell-art"
                   src={cell.src}

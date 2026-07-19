@@ -34,6 +34,17 @@ export const THEMES: ThemeMeta[] = [
     tutorialBody:
       "Tap the monster that doesn’t match the rest. Later levels twist, tint, and even jump around. You have 10 seconds.",
   },
+  {
+    id: "cat",
+    path: "/cat",
+    label: "Cats",
+    eyebrow: "Cat pack",
+    headline: "Cats",
+    tagline: "Find the different cat.",
+    findLine: "Find the odd one among the cats.",
+    tutorialBody:
+      "Tap the one that doesn’t belong. Early levels hide another animal among cats; later levels use look-alike kitties, tints, bells, and jump-arounds. You have 10 seconds.",
+  },
 ];
 
 export function getThemeMeta(id: ThemeId): ThemeMeta {
@@ -41,5 +52,5 @@ export function getThemeMeta(id: ThemeId): ThemeMeta {
 }
 
 export function isThemeId(value: string | undefined): value is ThemeId {
-  return value === "emoji" || value === "monster";
+  return value === "emoji" || value === "monster" || value === "cat";
 }

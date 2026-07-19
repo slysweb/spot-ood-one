@@ -20,6 +20,7 @@ function defaults(): AppSave {
     themes: {
       emoji: emptyTheme(),
       monster: emptyTheme(),
+      cat: emptyTheme(),
     },
   };
 }
@@ -62,9 +63,11 @@ export function loadSave(): AppSave {
 
 function normalize(save: AppSave): AppSave {
   const base = defaults();
+  const theme: ThemeId =
+    save.theme === "monster" || save.theme === "cat" ? save.theme : "emoji";
   return {
     version: 2,
-    theme: save.theme === "monster" ? "monster" : "emoji",
+    theme,
     sound: save.sound ?? true,
     colorblind: save.colorblind ?? false,
     themes: {
@@ -75,6 +78,10 @@ function normalize(save: AppSave): AppSave {
       monster: {
         ...base.themes.monster,
         ...save.themes?.monster,
+      },
+      cat: {
+        ...base.themes.cat,
+        ...save.themes?.cat,
       },
     },
   };
@@ -87,6 +94,7 @@ export function saveSave(save: AppSave): void {
     themes: {
       emoji: clampTheme("emoji", save.themes.emoji),
       monster: clampTheme("monster", save.themes.monster),
+      cat: clampTheme("cat", save.themes.cat ?? emptyTheme()),
     },
   };
   localStorage.setItem(KEY, JSON.stringify(next));

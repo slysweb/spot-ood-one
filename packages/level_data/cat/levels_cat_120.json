@@ -1,0 +1,3915 @@
+{
+  "version": 1,
+  "theme": "cat",
+  "campaignLevels": 120,
+  "assetPack": {
+    "emojiCats": [
+      "🐱",
+      "😺",
+      "😸",
+      "😻",
+      "😼",
+      "🐈",
+      "🐈‍⬛"
+    ],
+    "emojiOthers": [
+      "🐶",
+      "🐰",
+      "🐻",
+      "🦊",
+      "🐼",
+      "🐷",
+      "🐸",
+      "🐵",
+      "🐯",
+      "🐨"
+    ],
+    "requiredImages": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08"
+    ],
+    "optionalTwins": [
+      "C01b",
+      "C02b",
+      "C03b",
+      "C05b"
+    ],
+    "note": "1–80 emoji; 81–120 illustrated cats + twins/transforms"
+  },
+  "transforms": [
+    "none",
+    "flipX",
+    "rot30",
+    "rot180",
+    "scale75",
+    "scale88",
+    "scale125",
+    "hue40",
+    "darker",
+    "hue40+scale88",
+    "scale75+hue40"
+  ],
+  "fx": [
+    "none",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-30": "easy — cats vs other animal, 3x3 emoji",
+    "31-50": "easy_plus — cats vs animal, 3x3→4x4",
+    "51-80": "medium — cat category mix (face vs body)",
+    "81-100": "hard — same cat, fur tint / decoration twin",
+    "101-120": "hell — subtle + teleport"
+  },
+  "levels": [
+    {
+      "id": "C-001",
+      "index": 1,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐰",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5001
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-002",
+      "index": 2,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐻",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5002
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-003",
+      "index": 3,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🦊",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5003
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-004",
+      "index": 4,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5004
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-005",
+      "index": 5,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐷",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5005
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-006",
+      "index": 6,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5006
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-007",
+      "index": 7,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐵",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5007
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-008",
+      "index": 8,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐯",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5008
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-009",
+      "index": 9,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐨",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5009
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-010",
+      "index": 10,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐶",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5010
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-011",
+      "index": 11,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐰",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5011
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-012",
+      "index": 12,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐻",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5012
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-013",
+      "index": 13,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🦊",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5013
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-014",
+      "index": 14,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5014
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-015",
+      "index": 15,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐷",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5015
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-016",
+      "index": 16,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5016
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-017",
+      "index": 17,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐵",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5017
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-018",
+      "index": 18,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐯",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5018
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-019",
+      "index": 19,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐨",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5019
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-020",
+      "index": 20,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐶",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5020
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-021",
+      "index": 21,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐰",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5021
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-022",
+      "index": 22,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐻",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5022
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-023",
+      "index": 23,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🦊",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5023
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-024",
+      "index": 24,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5024
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-025",
+      "index": 25,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐷",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5025
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-026",
+      "index": 26,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5026
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-027",
+      "index": 27,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐵",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5027
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-028",
+      "index": 28,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐯",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5028
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-029",
+      "index": 29,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐨",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5029
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-030",
+      "index": 30,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐶",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5030
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-031",
+      "index": 31,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5031
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-032",
+      "index": 32,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐵",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5032
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-033",
+      "index": 33,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐯",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5033
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-034",
+      "index": 34,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐨",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5034
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-035",
+      "index": 35,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐶",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5035
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-036",
+      "index": 36,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐰",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5036
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-037",
+      "index": 37,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐻",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5037
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-038",
+      "index": 38,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🦊",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5038
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-039",
+      "index": 39,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5039
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-040",
+      "index": 40,
+      "theme": "cat",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐷",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5040
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-041",
+      "index": 41,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5041
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-042",
+      "index": 42,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐵",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5042
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-043",
+      "index": 43,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐯",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5043
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-044",
+      "index": 44,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐨",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5044
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-045",
+      "index": 45,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐶",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5045
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-046",
+      "index": 46,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐰",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5046
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-047",
+      "index": 47,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐻",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5047
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-048",
+      "index": 48,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🦊",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5048
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-049",
+      "index": 49,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5049
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-050",
+      "index": 50,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐷",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5050
+      },
+      "meta": {
+        "band": "easy_plus",
+        "diffType": "cat_vs_animal"
+      }
+    },
+    {
+      "id": "C-051",
+      "index": 51,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5051
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-052",
+      "index": 52,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5052
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-053",
+      "index": 53,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5053
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-054",
+      "index": 54,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5054
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-055",
+      "index": 55,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5055
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-056",
+      "index": 56,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5056
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-057",
+      "index": 57,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5057
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-058",
+      "index": 58,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5058
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-059",
+      "index": 59,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5059
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-060",
+      "index": 60,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5060
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-061",
+      "index": 61,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5061
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-062",
+      "index": 62,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5062
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-063",
+      "index": 63,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5063
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-064",
+      "index": 64,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5064
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-065",
+      "index": 65,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5065
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-066",
+      "index": 66,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5066
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-067",
+      "index": 67,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5067
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-068",
+      "index": 68,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5068
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-069",
+      "index": 69,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5069
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-070",
+      "index": 70,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5070
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-071",
+      "index": 71,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5071
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-072",
+      "index": 72,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5072
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-073",
+      "index": 73,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5073
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-074",
+      "index": 74,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5074
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-075",
+      "index": 75,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5075
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-076",
+      "index": 76,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5076
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-077",
+      "index": 77,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😼",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5077
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-078",
+      "index": 78,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😻",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐈",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5078
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-079",
+      "index": 79,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "🐈‍⬛",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "😸",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5079
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-080",
+      "index": 80,
+      "theme": "cat",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "emoji",
+        "emoji": "😺",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "emoji",
+        "emoji": "🐱",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5080
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "cat_category"
+      }
+    },
+    {
+      "id": "C-081",
+      "index": 81,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5081
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "decoration_or_fur"
+      }
+    },
+    {
+      "id": "C-082",
+      "index": 82,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5082
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-083",
+      "index": 83,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5083
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-084",
+      "index": 84,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5084
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-085",
+      "index": 85,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5085
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-086",
+      "index": 86,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5086
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-087",
+      "index": 87,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5087
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-088",
+      "index": 88,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "rot30"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5088
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-089",
+      "index": 89,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5089
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-090",
+      "index": 90,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5090
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "decoration_or_fur"
+      }
+    },
+    {
+      "id": "C-091",
+      "index": 91,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5091
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-092",
+      "index": 92,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5092
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-093",
+      "index": 93,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C05b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5093
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "decoration_or_fur"
+      }
+    },
+    {
+      "id": "C-094",
+      "index": 94,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5094
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-095",
+      "index": 95,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "hue40+scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5095
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-096",
+      "index": 96,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "hue40"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5096
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-097",
+      "index": 97,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5097
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-098",
+      "index": 98,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "scale88"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5098
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-099",
+      "index": 99,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5099
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "decoration_or_fur"
+      }
+    },
+    {
+      "id": "C-100",
+      "index": 100,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "rot30"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5100
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "fur_tint_or_pose"
+      }
+    },
+    {
+      "id": "C-101",
+      "index": 101,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5101
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-102",
+      "index": 102,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5102
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-103",
+      "index": 103,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5103
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-104",
+      "index": 104,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5104
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-105",
+      "index": 105,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5105
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-106",
+      "index": 106,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "darker"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5106
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-107",
+      "index": 107,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "scale125"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5107
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-108",
+      "index": 108,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5108
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-109",
+      "index": 109,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5109
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-110",
+      "index": 110,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5110
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-111",
+      "index": 111,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5111
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-112",
+      "index": 112,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "flipX"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5112
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-113",
+      "index": 113,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C05b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5113
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "C-114",
+      "index": 114,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C06",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5114
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-115",
+      "index": 115,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C07",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5115
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "hard_diff"
+      }
+    },
+    {
+      "id": "C-116",
+      "index": 116,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C08",
+        "transform": "rot180"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5116
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    },
+    {
+      "id": "C-117",
+      "index": 117,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C01b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5117
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "C-118",
+      "index": 118,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C02b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5118
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "C-119",
+      "index": 119,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C03b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5119
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "twin"
+      }
+    },
+    {
+      "id": "C-120",
+      "index": 120,
+      "theme": "cat",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "catId": "C04",
+        "transform": "scale75"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 5120
+      },
+      "meta": {
+        "band": "hell",
+        "diffType": "teleport_overt"
+      }
+    }
+  ]
+}

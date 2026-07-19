@@ -50,6 +50,19 @@ export function Hub({ save, onSettings }: HubProps) {
                       <img src="/monsters/monster_m01.png" alt="" />
                     </span>
                   </>
+                ) : theme.id === "cat" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/cats/cat_c01.png" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/cats/cat_c01.png" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd emoji">🐶</span>
+                    <span className="pack-cell">
+                      <img src="/cats/cat_c01.png" alt="" />
+                    </span>
+                  </>
                 ) : (
                   <>
                     <span className="pack-cell emoji">🐶</span>

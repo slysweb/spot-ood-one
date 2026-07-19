@@ -14,6 +14,15 @@ const PART_TWIN = {
   F08: "F08e",
 };
 
+/**
+ * Medium-band base order by thumbnail visibility (96px board cells).
+ * F02d/F05h/F06d are high-contrast; F03p/F07p are prop swaps; F01h is
+ * blonde→soft pink (low contrast on pink dress — do not lead the band).
+ * F04e / F08e (earring / wing-tip) are near-micro at thumb size — omit from
+ * medium until redrawn with a larger part change.
+ */
+const MEDIUM_BASES = ["F02", "F05", "F06", "F03", "F07", "F01"];
+
 /** Smaller detail twins (hard band) */
 const MICRO_TWIN = {
   F01: "F01m",
@@ -69,9 +78,9 @@ for (let i = 1; i <= 15; i++) {
   );
 }
 
-// 16–55 Medium: same fairy, one part different
+// 16–55 Medium: same fairy, one part different (clear twins first)
 for (let i = 16; i <= 55; i++) {
-  const id = pick(FAIRY_IDS, i - 16);
+  const id = pick(MEDIUM_BASES, i - 16);
   const twin = PART_TWIN[id];
   levels.push(
     level(i, 4, imageRef(id), imageRef(twin), "medium", "part_diff", {
@@ -81,11 +90,10 @@ for (let i = 16; i <= 55; i++) {
   );
 }
 
-// 56–65 Transition: still part diff but cycle “easier” bases (hair/dress/prop — clearer)
-const EASY_PARTS = ["F01h", "F02d", "F03p", "F06d", "F07p", "F05h"];
+// 56–65 Transition: still part diff but cycle clearer bases only
 for (let i = 56; i <= 65; i++) {
-  const id = pick(["F01", "F02", "F03", "F05", "F06", "F07"], i);
-  const twin = PART_TWIN[id] ?? pick(EASY_PARTS, i);
+  const id = pick(MEDIUM_BASES, i);
+  const twin = PART_TWIN[id];
   levels.push(
     level(i, 4, imageRef(id), imageRef(twin), "bridge", "part_diff_easy", {
       board: "none",
@@ -119,9 +127,11 @@ const out = {
   campaignLevels: 85,
   assetPack: {
     required: FAIRY_IDS,
-    partTwins: Object.values(PART_TWIN),
+    partTwins: MEDIUM_BASES.map((id) => PART_TWIN[id]),
+    reservedSubtleTwins: ["F04e", "F08e"],
     microTwins: Object.values(MICRO_TWIN),
-    note: "Medium pack: 15 easy + 40 part + 10 bridge + 20 micro/teleport",
+    note:
+      "Medium pack: 15 easy + 40 part + 10 bridge + 20 micro/teleport. F04e/F08e omitted from medium (too subtle at thumb); redraw before reuse.",
   },
   fx: ["none", "teleport"],
   defaults: { timeLimitMs: 10000, failOnWrongTap: true },

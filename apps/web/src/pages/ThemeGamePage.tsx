@@ -36,7 +36,7 @@ import type {
   ThemeId,
 } from "@/game/types";
 import { usePageMeta } from "@/hooks/usePageMeta";
-import { getThemePageMeta, getThemePlayTitle } from "@/seo/pageMeta";
+import { getThemePageMeta } from "@/seo/pageMeta";
 
 export function ThemeGamePage() {
   const { themeId } = useParams();
@@ -58,11 +58,7 @@ function ThemeGame({ theme }: { theme: ThemeId }) {
   const [screen, setScreen] = useState<Screen>("home");
   const [overlay, setOverlay] = useState<Overlay>(null);
 
-  usePageMeta({
-    title: screen === "play" ? getThemePlayTitle(theme) : landingMeta.title,
-    description: landingMeta.description,
-    path: landingMeta.path,
-  });
+  usePageMeta(landingMeta);
 
   const [cells, setCells] = useState<CellView[]>([]);
   const [cols, setCols] = useState(3);

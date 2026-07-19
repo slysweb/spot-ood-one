@@ -265,7 +265,7 @@ spot-odd-one/
 |----|------|
 | 托管 | Cloudflare Pages / Vercel / Netlify |
 | 域名 | 短好记，如 `spotoddone.com` |
-| SEO | 简单落地文案 + OG 图（可玩优先） |
+| SEO | 见 **`docs/SEO.md`**（title / description / canonical；新主题包 checklist）。OG 图后续可补 |
 | PWA | 可选；非 MVP 必做 |
 | HTTPS | 必须（Share / 部分广告要求） |
 

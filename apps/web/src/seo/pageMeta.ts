@@ -1,4 +1,4 @@
-import { difficultyLabel, getThemeMeta } from "@/game/themeMeta";
+import { getThemeMeta } from "@/game/themeMeta";
 import type { ThemeId } from "@/game/types";
 
 export interface PageMeta {
@@ -11,7 +11,7 @@ export interface PageMeta {
 export const HUB_META: PageMeta = {
   title: "Spot Odd One — Find the Odd One Out",
   description:
-    "Pick a pack and find the one that doesn’t belong. Quick odd-one-out puzzles with emoji, monsters, cats, dogs, and fairies.",
+    "Play a free find the difference game — spot the difference picture among look-alike photos and pick the odd one out. Quick packs with emoji, monsters, cats, dogs, and fairies.",
   path: "/",
 };
 
@@ -20,29 +20,29 @@ const THEME_SEO: Record<
   Pick<PageMeta, "title" | "description">
 > = {
   emoji: {
-    title: "Emoji Pack — Spot Odd One",
+    title: "Spot the different emoji picture — Spot Odd One",
     description:
-      "Find the emoji that doesn’t belong. An easy Spot Odd One pack with quick timed levels.",
+      "Spot the different emoji picture among look-alikes. An easy Spot Odd One pack with quick timed levels.",
   },
   monster: {
-    title: "Monsters Pack — Spot Odd One",
+    title: "Spot the different monster picture — Spot Odd One",
     description:
-      "Find the monster that doesn’t belong. An easy Spot Odd One pack with twists, tints, and jump-arounds.",
+      "Spot the different monster picture among look-alikes. An easy Spot Odd One pack with twists, tints, and jump-arounds.",
   },
   cat: {
-    title: "Cats Pack — Spot Odd One",
+    title: "Spot the different cat picture — Spot Odd One",
     description:
-      "Find the odd one among the cats. An easy Spot Odd One pack with look-alike kitties and timed levels.",
+      "Spot the different cat picture among look-alike kitties. An easy Spot Odd One pack with timed levels.",
   },
   dog: {
-    title: "Dogs Pack — Spot Odd One",
+    title: "Spot the different dog picture — Spot Odd One",
     description:
-      "Find the odd one among the dogs. An easy Spot Odd One pack with look-alike pups and timed levels.",
+      "Spot the different dog picture among look-alike pups. An easy Spot Odd One pack with timed levels.",
   },
   fairy: {
-    title: "Fairies Pack (Medium) — Spot Odd One",
+    title: "Spot the different fairy picture — Spot Odd One",
     description:
-      "Spot the fairy that doesn’t match. A medium Spot Odd One pack — watch hair, dress, props, and tiny details.",
+      "Spot the different fairy picture — watch hair, dress, props, and tiny details. A medium Spot Odd One pack.",
   },
 };
 
@@ -54,11 +54,4 @@ export function getThemePageMeta(themeId: ThemeId): PageMeta {
     description: seo.description,
     path: meta.path,
   };
-}
-
-/** Optional play-state title; canonical stays on the theme landing URL. */
-export function getThemePlayTitle(themeId: ThemeId): string {
-  const meta = getThemeMeta(themeId);
-  const diff = difficultyLabel(meta.difficulty);
-  return `Play ${meta.label} (${diff}) — Spot Odd One`;
 }

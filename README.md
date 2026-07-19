@@ -45,6 +45,11 @@ Dashboard → **Import a repository** 时：
 | `packages/level_data` | 120-level pair JSON |
 | `docs` | Product / fail-share / deploy docs |
 
+## Docs
+
+- **[docs/SEO.md](docs/SEO.md)** — Web SEO（title / description / canonical；新主题包 checklist）
+- **[docs/DEPLOY_CLOUDFLARE.md](docs/DEPLOY_CLOUDFLARE.md)** — Cloudflare Workers 部署
+
 ## Product rules (MVP)
 
 - 120 levels, 10s each

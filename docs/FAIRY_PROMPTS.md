@@ -36,6 +36,8 @@ single character centered, plain white background, no text, no watermark,
 | F07p | holds a small lantern instead of flowers |
 | F08e | wing tip color / small moon earring change |
 
+> **可辨度备注（2026-07-19）**：`F01h`（金发→浅粉）在 4×4 缩略下对比偏弱；`F04e` / `F08e` 接近微差，中等段已暂不排入，需重画出更大部件差后再用。中等段优先：`F02d` / `F05h` / `F06d` / `F03p` / `F07p`，`F01h` 靠后。
+
 微差 twin（高难）：
 
 | ID | 差异 |

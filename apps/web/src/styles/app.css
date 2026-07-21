@@ -671,7 +671,7 @@ a.link-btn {
 }
 
 .sheet {
-  width: min(100%, 360px);
+  width: min(100%, 440px);
   background: var(--panel);
   border: 3px solid var(--ink);
   border-radius: 22px;
@@ -748,15 +748,52 @@ a.link-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 14px;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 4px 0 8px;
   text-align: center;
+}
+
+.clear-screen > .panel {
+  width: 100%;
+  padding: 28px 22px 24px;
+}
+
+.clear-screen > .btn,
+.clear-screen > .stack {
+  width: 100%;
+}
+
+.clear-screen .eyebrow {
+  margin-bottom: 10px;
+  color: var(--orange-deep);
 }
 
 .clear-screen h1 {
   font-size: clamp(2.2rem, 9vw, 2.8rem);
+  margin: 0 0 12px;
+}
+
+.clear-screen .body-text {
+  font-size: 1.05rem;
+  max-width: 28ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clear-burst {
-  font-size: 2.6rem;
-  letter-spacing: 0.15em;
+  display: block;
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+  letter-spacing: 0.18em;
+  line-height: 1;
+  color: var(--sun);
+  text-shadow:
+    -1px 0 var(--ink),
+    0 1px var(--ink),
+    1px 0 var(--ink),
+    0 -1px var(--ink);
 }

@@ -7,9 +7,10 @@ export function Clear({ totalLevels, onHome }: ClearProps) {
   return (
     <section className="clear-screen">
       <div className="panel">
-        <p className="eyebrow" style={{ marginBottom: 8 }}>
-          Campaign clear
-        </p>
+        <span className="clear-burst" aria-hidden="true">
+          ★ ✓ ★
+        </span>
+        <p className="eyebrow">Campaign clear</p>
         <h1 className="display">You did it!</h1>
         <p className="body-text">
           You cleared all {totalLevels} levels. Sharp eye!

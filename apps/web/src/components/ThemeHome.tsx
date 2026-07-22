@@ -6,6 +6,7 @@ interface ThemeHomeProps {
   currentLevel: number;
   bestLevel: number;
   totalLevels: number;
+  campaignCleared?: boolean;
   onPlay: () => void;
   onContinue: () => void;
   onSettings: () => void;
@@ -16,11 +17,15 @@ export function ThemeHome({
   currentLevel,
   bestLevel,
   totalLevels,
+  campaignCleared = false,
   onPlay,
   onContinue,
   onSettings,
 }: ThemeHomeProps) {
-  const showContinue = currentLevel > 1 || bestLevel > 1;
+  const cleared = campaignCleared || bestLevel >= totalLevels;
+  /** Mid-run resume only — hide after campaign clear */
+  const showContinue =
+    !cleared && (currentLevel > 1 || bestLevel > 1);
 
   return (
     <section className="home">

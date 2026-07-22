@@ -153,6 +153,66 @@ export function ThemeHome({
                 <img src="/fairies/fairy_f01.webp" alt="" />
               </span>
             </>
+          ) : meta.id === "color" ? (
+            <>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch is-odd">
+                <span className="cell-swatch" style={{ background: "#1E88E5" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+              <span className="cell preview-art swatch">
+                <span className="cell-swatch" style={{ background: "#E53935" }} />
+              </span>
+            </>
+          ) : meta.id === "fruit" ? (
+            <>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art is-odd">
+                <img src="/fruits/fruit_r09.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/fruits/fruit_r01.webp" alt="" />
+              </span>
+            </>
           ) : (
             <>
               <span className="cell">🐶</span>

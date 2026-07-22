@@ -48,8 +48,17 @@ export function Board({
             aria-label={`Cell ${index + 1}`}
           >
             <span className="cell-art-wrap">
-              {(cell.kind === "monster" || cell.kind === "image") &&
-              cell.src ? (
+              {cell.kind === "color" && cell.fill ? (
+                <span
+                  className="cell-swatch"
+                  style={{
+                    background: cell.fill,
+                    transform: cell.cssTransform,
+                    filter: cell.cssFilter,
+                  }}
+                />
+              ) : (cell.kind === "monster" || cell.kind === "image") &&
+                cell.src ? (
                 <img
                   className="cell-art"
                   src={cell.src}

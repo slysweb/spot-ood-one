@@ -562,6 +562,28 @@ a.link-btn {
   line-height: 1;
 }
 
+.cell-swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 2px solid rgba(44, 33, 24, 0.14);
+  box-shadow: inset 0 -6px 0 rgba(44, 33, 24, 0.08);
+  display: block;
+  pointer-events: none;
+}
+
+.pack-cell.swatch,
+.preview-art.swatch {
+  padding: 10%;
+}
+
+.pack-cell .cell-swatch,
+.preview-art .cell-swatch {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 .other-packs {
   margin-top: 8px;
   width: 100%;

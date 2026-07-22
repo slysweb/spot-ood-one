@@ -1,6 +1,13 @@
 export type FailReason = "wrong" | "timeout";
 
-export type ThemeId = "emoji" | "monster" | "cat" | "dog" | "fairy";
+export type ThemeId =
+  | "emoji"
+  | "monster"
+  | "cat"
+  | "dog"
+  | "fairy"
+  | "color"
+  | "fruit";
 
 export type PackDifficulty = "easy" | "medium" | "hard";
 
@@ -166,14 +173,76 @@ export interface FairyCampaignData {
   levels: FairyLevelDef[];
 }
 
+export interface ColorRef {
+  render: "swatch";
+  colorId: string;
+}
+
+export interface ColorLevelDef {
+  id: string;
+  index: number;
+  theme: "color";
+  grid: { cols: number; rows: number };
+  base: ColorRef;
+  odd: ColorRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface ColorCampaignData {
+  version: number;
+  theme: "color";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: ColorLevelDef[];
+}
+
+export interface FruitRef {
+  render: "image";
+  fruitId: string;
+  transform: string;
+}
+
+export interface FruitLevelDef {
+  id: string;
+  index: number;
+  theme: "fruit";
+  grid: { cols: number; rows: number };
+  base: FruitRef;
+  odd: FruitRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface FruitCampaignData {
+  version: number;
+  theme: "fruit";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: FruitLevelDef[];
+}
+
 export interface CellView {
   key: string;
-  kind: "emoji" | "monster" | "image";
+  kind: "emoji" | "monster" | "image" | "color";
   emoji?: string;
   monsterId?: string;
   catId?: string;
   dogId?: string;
   fairyId?: string;
+  fruitId?: string;
+  colorId?: string;
+  fill?: string;
   src?: string;
   transformKey: string;
   cssTransform: string;

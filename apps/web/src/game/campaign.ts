@@ -3,26 +3,36 @@ import monsterRaw from "@level-data/monster/levels_monster_120.json";
 import catRaw from "@level-data/cat/levels_cat_120.json";
 import dogRaw from "@level-data/dog/levels_dog_120.json";
 import fairyRaw from "@level-data/fairy/levels_fairy_85.json";
+import colorRaw from "@level-data/color/levels_color_30.json";
+import fruitRaw from "@level-data/fruit/levels_fruit_30.json";
 import type {
   CampaignData,
   CatCampaignData,
   CatLevelDef,
   CatRef,
   CellView,
+  ColorCampaignData,
+  ColorLevelDef,
+  ColorRef,
   DogCampaignData,
   DogLevelDef,
   DogRef,
   FairyCampaignData,
   FairyLevelDef,
   FairyRef,
+  FruitCampaignData,
+  FruitLevelDef,
+  FruitRef,
   MonsterCampaignData,
   MonsterLevelDef,
   ThemeId,
   ThemeProgress,
 } from "./types";
 import { resolveCatCell } from "./catAssets";
+import { resolveColorSwatch } from "./colorAssets";
 import { resolveDogCell } from "./dogAssets";
 import { resolveFairyCell } from "./fairyAssets";
+import { resolveFruitCell } from "./fruitAssets";
 import {
   mergeTransformKey,
   monsterSrc,
@@ -35,6 +45,8 @@ const monsterData = monsterRaw as MonsterCampaignData;
 const catData = catRaw as CatCampaignData;
 const dogData = dogRaw as DogCampaignData;
 const fairyData = fairyRaw as FairyCampaignData;
+const colorData = colorRaw as ColorCampaignData;
+const fruitData = fruitRaw as FruitCampaignData;
 
 export const TIME_LIMIT_MS = 10_000;
 
@@ -43,6 +55,8 @@ export function getTotalLevels(theme: ThemeId): number {
   if (theme === "cat") return catData.campaignLevels;
   if (theme === "dog") return dogData.campaignLevels;
   if (theme === "fairy") return fairyData.campaignLevels;
+  if (theme === "color") return colorData.campaignLevels;
+  if (theme === "fruit") return fruitData.campaignLevels;
   return emojiData.campaignLevels;
 }
 
@@ -297,6 +311,91 @@ export function buildFairyLevel(
   };
 }
 
+function colorCell(ref: ColorRef, index: number, isOdd: boolean): CellView {
+  const swatch = resolveColorSwatch(ref.colorId);
+  return {
+    key: `cl-${index}-${swatch.id}`,
+    kind: "color",
+    colorId: swatch.id,
+    fill: swatch.fill,
+    transformKey: "none",
+    cssTransform: "none",
+    cssFilter: "none",
+    isOdd,
+  };
+}
+
+export function buildColorLevel(
+  levelIndex: number,
+  retryCount: number,
+): {
+  cols: number;
+  cells: CellView[];
+  oddIndex: number;
+  fx: { board: string; odd: string };
+  timeLimitMs: number;
+} {
+  const level = colorData.levels.find((l) => l.index === levelIndex) as
+    | ColorLevelDef
+    | undefined;
+  if (!level) throw new Error(`Missing color level ${levelIndex}`);
+  const total = level.grid.cols * level.grid.rows;
+  const oddIndex = pickOddIndex(total, level.rules.shuffleSeed, retryCount);
+  const cells = Array.from({ length: total }, (_, i) =>
+    colorCell(i === oddIndex ? level.odd : level.base, i, i === oddIndex),
+  );
+  return {
+    cols: level.grid.cols,
+    cells,
+    oddIndex,
+    fx: level.fx,
+    timeLimitMs: level.rules.timeLimitMs,
+  };
+}
+
+function fruitCell(ref: FruitRef, index: number, isOdd: boolean): CellView {
+  const fruitId = ref.fruitId ?? "R01";
+  const art = resolveFruitCell(fruitId, ref.transform ?? "none");
+  return {
+    key: `fr-i-${index}-${fruitId}-${art.transformKey}`,
+    kind: "image",
+    fruitId,
+    src: art.src,
+    transformKey: art.transformKey,
+    cssTransform: art.cssTransform,
+    cssFilter: art.cssFilter,
+    isOdd,
+  };
+}
+
+export function buildFruitLevel(
+  levelIndex: number,
+  retryCount: number,
+): {
+  cols: number;
+  cells: CellView[];
+  oddIndex: number;
+  fx: { board: string; odd: string };
+  timeLimitMs: number;
+} {
+  const level = fruitData.levels.find((l) => l.index === levelIndex) as
+    | FruitLevelDef
+    | undefined;
+  if (!level) throw new Error(`Missing fruit level ${levelIndex}`);
+  const total = level.grid.cols * level.grid.rows;
+  const oddIndex = pickOddIndex(total, level.rules.shuffleSeed, retryCount);
+  const cells = Array.from({ length: total }, (_, i) =>
+    fruitCell(i === oddIndex ? level.odd : level.base, i, i === oddIndex),
+  );
+  return {
+    cols: level.grid.cols,
+    cells,
+    oddIndex,
+    fx: level.fx,
+    timeLimitMs: level.rules.timeLimitMs,
+  };
+}
+
 export function buildThemeLevel(
   theme: ThemeId,
   levelIndex: number,
@@ -306,5 +405,7 @@ export function buildThemeLevel(
   if (theme === "cat") return buildCatLevel(levelIndex, retryCount);
   if (theme === "dog") return buildDogLevel(levelIndex, retryCount);
   if (theme === "fairy") return buildFairyLevel(levelIndex, retryCount);
+  if (theme === "color") return buildColorLevel(levelIndex, retryCount);
+  if (theme === "fruit") return buildFruitLevel(levelIndex, retryCount);
   return buildEmojiLevel(levelIndex, retryCount);
 }

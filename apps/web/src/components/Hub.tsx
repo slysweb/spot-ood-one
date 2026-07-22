@@ -95,6 +95,48 @@ export function Hub({ save, onSettings }: HubProps) {
                       <img src="/fairies/fairy_f01.webp" alt="" />
                     </span>
                   </>
+                ) : theme.id === "color" ? (
+                  <>
+                    <span className="pack-cell swatch">
+                      <span
+                        className="cell-swatch"
+                        style={{ background: "#E53935" }}
+                      />
+                    </span>
+                    <span className="pack-cell swatch">
+                      <span
+                        className="cell-swatch"
+                        style={{ background: "#E53935" }}
+                      />
+                    </span>
+                    <span className="pack-cell swatch is-odd">
+                      <span
+                        className="cell-swatch"
+                        style={{ background: "#1E88E5" }}
+                      />
+                    </span>
+                    <span className="pack-cell swatch">
+                      <span
+                        className="cell-swatch"
+                        style={{ background: "#E53935" }}
+                      />
+                    </span>
+                  </>
+                ) : theme.id === "fruit" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/fruits/fruit_r01.webp" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/fruits/fruit_r01.webp" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd">
+                      <img src="/fruits/fruit_r09.webp" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/fruits/fruit_r01.webp" alt="" />
+                    </span>
+                  </>
                 ) : (
                   <>
                     <span className="pack-cell emoji">🐶</span>

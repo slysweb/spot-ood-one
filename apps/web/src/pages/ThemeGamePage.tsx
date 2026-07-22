@@ -480,6 +480,7 @@ function ThemeGame({ theme }: { theme: ThemeId }) {
           currentLevel={getContinueLevel(theme, themeProgress)}
           bestLevel={themeProgress.bestLevel}
           totalLevels={totalLevels}
+          campaignCleared={themeProgress.campaignCleared}
           onPlay={() => enterPlay(1)}
           onContinue={() =>
             enterPlay(getContinueLevel(theme, themeProgress))

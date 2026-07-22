@@ -44,7 +44,7 @@ export const THEMES: ThemeMeta[] = [
     eyebrow: "Cat pack",
     headline: "Cats",
     tagline: "Find the different cat.",
-    findLine: "Find the odd one among the cats.",
+    findLine: "Find the different cat.",
     tutorialBody:
       "Tap the one that doesn’t belong. Early levels hide another animal among cute cats; later levels use look-alike kitties, tints, bells, and jump-arounds. You have 10 seconds.",
     difficulty: "easy",
@@ -56,7 +56,7 @@ export const THEMES: ThemeMeta[] = [
     eyebrow: "Dog pack",
     headline: "Dogs",
     tagline: "Find the different dog.",
-    findLine: "Find the odd one among the dogs.",
+    findLine: "Find the different dog.",
     tutorialBody:
       "Tap the one that doesn’t belong. Early levels hide another animal among cute dogs; later levels use look-alike pups, tints, collars, and jump-arounds. You have 10 seconds.",
     difficulty: "easy",
@@ -68,7 +68,7 @@ export const THEMES: ThemeMeta[] = [
     eyebrow: "Fairy pack · Medium",
     headline: "Fairies",
     tagline: "Find the different fairy.",
-    findLine: "Spot the fairy that doesn’t match — watch the details.",
+    findLine: "Find the different fairy.",
     tutorialBody:
       "Tap the fairy that doesn’t belong. Early levels look clearly different; later levels change hair, dress, props, or tiny details — and some jump around. You have 10 seconds.",
     difficulty: "medium",
@@ -80,7 +80,7 @@ export const THEMES: ThemeMeta[] = [
     eyebrow: "Color pack · Medium",
     headline: "Colors",
     tagline: "Find the different color.",
-    findLine: "Spot the swatch that doesn’t match — watch hue and brightness.",
+    findLine: "Find the different color.",
     tutorialBody:
       "Tap the color that doesn’t belong. Early levels use clear hue changes; later levels shift brightness, saturation, or gradients — and some jump around. You have 10 seconds.",
     difficulty: "medium",
@@ -92,7 +92,7 @@ export const THEMES: ThemeMeta[] = [
     eyebrow: "Fruit pack · Medium",
     headline: "Fruits",
     tagline: "Find the different fruit.",
-    findLine: "Spot the fruit that doesn’t match — watch shape and type.",
+    findLine: "Find the different fruit.",
     tutorialBody:
       "Tap the fruit that doesn’t belong. Early levels hide a different kind of fruit; later levels use look-alikes like lemon vs lime — and some jump around. You have 10 seconds.",
     difficulty: "medium",

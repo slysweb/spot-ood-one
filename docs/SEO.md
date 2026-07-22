@@ -158,7 +158,8 @@ Spot the different {xx} picture — Spot Odd One
 ## 7. 文案维护约定
 
 - 英文 title / description **以代码为准**；改 SEO 只改 `pageMeta.ts`（Hub 时再同步 `index.html`）
-- 主题展示文案（headline、tagline、教程）在 `themeMeta.ts`，**不等于** SEO title/description；两者可相关但勿混用同一字段
+- 主题展示文案（headline、tagline / findLine、教程）在 `themeMeta.ts`，**不等于** SEO title/description；两者可相关但勿混用同一字段  
+- Hub **pack-tag**（`findLine`）句式强制统一：`Find the different {noun}.` — 见 `DIFFICULTY_AND_ASSETS.md` §4.1
 - 新增关键词或改格式时，先改本文再改代码，避免文档与实现漂移
 
 ---

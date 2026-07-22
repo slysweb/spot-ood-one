@@ -164,7 +164,37 @@
 |------|------|
 | 难度标签 | 卡片上展示 Easy / Medium / Hard（或中文：简单 / 中等 / 困难） |
 | 预览板 | 3×3 或 2×2：多数为本包角色，1 格为 Odd，且与真实玩法一致 |
-| 文案 | 简单：「找不一样的一只」；中等可强调「找细节不同的那个」 |
+| **pack-tag（`findLine`）** | **统一格式：`Find the different {noun}.`**（见下） |
+
+### 4.1 pack-tag 文案规范（强制）
+
+Hub 卡片与 Other packs 上的短描述（`themeMeta.findLine`，CSS 类 `.pack-tag`）**所有主题包必须同一句式**：
+
+```text
+Find the different {noun}.
+```
+
+| 规则 | 说明 |
+|------|------|
+| 句式 | 固定以 `Find the different` 开头，以句号结尾 |
+| `{noun}` | **单数**英文名，与玩法对象一致（emoji / monster / cat / dog / fairy / color / fruit） |
+| 禁止 | 加破折号补充、换用 Spot / odd one among 等变体、写成长句 |
+| 字段 | `findLine` 与 `tagline` 保持同句；细节说明放进 `tutorialBody`，不要塞进 pack-tag |
+| 实现 | `apps/web/src/game/themeMeta.ts` → `THEMES[].findLine` |
+
+**示例：**
+
+| 包 | pack-tag |
+|----|----------|
+| Emoji | `Find the different emoji.` |
+| Monsters | `Find the different monster.` |
+| Cats | `Find the different cat.` |
+| Dogs | `Find the different dog.` |
+| Fairies | `Find the different fairy.` |
+| Colors | `Find the different color.` |
+| Fruits | `Find the different fruit.` |
+
+新开主题包 checklist：补 `ThemeMeta` 时先写好符合本规范的 `findLine`，再写 SEO / 教程长文案。
 
 ---
 
@@ -188,3 +218,4 @@
 |------|------|------|
 | v1 | 2026-07-19 | 初版：三模式分级、各模式关卡模板、1024 出图规范；仙女定为中等 |
 | v1.1 | 2026-07-19 | 明确入库格式仅 WebP；禁止 JPG/GIF 等；补充转换命令与校验清单 |
+| v1.2 | 2026-07-22 | Hub pack-tag 统一为 `Find the different {noun}.`（§4.1） |

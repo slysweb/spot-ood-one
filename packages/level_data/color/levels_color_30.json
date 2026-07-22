@@ -1,0 +1,937 @@
+{
+  "version": 1,
+  "theme": "color",
+  "difficulty": "medium",
+  "campaignLevels": 30,
+  "assetPack": {
+    "note": "CSS swatches resolved by colorId in colorAssets.ts — no WebP art.",
+    "families": [
+      "RED",
+      "ORANGE",
+      "YELLOW",
+      "LIME",
+      "GREEN",
+      "TEAL",
+      "CYAN",
+      "BLUE",
+      "PURPLE",
+      "PINK"
+    ]
+  },
+  "fx": [
+    "none",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-8": "easy — clearly different hue",
+    "9-20": "medium — brightness / near-hue / saturation",
+    "21-24": "bridge — clearer same-family diffs",
+    "25-30": "hard — soft brightness + gradients; teleport from 28"
+  },
+  "levels": [
+    {
+      "id": "CL-001",
+      "index": 1,
+      "theme": "color",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7101
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-002",
+      "index": 2,
+      "theme": "color",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "GREEN"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "PURPLE"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7102
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-003",
+      "index": 3,
+      "theme": "color",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "YELLOW"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7103
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-004",
+      "index": 4,
+      "theme": "color",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "ORANGE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "TEAL"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7104
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-005",
+      "index": 5,
+      "theme": "color",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "PINK"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "GREEN"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7105
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-006",
+      "index": 6,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "CYAN"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7106
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-007",
+      "index": 7,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "PURPLE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "LIME"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7107
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-008",
+      "index": 8,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "TEAL"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "ORANGE"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7108
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "hue_clear"
+      }
+    },
+    {
+      "id": "CL-009",
+      "index": 9,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "RED_DARK"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7109
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-010",
+      "index": 10,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "RED_LIGHT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7110
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-011",
+      "index": 11,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "BLUE_DARK"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7111
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-012",
+      "index": 12,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "BLUE_DESAT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7112
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "saturation"
+      }
+    },
+    {
+      "id": "CL-013",
+      "index": 13,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "GREEN"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "GREEN_LIGHT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7113
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-014",
+      "index": 14,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "ORANGE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "ORANGE_DARK"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7114
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-015",
+      "index": 15,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "PURPLE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "PURPLE_LIGHT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7115
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-016",
+      "index": 16,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "TEAL"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "TEAL_DESAT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7116
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "saturation"
+      }
+    },
+    {
+      "id": "CL-017",
+      "index": 17,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "YELLOW"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "YELLOW_DARK"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7117
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-018",
+      "index": 18,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "PINK"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "PINK_DESAT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7118
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "saturation"
+      }
+    },
+    {
+      "id": "CL-019",
+      "index": 19,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "ORANGE_NEAR"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7119
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "hue_near"
+      }
+    },
+    {
+      "id": "CL-020",
+      "index": 20,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "CYAN_NEAR"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7120
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "hue_near"
+      }
+    },
+    {
+      "id": "CL-021",
+      "index": 21,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "RED_DARK"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7121
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "brightness_easy"
+      }
+    },
+    {
+      "id": "CL-022",
+      "index": 22,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "GREEN"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "GREEN_LIGHT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7122
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "brightness_easy"
+      }
+    },
+    {
+      "id": "CL-023",
+      "index": 23,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "PURPLE"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7123
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "hue_clear_easy"
+      }
+    },
+    {
+      "id": "CL-024",
+      "index": 24,
+      "theme": "color",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "ORANGE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "YELLOW"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7124
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "hue_clear_easy"
+      }
+    },
+    {
+      "id": "CL-025",
+      "index": 25,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "RED"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "RED_SOFT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7125
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-026",
+      "index": 26,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "BLUE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "BLUE_SOFT"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7126
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "brightness"
+      }
+    },
+    {
+      "id": "CL-027",
+      "index": 27,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "GREEN"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "GREEN_GRAD"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7127
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "gradient"
+      }
+    },
+    {
+      "id": "CL-028",
+      "index": 28,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "ORANGE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "ORANGE_GRAD"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7128
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "gradient"
+      }
+    },
+    {
+      "id": "CL-029",
+      "index": 29,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "PURPLE"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "PURPLE_GRAD"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7129
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "gradient"
+      }
+    },
+    {
+      "id": "CL-030",
+      "index": 30,
+      "theme": "color",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "swatch",
+        "colorId": "TEAL"
+      },
+      "odd": {
+        "render": "swatch",
+        "colorId": "TEAL_GRAD"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 7130
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "gradient"
+      }
+    }
+  ]
+}

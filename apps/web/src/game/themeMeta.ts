@@ -73,6 +73,30 @@ export const THEMES: ThemeMeta[] = [
       "Tap the fairy that doesn’t belong. Early levels look clearly different; later levels change hair, dress, props, or tiny details — and some jump around. You have 10 seconds.",
     difficulty: "medium",
   },
+  {
+    id: "color",
+    path: "/color",
+    label: "Colors",
+    eyebrow: "Color pack · Medium",
+    headline: "Colors",
+    tagline: "Find the different color.",
+    findLine: "Spot the swatch that doesn’t match — watch hue and brightness.",
+    tutorialBody:
+      "Tap the color that doesn’t belong. Early levels use clear hue changes; later levels shift brightness, saturation, or gradients — and some jump around. You have 10 seconds.",
+    difficulty: "medium",
+  },
+  {
+    id: "fruit",
+    path: "/fruit",
+    label: "Fruits",
+    eyebrow: "Fruit pack · Medium",
+    headline: "Fruits",
+    tagline: "Find the different fruit.",
+    findLine: "Spot the fruit that doesn’t match — watch shape and type.",
+    tutorialBody:
+      "Tap the fruit that doesn’t belong. Early levels hide a different kind of fruit; later levels use look-alikes like lemon vs lime — and some jump around. You have 10 seconds.",
+    difficulty: "medium",
+  },
 ];
 
 const DIFFICULTY_LABEL: Record<PackDifficulty, string> = {
@@ -95,6 +119,8 @@ export function isThemeId(value: string | undefined): value is ThemeId {
     value === "monster" ||
     value === "cat" ||
     value === "dog" ||
-    value === "fairy"
+    value === "fairy" ||
+    value === "color" ||
+    value === "fruit"
   );
 }

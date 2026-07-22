@@ -11,7 +11,7 @@ export interface PageMeta {
 export const HUB_META: PageMeta = {
   title: "Spot Odd One — Find the Odd One Out",
   description:
-    "Play a free find the difference game — spot the difference picture among look-alike photos and pick the odd one out. Quick packs with emoji, monsters, cats, dogs, and fairies.",
+    "Play a free find the difference game — spot the difference picture among look-alike photos and pick the odd one out. Quick packs with emoji, monsters, cats, dogs, fairies, colors, and fruits.",
   path: "/",
 };
 
@@ -43,6 +43,16 @@ const THEME_SEO: Record<
     title: "Spot the different fairy picture — Spot Odd One",
     description:
       "Spot the different fairy picture — watch hair, dress, props, and tiny details. A medium Spot Odd One pack.",
+  },
+  color: {
+    title: "Spot the different color picture — Spot Odd One",
+    description:
+      "Spot the different color picture among look-alike swatches — watch hue, brightness, and gradients. A medium Spot Odd One pack.",
+  },
+  fruit: {
+    title: "Spot the different fruit picture — Spot Odd One",
+    description:
+      "Spot the different fruit picture among cute look-alikes — watch shape and type. A medium Spot Odd One pack.",
   },
 };
 

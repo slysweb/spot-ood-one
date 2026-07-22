@@ -1,8 +1,19 @@
 import type { AppSave, ThemeId, ThemeProgress } from "./types";
 import { clampLevel, getTotalLevels } from "./campaign";
+import { isThemeId } from "./themeMeta";
 
 const KEY = "spot_odd_one_v2";
 const LEGACY_KEY = "spot_odd_one_v1";
+
+const THEME_IDS: ThemeId[] = [
+  "emoji",
+  "monster",
+  "cat",
+  "dog",
+  "fairy",
+  "color",
+  "fruit",
+];
 
 const emptyTheme = (): ThemeProgress => ({
   currentLevel: 1,
@@ -11,19 +22,25 @@ const emptyTheme = (): ThemeProgress => ({
   campaignCleared: false,
 });
 
+function emptyThemes(): Record<ThemeId, ThemeProgress> {
+  return {
+    emoji: emptyTheme(),
+    monster: emptyTheme(),
+    cat: emptyTheme(),
+    dog: emptyTheme(),
+    fairy: emptyTheme(),
+    color: emptyTheme(),
+    fruit: emptyTheme(),
+  };
+}
+
 function defaults(): AppSave {
   return {
     version: 2,
     theme: "emoji",
     sound: true,
     colorblind: false,
-    themes: {
-      emoji: emptyTheme(),
-      monster: emptyTheme(),
-      cat: emptyTheme(),
-      dog: emptyTheme(),
-      fairy: emptyTheme(),
-    },
+    themes: emptyThemes(),
   };
 }
 
@@ -65,54 +82,32 @@ export function loadSave(): AppSave {
 
 function normalize(save: AppSave): AppSave {
   const base = defaults();
-  const theme: ThemeId =
-    save.theme === "monster" ||
-    save.theme === "cat" ||
-    save.theme === "dog" ||
-    save.theme === "fairy"
-      ? save.theme
-      : "emoji";
+  const theme: ThemeId = isThemeId(save.theme) ? save.theme : "emoji";
+  const themes = emptyThemes();
+  for (const id of THEME_IDS) {
+    themes[id] = {
+      ...base.themes[id],
+      ...save.themes?.[id],
+    };
+  }
   return {
     version: 2,
     theme,
     sound: save.sound ?? true,
     colorblind: save.colorblind ?? false,
-    themes: {
-      emoji: {
-        ...base.themes.emoji,
-        ...save.themes?.emoji,
-      },
-      monster: {
-        ...base.themes.monster,
-        ...save.themes?.monster,
-      },
-      cat: {
-        ...base.themes.cat,
-        ...save.themes?.cat,
-      },
-      dog: {
-        ...base.themes.dog,
-        ...save.themes?.dog,
-      },
-      fairy: {
-        ...base.themes.fairy,
-        ...save.themes?.fairy,
-      },
-    },
+    themes,
   };
 }
 
 export function saveSave(save: AppSave): void {
+  const themes = emptyThemes();
+  for (const id of THEME_IDS) {
+    themes[id] = clampTheme(id, save.themes[id] ?? emptyTheme());
+  }
   const next: AppSave = {
     ...save,
     version: 2,
-    themes: {
-      emoji: clampTheme("emoji", save.themes.emoji),
-      monster: clampTheme("monster", save.themes.monster),
-      cat: clampTheme("cat", save.themes.cat ?? emptyTheme()),
-      dog: clampTheme("dog", save.themes.dog ?? emptyTheme()),
-      fairy: clampTheme("fairy", save.themes.fairy ?? emptyTheme()),
-    },
+    themes,
   };
   localStorage.setItem(KEY, JSON.stringify(next));
 }

@@ -445,6 +445,7 @@ Friendly, sharp, playful。短句。不嘲讽失败。
 |------|------|
 | Home CTA | Play |
 | Continue | Continue · Level {n} |
+| Continue 显示条件 | 仅未通关且有进度时显示；`campaignCleared` 或 `bestLevel >= total` 后隐藏 |
 | Tutorial title | Spot the odd one |
 | Tutorial body | Tap the emoji that doesn’t match. You have 10 seconds. |
 | Correct | Spot on! / Nice! / Nailed it! |

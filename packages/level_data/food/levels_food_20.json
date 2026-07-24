@@ -1,0 +1,726 @@
+{
+  "version": 1,
+  "theme": "food",
+  "difficulty": "hard",
+  "campaignLevels": 20,
+  "assetPack": {
+    "required": [
+      "F01",
+      "F01b",
+      "F02",
+      "F02b",
+      "F03",
+      "F03b",
+      "F04",
+      "F04b",
+      "F05",
+      "F05b",
+      "F06",
+      "F06b",
+      "F07",
+      "F07b",
+      "F08",
+      "F08b",
+      "F09",
+      "F09b",
+      "F10",
+      "F10b",
+      "F11",
+      "F11b",
+      "F12",
+      "F12b",
+      "F13",
+      "F13b",
+      "F14",
+      "F14b",
+      "F15",
+      "F15b",
+      "F16",
+      "F16b",
+      "F17",
+      "F17b",
+      "F18",
+      "F18b",
+      "F19",
+      "F19b",
+      "F20",
+      "F20b"
+    ],
+    "note": "Hard short pack: 20 unique foods, each base vs twin prop. Kawaii WebP in public/foods/."
+  },
+  "fx": [
+    "none",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-5": "warm — twin prop on 4×4 (still readable)",
+    "6-14": "main — twin prop; 5×5 from 10",
+    "15-20": "hard — densest grid; teleport from 17"
+  },
+  "levels": [
+    {
+      "id": "FD-001",
+      "index": 1,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F01",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F01b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9301
+      },
+      "meta": {
+        "band": "warm",
+        "diffType": "twin_prop",
+        "food": "pizza"
+      }
+    },
+    {
+      "id": "FD-002",
+      "index": 2,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F02",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F02b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9302
+      },
+      "meta": {
+        "band": "warm",
+        "diffType": "twin_prop",
+        "food": "ice cream"
+      }
+    },
+    {
+      "id": "FD-003",
+      "index": 3,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F03",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F03b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9303
+      },
+      "meta": {
+        "band": "warm",
+        "diffType": "twin_prop",
+        "food": "cookie"
+      }
+    },
+    {
+      "id": "FD-004",
+      "index": 4,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F04",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F04b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9304
+      },
+      "meta": {
+        "band": "warm",
+        "diffType": "twin_prop",
+        "food": "milk"
+      }
+    },
+    {
+      "id": "FD-005",
+      "index": 5,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F05",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F05b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9305
+      },
+      "meta": {
+        "band": "warm",
+        "diffType": "twin_prop",
+        "food": "butter bread"
+      }
+    },
+    {
+      "id": "FD-006",
+      "index": 6,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F06b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F06",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9306
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "chocolate"
+      }
+    },
+    {
+      "id": "FD-007",
+      "index": 7,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F07",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F07b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9307
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "cheese"
+      }
+    },
+    {
+      "id": "FD-008",
+      "index": 8,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F08",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F08b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9308
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "hamburger"
+      }
+    },
+    {
+      "id": "FD-009",
+      "index": 9,
+      "theme": "food",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F09b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F09",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9309
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "hot dog"
+      }
+    },
+    {
+      "id": "FD-010",
+      "index": 10,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F10",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F10b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9310
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "donut"
+      }
+    },
+    {
+      "id": "FD-011",
+      "index": 11,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F11",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F11b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9311
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "cake"
+      }
+    },
+    {
+      "id": "FD-012",
+      "index": 12,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F12b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F12",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9312
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "cupcake"
+      }
+    },
+    {
+      "id": "FD-013",
+      "index": 13,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F13",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F13b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9313
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "sushi"
+      }
+    },
+    {
+      "id": "FD-014",
+      "index": 14,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F14",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F14b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9314
+      },
+      "meta": {
+        "band": "main",
+        "diffType": "twin_prop",
+        "food": "ramen"
+      }
+    },
+    {
+      "id": "FD-015",
+      "index": 15,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F15",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F15b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9315
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "taco"
+      }
+    },
+    {
+      "id": "FD-016",
+      "index": 16,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F16b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F16",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9316
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "fries"
+      }
+    },
+    {
+      "id": "FD-017",
+      "index": 17,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F17",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F17b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9317
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "popcorn"
+      }
+    },
+    {
+      "id": "FD-018",
+      "index": 18,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F18b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F18",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9318
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "pancake"
+      }
+    },
+    {
+      "id": "FD-019",
+      "index": 19,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F19",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F19b",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9319
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "onigiri"
+      }
+    },
+    {
+      "id": "FD-020",
+      "index": 20,
+      "theme": "food",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "image",
+        "foodId": "F20b",
+        "transform": "none"
+      },
+      "odd": {
+        "render": "image",
+        "foodId": "F20",
+        "transform": "none"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9320
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "twin_prop",
+        "food": "pudding"
+      }
+    }
+  ]
+}

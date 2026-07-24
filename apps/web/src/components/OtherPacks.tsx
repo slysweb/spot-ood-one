@@ -24,6 +24,7 @@ const THUMBS: Record<
   fruit: { main: "/fruits/fruit_r01.webp", odd: "/fruits/fruit_r09.webp" },
   letter: { main: "b", odd: "d", glyph: true },
   number: { main: "0", odd: "O", glyph: true },
+  food: { main: "/foods/food_f01.webp", odd: "/foods/food_f01b.webp" },
 };
 
 interface OtherPacksProps {

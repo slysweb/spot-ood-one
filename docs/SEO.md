@@ -79,7 +79,7 @@ Hub 页在 `HubPage` 中调用 `usePageMeta(HUB_META)`。
 Spot the different {xx} picture — Spot Odd One
 ```
 
-- `{xx}` 为主题英文名（小写单数，与包名一致）：`emoji` / `monster` / `cat` / `dog` / `fairy` / `color` / `fruit` / `letter` / `number` 等
+- `{xx}` 为主题英文名（小写单数，与包名一致）：`emoji` / `monster` / `cat` / `dog` / `fairy` / `color` / `fruit` / `letter` / `number` / `food` 等
 - **进入 Play（或 Settings）后不改 title**——只在挂载主题页时设一次 `landingMeta`
 
 **示例（真实文案）：**
@@ -92,6 +92,7 @@ Spot the different {xx} picture — Spot Odd One
 | fruit | `Spot the different fruit picture — Spot Odd One` |
 | letter | `Spot the different letter picture — Spot Odd One` |
 | number | `Spot the different number picture — Spot Odd One` |
+| food | `Spot the different food picture — Spot Odd One` |
 
 ### 4.2 Description
 
@@ -108,6 +109,7 @@ Spot the different {xx} picture — Spot Odd One
 | fruit | `Spot the different fruit picture among cute look-alikes — watch shape and type. A medium Spot Odd One pack.` |
 | letter | `Spot the different letter picture among look-alikes like b vs d and p vs q. An easy Spot Odd One pack with timed levels.` |
 | number | `Spot the different number picture among look-alikes like 0 vs O and 5 vs S. An easy Spot Odd One pack with timed levels.` |
+| food | `Spot the different food picture among kawaii look-alike dishes — watch tiny toppings and props. A hard Spot Odd One pack.` |
 
 ### 4.3 Canonical
 

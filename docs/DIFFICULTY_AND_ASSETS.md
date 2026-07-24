@@ -15,13 +15,13 @@
 |------|------|----------|--------|---------------------|
 | **简单** | Easy | 低 → 中 | 全年龄、快速上手 | Emoji · Monsters · Cats · Dogs · **Letters** · **Numbers** |
 | **中等** | Medium | 中 → 中高 | 玩过简单包、喜欢观察细节 | **Fairy（仙女）** · **Colors（颜色）** · **Fruits（水果）** |
-| **困难** | Hard | 高 | 追求挑战、能接受微差与动效 | （后续品类，如 Micro / Chaos 等） |
+| **困难** | Hard | 高 | 追求挑战、能接受微差与动效 | **Foods（食物）**（短包） · 后续如 Micro / Chaos 等 |
 
 ### 1.1 模式差异总览
 
 | 维度 | 简单 Easy | 中等 Medium | 困难 Hard |
 |------|-----------|-------------|-----------|
-| 建议总关数 | **120**（短包如 Letters / Numbers 可 **30**） | **80–100**（仙女默认 **85**）；短包约 **30** | **60–80** |
+| 建议总关数 | **120**（短包如 Letters / Numbers 可 **30**） | **80–100**（仙女默认 **85**）；短包约 **30** | **60–80**（短包如 Foods 可 **20**） |
 | 开局可辨识度 | 一眼能分（字形短包开局即为相关形近） | 要扫一眼细节 | 需仔细对比 |
 | 差异尺度 | 物种 / 品种 / 大造型；字形包为易混字母数字 | 部件级（发色、衣服、道具） | 微部件 + 干扰 |
 | 网格 | 3×3 → 4×4 → 5×5 | 以 4×4 为主，后期 5×5 | 以 5×5 为主 |
@@ -74,13 +74,17 @@
 - 中等段不要靠 CSS 轻微 `hue` 冒充「发色不同」——发色差应是 **画出来的不同资产**（或明确 twin 图）。  
 - 过渡段禁止突然上微差 + 换位双杀。
 
-### 2.3 困难模式（Hard）— 关卡模板（预留）
+### 2.3 困难模式（Hard）— 关卡模板
+
+以 **Foods（食物）** 短包为样板；总关建议 **60–80**，短包可压到约 **20** 关（Foods：5 + 9 + 6）。
 
 | 段 | 建议关数 | 差异设计 | 网格 | FX |
 |----|----------|----------|------|-----|
-| 热身 | 1–10 | 仍可读的部件差（比中等高难段略易） | 4×4 | 无 |
-| 主体 | 11–40 | 微差 twin；同构图极高一致 | 5×5 | 轻 wobble 可选 |
-| 压迫 | 41–60+ | 微差 + 换位 / 抖动；可叠加弱色差 | 5×5 | teleport 为主 |
+| 热身 | 1–10（短包约 5） | 仍可读的部件差（比中等高难段略易） | 4×4 | 无 |
+| 主体 | 11–40（短包约 9） | 微差 twin；同构图极高一致 | 5×5 | 轻 wobble 可选 |
+| 压迫 | 41–60+（短包约 6） | 微差 + 换位 / 抖动；可叠加弱色差 | 5×5 | teleport 为主 |
+
+**困难短包（Foods）强制：** 每关一种食物不重复；Odd 必须是同食物 twin（如披萨有无草莓），禁止跨种类藏不同食物。
 
 困难包上线前需单独评审「可辨识性」与误触率。
 
@@ -178,7 +182,7 @@ Find the different {noun}.
 | 规则 | 说明 |
 |------|------|
 | 句式 | 固定以 `Find the different` 开头，以句号结尾 |
-| `{noun}` | **单数**英文名，与玩法对象一致（emoji / monster / cat / dog / fairy / color / fruit / letter / number） |
+| `{noun}` | **单数**英文名，与玩法对象一致（emoji / monster / cat / dog / fairy / color / fruit / letter / number / food） |
 | 禁止 | 加破折号补充、换用 Spot / odd one among 等变体、写成长句 |
 | 字段 | `findLine` 与 `tagline` 保持同句；细节说明放进 `tutorialBody`，不要塞进 pack-tag |
 | 实现 | `apps/web/src/game/themeMeta.ts` → `THEMES[].findLine` |
@@ -195,7 +199,7 @@ Find the different {noun}.
 | Colors | `Find the different color.` |
 | Fruits | `Find the different fruit.` |
 | Letters | `Find the different letter.` |
-| Numbers | `Find the different number.` |
+| Foods | `Find the different food.` |
 
 新开主题包 checklist：补 `ThemeMeta` 时先写好符合本规范的 `findLine`，再写 SEO / 教程长文案。
 
@@ -212,6 +216,7 @@ Find the different {noun}.
 | `FRUIT_THEME.md` | 水果（中等短包 · 类别/形状/易错认） |
 | `LETTER_THEME.md` | 字母（简单短包 · b/d · p/q · o/0） |
 | `NUMBER_THEME.md` | 数字（简单短包 · 0/O · 5/S · 8/B） |
+| `FOOD_THEME.md` | 食物（困难短包 · 同食 twin 微差） |
 | `CAT_THEME.md` / `DOG_THEME.md` / `MONSTER_THEME.md` | 简单模式品类 |
 | `FAIL_SHARE_AD_SPEC.md` | 失败续关 |
 
@@ -225,3 +230,4 @@ Find the different {noun}.
 | v1.1 | 2026-07-19 | 明确入库格式仅 WebP；禁止 JPG/GIF 等；补充转换命令与校验清单 |
 | v1.2 | 2026-07-22 | Hub pack-tag 统一为 `Find the different {noun}.`（§4.1） |
 | v1.3 | 2026-07-24 | 增加 Letters / Numbers 简单短包（30 关 · 易混字形） |
+| v1.4 | 2026-07-24 | 增加 Foods 困难短包（20 关 · 同食 twin） |

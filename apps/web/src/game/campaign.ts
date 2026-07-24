@@ -7,6 +7,7 @@ import colorRaw from "@level-data/color/levels_color_30.json";
 import fruitRaw from "@level-data/fruit/levels_fruit_30.json";
 import letterRaw from "@level-data/letter/levels_letter_30.json";
 import numberRaw from "@level-data/number/levels_number_30.json";
+import foodRaw from "@level-data/food/levels_food_20.json";
 import type {
   CampaignData,
   CatCampaignData,
@@ -22,6 +23,9 @@ import type {
   FairyCampaignData,
   FairyLevelDef,
   FairyRef,
+  FoodCampaignData,
+  FoodLevelDef,
+  FoodRef,
   FruitCampaignData,
   FruitLevelDef,
   FruitRef,
@@ -39,6 +43,7 @@ import { resolveCatCell } from "./catAssets";
 import { resolveColorSwatch } from "./colorAssets";
 import { resolveDogCell } from "./dogAssets";
 import { resolveFairyCell } from "./fairyAssets";
+import { resolveFoodCell } from "./foodAssets";
 import { resolveFruitCell } from "./fruitAssets";
 import { resolveGlyph } from "./glyphAssets";
 import {
@@ -57,6 +62,7 @@ const colorData = colorRaw as ColorCampaignData;
 const fruitData = fruitRaw as FruitCampaignData;
 const letterData = letterRaw as LetterCampaignData;
 const numberData = numberRaw as NumberCampaignData;
+const foodData = foodRaw as FoodCampaignData;
 
 export const TIME_LIMIT_MS = 10_000;
 
@@ -69,6 +75,7 @@ export function getTotalLevels(theme: ThemeId): number {
   if (theme === "fruit") return fruitData.campaignLevels;
   if (theme === "letter") return letterData.campaignLevels;
   if (theme === "number") return numberData.campaignLevels;
+  if (theme === "food") return foodData.campaignLevels;
   return emojiData.campaignLevels;
 }
 
@@ -478,6 +485,49 @@ export function buildNumberLevel(
   };
 }
 
+function foodCell(ref: FoodRef, index: number, isOdd: boolean): CellView {
+  const foodId = ref.foodId ?? "F01";
+  const art = resolveFoodCell(foodId, ref.transform ?? "none");
+  return {
+    key: `fd-i-${index}-${foodId}-${art.transformKey}`,
+    kind: "image",
+    foodId,
+    src: art.src,
+    transformKey: art.transformKey,
+    cssTransform: art.cssTransform,
+    cssFilter: art.cssFilter,
+    isOdd,
+  };
+}
+
+export function buildFoodLevel(
+  levelIndex: number,
+  retryCount: number,
+): {
+  cols: number;
+  cells: CellView[];
+  oddIndex: number;
+  fx: { board: string; odd: string };
+  timeLimitMs: number;
+} {
+  const level = foodData.levels.find((l) => l.index === levelIndex) as
+    | FoodLevelDef
+    | undefined;
+  if (!level) throw new Error(`Missing food level ${levelIndex}`);
+  const total = level.grid.cols * level.grid.rows;
+  const oddIndex = pickOddIndex(total, level.rules.shuffleSeed, retryCount);
+  const cells = Array.from({ length: total }, (_, i) =>
+    foodCell(i === oddIndex ? level.odd : level.base, i, i === oddIndex),
+  );
+  return {
+    cols: level.grid.cols,
+    cells,
+    oddIndex,
+    fx: level.fx,
+    timeLimitMs: level.rules.timeLimitMs,
+  };
+}
+
 export function buildThemeLevel(
   theme: ThemeId,
   levelIndex: number,
@@ -491,5 +541,6 @@ export function buildThemeLevel(
   if (theme === "fruit") return buildFruitLevel(levelIndex, retryCount);
   if (theme === "letter") return buildLetterLevel(levelIndex, retryCount);
   if (theme === "number") return buildNumberLevel(levelIndex, retryCount);
+  if (theme === "food") return buildFoodLevel(levelIndex, retryCount);
   return buildEmojiLevel(levelIndex, retryCount);
 }

@@ -15,6 +15,7 @@ const THEME_IDS: ThemeId[] = [
   "fruit",
   "letter",
   "number",
+  "food",
 ];
 
 const emptyTheme = (): ThemeProgress => ({
@@ -35,6 +36,7 @@ function emptyThemes(): Record<ThemeId, ThemeProgress> {
     fruit: emptyTheme(),
     letter: emptyTheme(),
     number: emptyTheme(),
+    food: emptyTheme(),
   };
 }
 

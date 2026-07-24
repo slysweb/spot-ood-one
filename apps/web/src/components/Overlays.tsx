@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import type { FailReason } from "@/game/types";
 import { ADS_ENABLED } from "@/game/config";
 
@@ -199,6 +200,17 @@ export function SettingsOverlay({
           />
         </label>
         <p style={{ marginTop: 14 }}>No account needed. Progress stays on this device.</p>
+        <p className="settings-about">
+          <Link to="/about" className="link-btn" onClick={onClose}>
+            About
+          </Link>
+          <Link to="/privacy" className="link-btn" onClick={onClose}>
+            Privacy
+          </Link>
+          <Link to="/terms" className="link-btn" onClick={onClose}>
+            Terms
+          </Link>
+        </p>
         <button type="button" className="btn btn-secondary" onClick={onClose}>
           Close
         </button>

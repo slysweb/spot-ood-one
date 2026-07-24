@@ -15,6 +15,27 @@ export const HUB_META: PageMeta = {
   path: "/",
 };
 
+export const ABOUT_META: PageMeta = {
+  title: "About Spot Odd One — Free Odd One Out Game",
+  description:
+    "Learn about Spot Odd One, a free find the odd one out game. Tap the different picture among look-alikes across emoji, monster, cat, dog, fairy, color, and fruit packs.",
+  path: "/about",
+};
+
+export const PRIVACY_META: PageMeta = {
+  title: "Privacy Policy — Spot Odd One",
+  description:
+    "Privacy Policy for Spot Odd One. Play without an account; progress and settings stay in your browser. We do not sell personal data.",
+  path: "/privacy",
+};
+
+export const TERMS_META: PageMeta = {
+  title: "Terms of Service — Spot Odd One",
+  description:
+    "Terms of Service for Spot Odd One, the free find the odd one out browser game at spotoddone.com.",
+  path: "/terms",
+};
+
 const THEME_SEO: Record<
   ThemeId,
   Pick<PageMeta, "title" | "description">

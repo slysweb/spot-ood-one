@@ -161,9 +161,20 @@ export function Hub({ save, onSettings }: HubProps) {
         })}
       </div>
 
-      <button type="button" className="link-btn" onClick={onSettings}>
-        Settings
-      </button>
+      <div className="home-links">
+        <button type="button" className="link-btn" onClick={onSettings}>
+          Settings
+        </button>
+        <Link to="/about" className="link-btn">
+          About
+        </Link>
+        <Link to="/privacy" className="link-btn">
+          Privacy
+        </Link>
+        <Link to="/terms" className="link-btn">
+          Terms
+        </Link>
+      </div>
     </section>
   );
 }

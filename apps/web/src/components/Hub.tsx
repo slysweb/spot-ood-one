@@ -177,7 +177,9 @@ export function Hub({ save, onSettings }: HubProps) {
               </div>
               <div className="pack-copy">
                 <h2 className="pack-title">{theme.label}</h2>
-                <p className="pack-diff">{difficultyLabel(theme.difficulty)}</p>
+                <p className={`pack-diff pack-diff-${theme.difficulty}`}>
+                  {difficultyLabel(theme.difficulty)}
+                </p>
                 <p className="pack-tag">{theme.findLine}</p>
                 <p className="pack-meta">
                   {hasProgress

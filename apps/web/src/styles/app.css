@@ -83,6 +83,7 @@ button {
 
 .home-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 18px;
   margin-top: 4px;
@@ -407,10 +408,6 @@ a.link-btn {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px 16px;
-}
-
-.home-links {
-  flex-wrap: wrap;
 }
 
 .home .stack,

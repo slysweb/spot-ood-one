@@ -121,6 +121,18 @@ export const THEMES: ThemeMeta[] = [
       "Tap the number that doesn’t belong. Watch look-alikes like 0 vs O, 5 vs S, and 8 vs B — some jump around later. You have 10 seconds.",
     difficulty: "easy",
   },
+  {
+    id: "food",
+    path: "/food",
+    label: "Foods",
+    eyebrow: "Food pack · Hard",
+    headline: "Foods",
+    tagline: "Find the different food.",
+    findLine: "Find the different food.",
+    tutorialBody:
+      "Tap the food that doesn’t belong. Each level uses one dish — the odd one only changes a tiny topping or prop, and some jump around. You have 10 seconds.",
+    difficulty: "hard",
+  },
 ];
 
 const DIFFICULTY_LABEL: Record<PackDifficulty, string> = {
@@ -147,6 +159,7 @@ export function isThemeId(value: string | undefined): value is ThemeId {
     value === "color" ||
     value === "fruit" ||
     value === "letter" ||
-    value === "number"
+    value === "number" ||
+    value === "food"
   );
 }

@@ -151,6 +151,21 @@ export function Hub({ save, onSettings }: HubProps) {
                     <span className="pack-cell glyph is-odd">O</span>
                     <span className="pack-cell glyph">0</span>
                   </>
+                ) : theme.id === "food" ? (
+                  <>
+                    <span className="pack-cell">
+                      <img src="/foods/food_f01.webp" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/foods/food_f01.webp" alt="" />
+                    </span>
+                    <span className="pack-cell is-odd">
+                      <img src="/foods/food_f01b.webp" alt="" />
+                    </span>
+                    <span className="pack-cell">
+                      <img src="/foods/food_f01.webp" alt="" />
+                    </span>
+                  </>
                 ) : (
                   <>
                     <span className="pack-cell emoji">🐶</span>

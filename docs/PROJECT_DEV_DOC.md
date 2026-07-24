@@ -62,7 +62,7 @@
 |------|----------|----------|
 | 简单 Easy | Emoji · Monsters · Cats · Dogs · **Letters** · **Numbers** | 不同角色 / 品种 → 后期明显装饰差；字形包为易混字母数字 |
 | 中等 Medium | **Fairy（仙女）** · **Colors** · **Fruits** | 明显不同 → **部件/明度/近亲差** → 过渡放松 → 微差/渐变 + 换位 |
-| 困难 Hard | （后续） | 微差为主，动效更早更密 |
+| 困难 Hard | **Foods（食物）**（后续可扩） | 同构图 twin 微差 + 换位 |
 
 仙女品类设计：**`docs/FAIRY_THEME.md`**（85 关曲线已锁定，待出图与开发）。
 
@@ -470,7 +470,7 @@ Hub / Other packs 卡片短描述（`findLine` → `.pack-tag`）统一为：
 Find the different {noun}.
 ```
 
-- `{noun}` 用**单数**（emoji、monster、cat、dog、fairy、color、fruit、letter、number…）  
+- `{noun}` 用**单数**（emoji、monster、cat、dog、fairy、color、fruit、letter、number、food…）  
 - 不在 pack-tag 里写细节提示；细节放 `tutorialBody`  
 - 完整表与新包 checklist：**`docs/DIFFICULTY_AND_ASSETS.md` §4.1**  
 - 源码：`apps/web/src/game/themeMeta.ts`

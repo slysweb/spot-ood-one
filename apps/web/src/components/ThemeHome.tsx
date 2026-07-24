@@ -242,6 +242,36 @@ export function ThemeHome({
               <span className="cell preview-art glyph">0</span>
               <span className="cell preview-art glyph">0</span>
             </>
+          ) : meta.id === "food" ? (
+            <>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art is-odd">
+                <img src="/foods/food_f01b.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+              <span className="cell preview-art">
+                <img src="/foods/food_f01.webp" alt="" />
+              </span>
+            </>
           ) : (
             <>
               <span className="cell">🐶</span>

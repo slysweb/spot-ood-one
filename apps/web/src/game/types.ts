@@ -9,7 +9,8 @@ export type ThemeId =
   | "color"
   | "fruit"
   | "letter"
-  | "number";
+  | "number"
+  | "food";
 
 export type PackDifficulty = "easy" | "medium" | "hard";
 
@@ -287,6 +288,36 @@ export interface NumberCampaignData {
   levels: NumberLevelDef[];
 }
 
+export interface FoodRef {
+  render: "image";
+  foodId: string;
+  transform: string;
+}
+
+export interface FoodLevelDef {
+  id: string;
+  index: number;
+  theme: "food";
+  grid: { cols: number; rows: number };
+  base: FoodRef;
+  odd: FoodRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string; food?: string };
+}
+
+export interface FoodCampaignData {
+  version: number;
+  theme: "food";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: FoodLevelDef[];
+}
+
 export interface CellView {
   key: string;
   kind: "emoji" | "monster" | "image" | "color" | "glyph";
@@ -296,6 +327,7 @@ export interface CellView {
   dogId?: string;
   fairyId?: string;
   fruitId?: string;
+  foodId?: string;
   colorId?: string;
   glyphId?: string;
   glyph?: string;

@@ -11,14 +11,14 @@ export interface PageMeta {
 export const HUB_META: PageMeta = {
   title: "Spot Odd One — Find the Odd One Out",
   description:
-    "Play a free find the difference game — spot the difference picture among look-alike photos and pick the odd one out. Quick packs with emoji, monsters, cats, dogs, fairies, colors, fruits, letters, and numbers.",
+    "Play a free find the difference game — spot the difference picture among look-alike photos and pick the odd one out. Quick packs with emoji, monsters, cats, dogs, fairies, colors, fruits, letters, numbers, and foods.",
   path: "/",
 };
 
 export const ABOUT_META: PageMeta = {
   title: "About Spot Odd One — Free Odd One Out Game",
   description:
-    "Learn about Spot Odd One, a free find the odd one out game. Tap the different picture among look-alikes across emoji, monster, cat, dog, fairy, color, fruit, letter, and number packs.",
+    "Learn about Spot Odd One, a free find the odd one out game. Tap the different picture among look-alikes across emoji, monster, cat, dog, fairy, color, fruit, letter, number, and food packs.",
   path: "/about",
 };
 
@@ -84,6 +84,11 @@ const THEME_SEO: Record<
     title: "Spot the different number picture — Spot Odd One",
     description:
       "Spot the different number picture among look-alikes like 0 vs O and 5 vs S. An easy Spot Odd One pack with timed levels.",
+  },
+  food: {
+    title: "Spot the different food picture — Spot Odd One",
+    description:
+      "Spot the different food picture among kawaii look-alike dishes — watch tiny toppings and props. A hard Spot Odd One pack.",
   },
 };
 

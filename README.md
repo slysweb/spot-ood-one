@@ -47,8 +47,10 @@ Dashboard → **Import a repository** 时：
 
 ## Docs
 
-- **[docs/SEO.md](docs/SEO.md)** — Web SEO（title / description / canonical；新主题包 checklist）
+- **[docs/SEO.md](docs/SEO.md)** — Web SEO（title / description / canonical / robots / sitemap；新主题包 checklist）
 - **[docs/DEPLOY_CLOUDFLARE.md](docs/DEPLOY_CLOUDFLARE.md)** — Cloudflare Workers 部署
+
+站点静态 SEO 文件（构建进 `dist`）：`/robots.txt`、`/sitemap.xml`；关于页：`/about`。
 
 ## Product rules (MVP)
 

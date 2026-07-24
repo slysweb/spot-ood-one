@@ -15,6 +15,13 @@ export const HUB_META: PageMeta = {
   path: "/",
 };
 
+export const ABOUT_META: PageMeta = {
+  title: "About Spot Odd One — Free Odd One Out Game",
+  description:
+    "Learn about Spot Odd One, a free find the odd one out game. Tap the different picture among look-alikes across emoji, monster, cat, dog, fairy, color, and fruit packs.",
+  path: "/about",
+};
+
 const THEME_SEO: Record<
   ThemeId,
   Pick<PageMeta, "title" | "description">

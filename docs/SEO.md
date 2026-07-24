@@ -14,9 +14,12 @@
 | 站点域名 `SITE_ORIGIN`、`absoluteUrl()` | `apps/web/src/game/site.ts` |
 | 运行时写入 `<title>` / meta description / canonical | `apps/web/src/hooks/usePageMeta.ts` |
 | Hub 调用 | `apps/web/src/pages/HubPage.tsx` |
+| About 调用 | `apps/web/src/pages/AboutPage.tsx` |
 | 主题页调用（含 Play / Settings） | `apps/web/src/pages/ThemeGamePage.tsx` |
 | 主题 path（如 `/dog`） | `apps/web/src/game/themeMeta.ts`（`ThemeMeta.path`） |
-| 路由 | `apps/web/src/App.tsx`（`/`、`/:themeId`） |
+| 路由 | `apps/web/src/App.tsx`（`/`、`/about`、`/:themeId`） |
+| 爬虫规则 | `apps/web/public/robots.txt` |
+| 站点地图 | `apps/web/public/sitemap.xml` |
 | 首屏 HTML fallback（爬虫 / JS 未跑前） | `apps/web/index.html` |
 
 运行时逻辑：`usePageMeta(meta)` 根据当前路由的 `PageMeta` 设置：
@@ -110,7 +113,41 @@ Spot the different {xx} picture — Spot Odd One
 
 ---
 
-## 5. `index.html` Fallback
+## 5. About（`/about`）
+
+常量：`ABOUT_META`（`pageMeta.ts`）。
+
+| 字段 | 要求 | 当前真实文案 |
+|------|------|----------------|
+| **title** | 品牌 + About | `About Spot Odd One — Free Odd One Out Game` |
+| **description** | 说明站点与玩法；可枚举主题包 | 见 `ABOUT_META` |
+| **path / canonical** | `"/about"` → `https://spotoddone.com/about` | 同左 |
+
+路由须写在 `/:themeId` **之前**，避免被主题路由吞掉。入口：Hub 底部 About、Settings → About & privacy。
+
+---
+
+## 6. 爬虫规则与站点地图
+
+构建时 Vite 会把 `apps/web/public/` 原样拷到 `dist/` 根目录，Workers 静态资源优先于 SPA fallback，因此下列 URL 可直接被爬虫抓取：
+
+| 文件 | 线上 URL |
+|------|----------|
+| `public/robots.txt` | `https://spotoddone.com/robots.txt` |
+| `public/sitemap.xml` | `https://spotoddone.com/sitemap.xml` |
+
+### 6.1 `robots.txt`
+
+- `User-agent: *` → `Allow: /`
+- 声明 `Sitemap: https://spotoddone.com/sitemap.xml`
+
+### 6.2 `sitemap.xml`
+
+须包含 Hub、About、以及 `THEMES` 中每个主题的规范 path（如 `/emoji`、`/dog`）。**新开主题包时同步增补一条 `<url>`。**
+
+---
+
+## 7. `index.html` Fallback
 
 `apps/web/index.html` 提供 **Hub 级** 默认 meta（JS 未执行或爬虫只看静态 HTML 时）：
 
@@ -121,7 +158,7 @@ Spot the different {xx} picture — Spot Odd One
 
 ---
 
-## 6. 新开主题包 · SEO Checklist
+## 8. 新开主题包 · SEO Checklist
 
 按顺序勾选：
 
@@ -146,16 +183,22 @@ Spot the different {xx} picture — Spot Odd One
 5. **Hub / fallback（按需）**  
    - [ ] 若 Hub description 列举了主题包，把新包装进枚举句  
    - [ ] 同步 `HUB_META` 与 `index.html` 的 description（及必要时 title）  
+   - [ ] 若 About description 列举了主题包，同步 `ABOUT_META`  
    - [ ] **不必**为每个主题单独改 `index.html` 的 canonical
 
-6. **自检**  
+6. **站点地图**  
+   - [ ] 在 `apps/web/public/sitemap.xml` 增加该主题 `<url><loc>…</loc></url>`
+
+7. **自检**  
    - [ ] 打开 Hub：title / description / canonical = Hub  
    - [ ] 打开 `/{themeId}`：title / description / canonical = 该主题  
-   - [ ] 点 Play：三者**不变**
+   - [ ] 打开 `/about`：title / description / canonical = About  
+   - [ ] 点 Play：三者**不变**  
+   - [ ] `/robots.txt`、`/sitemap.xml` 可访问且含新主题
 
 ---
 
-## 7. 文案维护约定
+## 9. 文案维护约定
 
 - 英文 title / description **以代码为准**；改 SEO 只改 `pageMeta.ts`（Hub 时再同步 `index.html`）
 - 主题展示文案（headline、tagline / findLine、教程）在 `themeMeta.ts`，**不等于** SEO title/description；两者可相关但勿混用同一字段  
@@ -164,7 +207,7 @@ Spot the different {xx} picture — Spot Odd One
 
 ---
 
-## 8. 相关文档
+## 10. 相关文档
 
 - 主题包难度与资产：`docs/DIFFICULTY_AND_ASSETS.md`
 - 品类设计（示例）：`docs/DOG_THEME.md`、`docs/FAIRY_THEME.md` 等

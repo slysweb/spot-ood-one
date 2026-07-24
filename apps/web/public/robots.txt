@@ -1,0 +1,5 @@
+# Spot Odd One — https://spotoddone.com
+User-agent: *
+Allow: /
+
+Sitemap: https://spotoddone.com/sitemap.xml

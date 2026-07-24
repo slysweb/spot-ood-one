@@ -470,7 +470,7 @@ Hub / Other packs 卡片短描述（`findLine` → `.pack-tag`）统一为：
 Find the different {noun}.
 ```
 
-- `{noun}` 用**单数**（emoji、monster、cat、dog、fairy、color、fruit…）  
+- `{noun}` 用**单数**（emoji、monster、cat、dog、fairy、color、fruit、letter、number…）  
 - 不在 pack-tag 里写细节提示；细节放 `tutorialBody`  
 - 完整表与新包 checklist：**`docs/DIFFICULTY_AND_ASSETS.md` §4.1**  
 - 源码：`apps/web/src/game/themeMeta.ts`

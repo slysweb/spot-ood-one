@@ -7,7 +7,9 @@ export type ThemeId =
   | "dog"
   | "fairy"
   | "color"
-  | "fruit";
+  | "fruit"
+  | "letter"
+  | "number";
 
 export type PackDifficulty = "easy" | "medium" | "hard";
 
@@ -232,9 +234,62 @@ export interface FruitCampaignData {
   levels: FruitLevelDef[];
 }
 
+export interface GlyphRef {
+  render: "glyph";
+  glyphId: string;
+}
+
+export interface LetterLevelDef {
+  id: string;
+  index: number;
+  theme: "letter";
+  grid: { cols: number; rows: number };
+  base: GlyphRef;
+  odd: GlyphRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface LetterCampaignData {
+  version: number;
+  theme: "letter";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: LetterLevelDef[];
+}
+
+export interface NumberLevelDef {
+  id: string;
+  index: number;
+  theme: "number";
+  grid: { cols: number; rows: number };
+  base: GlyphRef;
+  odd: GlyphRef;
+  fx: { board: string; odd: string };
+  rules: {
+    timeLimitMs: number;
+    failOnWrongTap: boolean;
+    shuffleSeed: number;
+  };
+  meta: { band: string; diffType: string };
+}
+
+export interface NumberCampaignData {
+  version: number;
+  theme: "number";
+  campaignLevels: number;
+  defaults: { timeLimitMs: number; failOnWrongTap: boolean };
+  levels: NumberLevelDef[];
+}
+
 export interface CellView {
   key: string;
-  kind: "emoji" | "monster" | "image" | "color";
+  kind: "emoji" | "monster" | "image" | "color" | "glyph";
   emoji?: string;
   monsterId?: string;
   catId?: string;
@@ -242,6 +297,8 @@ export interface CellView {
   fairyId?: string;
   fruitId?: string;
   colorId?: string;
+  glyphId?: string;
+  glyph?: string;
   fill?: string;
   src?: string;
   transformKey: string;

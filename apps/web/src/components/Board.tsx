@@ -57,6 +57,16 @@ export function Board({
                     filter: cell.cssFilter,
                   }}
                 />
+              ) : cell.kind === "glyph" && cell.glyph ? (
+                <span
+                  className="cell-glyph"
+                  style={{
+                    transform: cell.cssTransform,
+                    filter: cell.cssFilter,
+                  }}
+                >
+                  {cell.glyph}
+                </span>
               ) : (cell.kind === "monster" || cell.kind === "image") &&
                 cell.src ? (
                 <img

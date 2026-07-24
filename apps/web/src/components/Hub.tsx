@@ -137,6 +137,20 @@ export function Hub({ save, onSettings }: HubProps) {
                       <img src="/fruits/fruit_r01.webp" alt="" />
                     </span>
                   </>
+                ) : theme.id === "letter" ? (
+                  <>
+                    <span className="pack-cell glyph">b</span>
+                    <span className="pack-cell glyph">b</span>
+                    <span className="pack-cell glyph is-odd">d</span>
+                    <span className="pack-cell glyph">b</span>
+                  </>
+                ) : theme.id === "number" ? (
+                  <>
+                    <span className="pack-cell glyph">0</span>
+                    <span className="pack-cell glyph">0</span>
+                    <span className="pack-cell glyph is-odd">O</span>
+                    <span className="pack-cell glyph">0</span>
+                  </>
                 ) : (
                   <>
                     <span className="pack-cell emoji">🐶</span>

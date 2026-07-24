@@ -5,6 +5,8 @@ import dogRaw from "@level-data/dog/levels_dog_120.json";
 import fairyRaw from "@level-data/fairy/levels_fairy_85.json";
 import colorRaw from "@level-data/color/levels_color_30.json";
 import fruitRaw from "@level-data/fruit/levels_fruit_30.json";
+import letterRaw from "@level-data/letter/levels_letter_30.json";
+import numberRaw from "@level-data/number/levels_number_30.json";
 import type {
   CampaignData,
   CatCampaignData,
@@ -23,8 +25,13 @@ import type {
   FruitCampaignData,
   FruitLevelDef,
   FruitRef,
+  GlyphRef,
+  LetterCampaignData,
+  LetterLevelDef,
   MonsterCampaignData,
   MonsterLevelDef,
+  NumberCampaignData,
+  NumberLevelDef,
   ThemeId,
   ThemeProgress,
 } from "./types";
@@ -33,6 +40,7 @@ import { resolveColorSwatch } from "./colorAssets";
 import { resolveDogCell } from "./dogAssets";
 import { resolveFairyCell } from "./fairyAssets";
 import { resolveFruitCell } from "./fruitAssets";
+import { resolveGlyph } from "./glyphAssets";
 import {
   mergeTransformKey,
   monsterSrc,
@@ -47,6 +55,8 @@ const dogData = dogRaw as DogCampaignData;
 const fairyData = fairyRaw as FairyCampaignData;
 const colorData = colorRaw as ColorCampaignData;
 const fruitData = fruitRaw as FruitCampaignData;
+const letterData = letterRaw as LetterCampaignData;
+const numberData = numberRaw as NumberCampaignData;
 
 export const TIME_LIMIT_MS = 10_000;
 
@@ -57,6 +67,8 @@ export function getTotalLevels(theme: ThemeId): number {
   if (theme === "fairy") return fairyData.campaignLevels;
   if (theme === "color") return colorData.campaignLevels;
   if (theme === "fruit") return fruitData.campaignLevels;
+  if (theme === "letter") return letterData.campaignLevels;
+  if (theme === "number") return numberData.campaignLevels;
   return emojiData.campaignLevels;
 }
 
@@ -396,6 +408,76 @@ export function buildFruitLevel(
   };
 }
 
+function glyphCell(ref: GlyphRef, index: number, isOdd: boolean): CellView {
+  const glyph = resolveGlyph(ref.glyphId);
+  return {
+    key: `g-${index}-${glyph.id}`,
+    kind: "glyph",
+    glyphId: glyph.id,
+    glyph: glyph.char,
+    transformKey: "none",
+    cssTransform: "none",
+    cssFilter: "none",
+    isOdd,
+  };
+}
+
+export function buildLetterLevel(
+  levelIndex: number,
+  retryCount: number,
+): {
+  cols: number;
+  cells: CellView[];
+  oddIndex: number;
+  fx: { board: string; odd: string };
+  timeLimitMs: number;
+} {
+  const level = letterData.levels.find((l) => l.index === levelIndex) as
+    | LetterLevelDef
+    | undefined;
+  if (!level) throw new Error(`Missing letter level ${levelIndex}`);
+  const total = level.grid.cols * level.grid.rows;
+  const oddIndex = pickOddIndex(total, level.rules.shuffleSeed, retryCount);
+  const cells = Array.from({ length: total }, (_, i) =>
+    glyphCell(i === oddIndex ? level.odd : level.base, i, i === oddIndex),
+  );
+  return {
+    cols: level.grid.cols,
+    cells,
+    oddIndex,
+    fx: level.fx,
+    timeLimitMs: level.rules.timeLimitMs,
+  };
+}
+
+export function buildNumberLevel(
+  levelIndex: number,
+  retryCount: number,
+): {
+  cols: number;
+  cells: CellView[];
+  oddIndex: number;
+  fx: { board: string; odd: string };
+  timeLimitMs: number;
+} {
+  const level = numberData.levels.find((l) => l.index === levelIndex) as
+    | NumberLevelDef
+    | undefined;
+  if (!level) throw new Error(`Missing number level ${levelIndex}`);
+  const total = level.grid.cols * level.grid.rows;
+  const oddIndex = pickOddIndex(total, level.rules.shuffleSeed, retryCount);
+  const cells = Array.from({ length: total }, (_, i) =>
+    glyphCell(i === oddIndex ? level.odd : level.base, i, i === oddIndex),
+  );
+  return {
+    cols: level.grid.cols,
+    cells,
+    oddIndex,
+    fx: level.fx,
+    timeLimitMs: level.rules.timeLimitMs,
+  };
+}
+
 export function buildThemeLevel(
   theme: ThemeId,
   levelIndex: number,
@@ -407,5 +489,7 @@ export function buildThemeLevel(
   if (theme === "fairy") return buildFairyLevel(levelIndex, retryCount);
   if (theme === "color") return buildColorLevel(levelIndex, retryCount);
   if (theme === "fruit") return buildFruitLevel(levelIndex, retryCount);
+  if (theme === "letter") return buildLetterLevel(levelIndex, retryCount);
+  if (theme === "number") return buildNumberLevel(levelIndex, retryCount);
   return buildEmojiLevel(levelIndex, retryCount);
 }

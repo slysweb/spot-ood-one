@@ -4,7 +4,13 @@ import type { ThemeId } from "@/game/types";
 
 const THUMBS: Record<
   ThemeId,
-  { main: string; odd: string; emoji?: boolean; swatch?: boolean }
+  {
+    main: string;
+    odd: string;
+    emoji?: boolean;
+    swatch?: boolean;
+    glyph?: boolean;
+  }
 > = {
   emoji: { main: "🐶", odd: "🐱", emoji: true },
   monster: {
@@ -16,6 +22,8 @@ const THUMBS: Record<
   fairy: { main: "/fairies/fairy_f01.webp", odd: "/fairies/fairy_f02.webp" },
   color: { main: "#E53935", odd: "#1E88E5", swatch: true },
   fruit: { main: "/fruits/fruit_r01.webp", odd: "/fruits/fruit_r09.webp" },
+  letter: { main: "b", odd: "d", glyph: true },
+  number: { main: "0", odd: "O", glyph: true },
 };
 
 interface OtherPacksProps {
@@ -76,6 +84,13 @@ export function OtherPacks({
                         style={{ background: thumb.main }}
                       />
                     </span>
+                  </>
+                ) : thumb.glyph ? (
+                  <>
+                    <span className="pack-cell glyph">{thumb.main}</span>
+                    <span className="pack-cell glyph is-odd">{thumb.odd}</span>
+                    <span className="pack-cell glyph">{thumb.main}</span>
+                    <span className="pack-cell glyph">{thumb.main}</span>
                   </>
                 ) : (
                   <>

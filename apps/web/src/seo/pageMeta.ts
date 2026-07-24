@@ -22,6 +22,20 @@ export const ABOUT_META: PageMeta = {
   path: "/about",
 };
 
+export const PRIVACY_META: PageMeta = {
+  title: "Privacy Policy — Spot Odd One",
+  description:
+    "Privacy Policy for Spot Odd One. Play without an account; progress and settings stay in your browser. We do not sell personal data.",
+  path: "/privacy",
+};
+
+export const TERMS_META: PageMeta = {
+  title: "Terms of Service — Spot Odd One",
+  description:
+    "Terms of Service for Spot Odd One, the free find the odd one out browser game at spotoddone.com.",
+  path: "/terms",
+};
+
 const THEME_SEO: Record<
   ThemeId,
   Pick<PageMeta, "title" | "description">

@@ -15,9 +15,10 @@
 | 运行时写入 `<title>` / meta description / canonical | `apps/web/src/hooks/usePageMeta.ts` |
 | Hub 调用 | `apps/web/src/pages/HubPage.tsx` |
 | About 调用 | `apps/web/src/pages/AboutPage.tsx` |
+| Privacy / Terms | `apps/web/src/pages/PrivacyPage.tsx`、`TermsPage.tsx` |
 | 主题页调用（含 Play / Settings） | `apps/web/src/pages/ThemeGamePage.tsx` |
 | 主题 path（如 `/dog`） | `apps/web/src/game/themeMeta.ts`（`ThemeMeta.path`） |
-| 路由 | `apps/web/src/App.tsx`（`/`、`/about`、`/:themeId`） |
+| 路由 | `apps/web/src/App.tsx`（`/`、`/about`、`/privacy`、`/terms`、`/:themeId`） |
 | 爬虫规则 | `apps/web/public/robots.txt` |
 | 站点地图 | `apps/web/public/sitemap.xml` |
 | 首屏 HTML fallback（爬虫 / JS 未跑前） | `apps/web/index.html` |
@@ -123,7 +124,18 @@ Spot the different {xx} picture — Spot Odd One
 | **description** | 说明站点与玩法；可枚举主题包 | 见 `ABOUT_META` |
 | **path / canonical** | `"/about"` → `https://spotoddone.com/about` | 同左 |
 
-路由须写在 `/:themeId` **之前**，避免被主题路由吞掉。入口：Hub 底部 About、Settings → About & privacy。
+路由须写在 `/:themeId` **之前**，避免被主题路由吞掉。入口：Hub 底部 About / Privacy / Terms、Settings 内对应链接。
+
+---
+
+## 5.1 Privacy（`/privacy`）与 Terms（`/terms`）
+
+| 页 | 常量 | path | title（摘要） |
+|----|------|------|----------------|
+| Privacy Policy | `PRIVACY_META` | `/privacy` | `Privacy Policy — Spot Odd One` |
+| Terms of Service | `TERMS_META` | `/terms` | `Terms of Service — Spot Odd One` |
+
+两页均为静态说明文案；须写入 `sitemap.xml`，并与 About 互相链接。
 
 ---
 
@@ -143,7 +155,7 @@ Spot the different {xx} picture — Spot Odd One
 
 ### 6.2 `sitemap.xml`
 
-须包含 Hub、About、以及 `THEMES` 中每个主题的规范 path（如 `/emoji`、`/dog`）。**新开主题包时同步增补一条 `<url>`。**
+须包含 Hub、About、Privacy、Terms、以及 `THEMES` 中每个主题的规范 path（如 `/emoji`、`/dog`）。**新开主题包时同步增补一条 `<url>`。**
 
 ---
 
@@ -192,7 +204,7 @@ Spot the different {xx} picture — Spot Odd One
 7. **自检**  
    - [ ] 打开 Hub：title / description / canonical = Hub  
    - [ ] 打开 `/{themeId}`：title / description / canonical = 该主题  
-   - [ ] 打开 `/about`：title / description / canonical = About  
+   - [ ] 打开 `/about`、`/privacy`、`/terms`：title / description / canonical 各自正确  
    - [ ] 点 Play：三者**不变**  
    - [ ] `/robots.txt`、`/sitemap.xml` 可访问且含新主题
 

@@ -51,11 +51,19 @@ export function AboutPage() {
           <h2 className="about-heading">Privacy</h2>
           <p className="body-text">
             Spot Odd One does not require sign-in. Best level and settings are
-            stored locally in your browser. We do not sell personal data.
+            stored locally in your browser. We do not sell personal data. Read
+            the full <Link to="/privacy">Privacy Policy</Link> and{" "}
+            <Link to="/terms">Terms of Service</Link>.
           </p>
         </article>
 
         <div className="home-links">
+          <Link to="/privacy" className="link-btn">
+            Privacy
+          </Link>
+          <Link to="/terms" className="link-btn">
+            Terms
+          </Link>
           <Link to="/" className="link-btn">
             All packs
           </Link>

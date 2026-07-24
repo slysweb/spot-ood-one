@@ -345,6 +345,11 @@ a.link-btn {
   margin-right: auto;
 }
 
+.about-title {
+  font-size: clamp(2rem, 8vw, 2.6rem);
+  margin: 0 0 8px;
+}
+
 .about-heading {
   margin: 0 0 8px;
   font-family: var(--font-display);
@@ -354,6 +359,17 @@ a.link-btn {
 
 .about-card .body-text {
   margin: 0;
+}
+
+.about-card .body-text + .body-text {
+  margin-top: 10px;
+}
+
+.about-card a {
+  font-weight: 800;
+  color: var(--orange-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .about-pack-list {
@@ -387,6 +403,14 @@ a.link-btn {
 .settings-about {
   margin: 8px 0 14px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+
+.home-links {
+  flex-wrap: wrap;
 }
 
 .home .stack,

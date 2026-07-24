@@ -13,6 +13,8 @@ const THEME_IDS: ThemeId[] = [
   "fairy",
   "color",
   "fruit",
+  "letter",
+  "number",
 ];
 
 const emptyTheme = (): ThemeProgress => ({
@@ -31,6 +33,8 @@ function emptyThemes(): Record<ThemeId, ThemeProgress> {
     fairy: emptyTheme(),
     color: emptyTheme(),
     fruit: emptyTheme(),
+    letter: emptyTheme(),
+    number: emptyTheme(),
   };
 }
 

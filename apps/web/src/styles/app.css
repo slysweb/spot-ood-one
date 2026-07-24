@@ -641,6 +641,37 @@ a.link-btn {
   line-height: 1;
 }
 
+.cell-glyph {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-body), "Nunito", system-ui, sans-serif;
+  font-size: clamp(1.55rem, 6.2vw, 2.85rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--ink);
+  pointer-events: none;
+  user-select: none;
+}
+
+.pack-cell.glyph {
+  font-family: var(--font-body), "Nunito", system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.preview-art.glyph {
+  font-family: var(--font-body), "Nunito", system-ui, sans-serif;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ink);
+}
+
 .cell-swatch {
   width: 100%;
   height: 100%;

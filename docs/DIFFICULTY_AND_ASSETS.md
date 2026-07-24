@@ -13,7 +13,7 @@
 
 | 模式 | 英文 | 认知负担 | 适合谁 | 已规划 / 已上线品类 |
 |------|------|----------|--------|---------------------|
-| **简单** | Easy | 低 → 中 | 全年龄、快速上手 | Emoji · Monsters · Cats · Dogs |
+| **简单** | Easy | 低 → 中 | 全年龄、快速上手 | Emoji · Monsters · Cats · Dogs · **Letters** · **Numbers** |
 | **中等** | Medium | 中 → 中高 | 玩过简单包、喜欢观察细节 | **Fairy（仙女）** · **Colors（颜色）** · **Fruits（水果）** |
 | **困难** | Hard | 高 | 追求挑战、能接受微差与动效 | （后续品类，如 Micro / Chaos 等） |
 
@@ -21,13 +21,13 @@
 
 | 维度 | 简单 Easy | 中等 Medium | 困难 Hard |
 |------|-----------|-------------|-----------|
-| 建议总关数 | **120** | **80–100**（仙女默认 **85**） | **60–80** |
-| 开局可辨识度 | 一眼能分 | 要扫一眼细节 | 需仔细对比 |
-| 差异尺度 | 物种 / 品种 / 大造型 | 部件级（发色、衣服、道具） | 微部件 + 干扰 |
+| 建议总关数 | **120**（短包如 Letters / Numbers 可 **30**） | **80–100**（仙女默认 **85**）；短包约 **30** | **60–80** |
+| 开局可辨识度 | 一眼能分（字形短包开局即为相关形近） | 要扫一眼细节 | 需仔细对比 |
+| 差异尺度 | 物种 / 品种 / 大造型；字形包为易混字母数字 | 部件级（发色、衣服、道具） | 微部件 + 干扰 |
 | 网格 | 3×3 → 4×4 → 5×5 | 以 4×4 为主，后期 5×5 | 以 5×5 为主 |
 | 变换（旋转/缩放/色相） | 中后期可用、偏明显 | 慎用；优先「部件真不同」 | 可与微差叠加 |
 | 动效（teleport 等） | 仅地狱段、且差异够明显 | 仅最高难段 | 可更早、更密 |
-| 美术 | 插画或 emoji；插画需统一风格 | **必须精致手绘卡通** | 精致手绘 + 极高一致性 |
+| 美术 | 插画或 emoji；插画需统一风格；字形包用运行时 CSS 字 | **必须精致手绘卡通** | 精致手绘 + 极高一致性 |
 | 限时 | 全关 **10s** | 全关 **10s** | 全关 **10s**（难度不靠加时） |
 
 ---
@@ -42,17 +42,18 @@
 
 ### 2.1 简单模式（Easy）— 关卡模板
 
-参考已上线：Cats / Dogs / Monsters（120 关）。
+参考已上线：Cats / Dogs / Monsters（120 关）。  
+**Letters / Numbers** 为简单短包（**30** 关）：热身相关形近 → 主力经典易混 → 过渡略松 → 高难易混 + teleport；见 `LETTER_THEME.md` / `NUMBER_THEME.md`。
 
 | 段 | 建议关数 | 网格 | 差异设计 | FX |
 |----|----------|------|----------|-----|
-| 入门 | 1–30 | 3×3 | **完全不同角色**（如猫群里一只兔子） | 无 |
+| 入门 | 1–30 | 3×3 | **完全不同角色**（如猫群里一只兔子）；字形短包改为**相关形近**热身 | 无 |
 | 巩固 | 31–50 | 3×3→4×4 | 仍是「不同角色」，扩大角色池 | 无 |
 | 中段 | 51–80 | 4×4 | **同大类不同亚类**（品种 / 剪影分组） | 无 |
 | 高段 | 81–100 | 5×5 | 同角色：明显色差 / 装饰 twin | 无 |
 | 地狱 | 101–120 | 5×5 | 更强差异或 twin；偶数关可 `teleport` | teleport（可选） |
 
-**设计原则：** 前 50 关禁止「只有 5° 旋转」这类肉眼难辨差异；对称角色禁止纯镜像。
+**设计原则：** 前 50 关禁止「只有 5° 旋转」这类肉眼难辨差异；对称角色禁止纯镜像。字形短包禁止过偏简单的「跨类大差」作为主力（如整关都用 A vs Z）。
 
 ### 2.2 中等模式（Medium）— 关卡模板
 
@@ -177,7 +178,7 @@ Find the different {noun}.
 | 规则 | 说明 |
 |------|------|
 | 句式 | 固定以 `Find the different` 开头，以句号结尾 |
-| `{noun}` | **单数**英文名，与玩法对象一致（emoji / monster / cat / dog / fairy / color / fruit） |
+| `{noun}` | **单数**英文名，与玩法对象一致（emoji / monster / cat / dog / fairy / color / fruit / letter / number） |
 | 禁止 | 加破折号补充、换用 Spot / odd one among 等变体、写成长句 |
 | 字段 | `findLine` 与 `tagline` 保持同句；细节说明放进 `tutorialBody`，不要塞进 pack-tag |
 | 实现 | `apps/web/src/game/themeMeta.ts` → `THEMES[].findLine` |
@@ -193,6 +194,8 @@ Find the different {noun}.
 | Fairies | `Find the different fairy.` |
 | Colors | `Find the different color.` |
 | Fruits | `Find the different fruit.` |
+| Letters | `Find the different letter.` |
+| Numbers | `Find the different number.` |
 
 新开主题包 checklist：补 `ThemeMeta` 时先写好符合本规范的 `findLine`，再写 SEO / 教程长文案。
 
@@ -207,6 +210,8 @@ Find the different {noun}.
 | `FAIRY_THEME.md` | 仙女（中等）品类设计 |
 | `COLOR_THEME.md` | 颜色（中等短包 · 色相/明度/渐变） |
 | `FRUIT_THEME.md` | 水果（中等短包 · 类别/形状/易错认） |
+| `LETTER_THEME.md` | 字母（简单短包 · b/d · p/q · o/0） |
+| `NUMBER_THEME.md` | 数字（简单短包 · 0/O · 5/S · 8/B） |
 | `CAT_THEME.md` / `DOG_THEME.md` / `MONSTER_THEME.md` | 简单模式品类 |
 | `FAIL_SHARE_AD_SPEC.md` | 失败续关 |
 
@@ -219,3 +224,4 @@ Find the different {noun}.
 | v1 | 2026-07-19 | 初版：三模式分级、各模式关卡模板、1024 出图规范；仙女定为中等 |
 | v1.1 | 2026-07-19 | 明确入库格式仅 WebP；禁止 JPG/GIF 等；补充转换命令与校验清单 |
 | v1.2 | 2026-07-22 | Hub pack-tag 统一为 `Find the different {noun}.`（§4.1） |
+| v1.3 | 2026-07-24 | 增加 Letters / Numbers 简单短包（30 关 · 易混字形） |

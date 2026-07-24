@@ -1,0 +1,950 @@
+{
+  "version": 1,
+  "theme": "letter",
+  "difficulty": "easy",
+  "campaignLevels": 30,
+  "assetPack": {
+    "note": "Runtime glyphs (CSS text) — no WebP. Easy short pack biased to look-alikes: b/d, p/q, o/0.",
+    "glyphs": [
+      "0",
+      "O",
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "h",
+      "i",
+      "j",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "z"
+    ]
+  },
+  "fx": [
+    "none",
+    "teleport"
+  ],
+  "defaults": {
+    "timeLimitMs": 10000,
+    "failOnWrongTap": true
+  },
+  "bands": {
+    "1-6": "warm — related letter shapes on 3×3",
+    "7-18": "main — classic look-alikes (b/d, p/q, o/0); 3×3→4×4",
+    "19-22": "bridge — slightly easier look-alikes",
+    "23-30": "hard — closest twins; 5×5 from 26; teleport from 28"
+  },
+  "levels": [
+    {
+      "id": "LT-001",
+      "index": 1,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "c"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "o"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9101
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-002",
+      "index": 2,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "n"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "u"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9102
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-003",
+      "index": 3,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "h"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "n"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9103
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-004",
+      "index": 4,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "i"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "j"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9104
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-005",
+      "index": 5,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "v"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "w"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9105
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-006",
+      "index": 6,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "a"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "e"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9106
+      },
+      "meta": {
+        "band": "easy",
+        "diffType": "shape_near"
+      }
+    },
+    {
+      "id": "LT-007",
+      "index": 7,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9107
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-008",
+      "index": 8,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9108
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-009",
+      "index": 9,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9109
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-010",
+      "index": 10,
+      "theme": "letter",
+      "grid": {
+        "cols": 3,
+        "rows": 3
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9110
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-011",
+      "index": 11,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9111
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-012",
+      "index": 12,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9112
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-013",
+      "index": 13,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "o"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "0"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9113
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-014",
+      "index": 14,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "0"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "o"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9114
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-015",
+      "index": 15,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "m"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "n"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9115
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-016",
+      "index": 16,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "n"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "m"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9116
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-017",
+      "index": 17,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "u"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "n"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9117
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-018",
+      "index": 18,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "i"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "l"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9118
+      },
+      "meta": {
+        "band": "medium",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-019",
+      "index": 19,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "c"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "e"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9119
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "shape_near_easy"
+      }
+    },
+    {
+      "id": "LT-020",
+      "index": 20,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "a"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "o"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9120
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "shape_near_easy"
+      }
+    },
+    {
+      "id": "LT-021",
+      "index": 21,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "s"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "z"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9121
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "shape_near_easy"
+      }
+    },
+    {
+      "id": "LT-022",
+      "index": 22,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "f"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "t"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9122
+      },
+      "meta": {
+        "band": "bridge",
+        "diffType": "shape_near_easy"
+      }
+    },
+    {
+      "id": "LT-023",
+      "index": 23,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9123
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-024",
+      "index": 24,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9124
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-025",
+      "index": 25,
+      "theme": "letter",
+      "grid": {
+        "cols": 4,
+        "rows": 4
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "o"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "0"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9125
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-026",
+      "index": 26,
+      "theme": "letter",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9126
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-027",
+      "index": 27,
+      "theme": "letter",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "none"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9127
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-028",
+      "index": 28,
+      "theme": "letter",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "0"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "O"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9128
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-029",
+      "index": 29,
+      "theme": "letter",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "b"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "d"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9129
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    },
+    {
+      "id": "LT-030",
+      "index": 30,
+      "theme": "letter",
+      "grid": {
+        "cols": 5,
+        "rows": 5
+      },
+      "base": {
+        "render": "glyph",
+        "glyphId": "p"
+      },
+      "odd": {
+        "render": "glyph",
+        "glyphId": "q"
+      },
+      "fx": {
+        "board": "none",
+        "odd": "teleport"
+      },
+      "rules": {
+        "timeLimitMs": 10000,
+        "failOnWrongTap": true,
+        "shuffleSeed": 9130
+      },
+      "meta": {
+        "band": "hard",
+        "diffType": "lookalike"
+      }
+    }
+  ]
+}

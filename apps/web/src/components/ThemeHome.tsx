@@ -218,6 +218,30 @@ export function ThemeHome({
                 <img src="/fruits/fruit_r01.webp" alt="" />
               </span>
             </>
+          ) : meta.id === "letter" ? (
+            <>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph is-odd">d</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+              <span className="cell preview-art glyph">b</span>
+            </>
+          ) : meta.id === "number" ? (
+            <>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph is-odd">O</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+              <span className="cell preview-art glyph">0</span>
+            </>
           ) : (
             <>
               <span className="cell">🐶</span>

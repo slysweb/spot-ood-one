@@ -60,7 +60,7 @@
 
 | 模式 | 代表品类 | 差异重心 |
 |------|----------|----------|
-| 简单 Easy | Emoji · Monsters · Cats · Dogs | 不同角色 / 品种 → 后期明显装饰差 |
+| 简单 Easy | Emoji · Monsters · Cats · Dogs · **Letters** · **Numbers** | 不同角色 / 品种 → 后期明显装饰差；字形包为易混字母数字 |
 | 中等 Medium | **Fairy（仙女）** · **Colors** · **Fruits** | 明显不同 → **部件/明度/近亲差** → 过渡放松 → 微差/渐变 + 换位 |
 | 困难 Hard | （后续） | 微差为主，动效更早更密 |
 

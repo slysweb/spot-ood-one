@@ -97,6 +97,30 @@ export const THEMES: ThemeMeta[] = [
       "Tap the fruit that doesn’t belong. Early levels hide a different kind of fruit; later levels use look-alikes like lemon vs lime — and some jump around. You have 10 seconds.",
     difficulty: "medium",
   },
+  {
+    id: "letter",
+    path: "/letter",
+    label: "Letters",
+    eyebrow: "Letter pack",
+    headline: "Letters",
+    tagline: "Find the different letter.",
+    findLine: "Find the different letter.",
+    tutorialBody:
+      "Tap the letter that doesn’t belong. Watch look-alikes like b vs d, p vs q, and o vs 0 — some jump around later. You have 10 seconds.",
+    difficulty: "easy",
+  },
+  {
+    id: "number",
+    path: "/number",
+    label: "Numbers",
+    eyebrow: "Number pack",
+    headline: "Numbers",
+    tagline: "Find the different number.",
+    findLine: "Find the different number.",
+    tutorialBody:
+      "Tap the number that doesn’t belong. Watch look-alikes like 0 vs O, 5 vs S, and 8 vs B — some jump around later. You have 10 seconds.",
+    difficulty: "easy",
+  },
 ];
 
 const DIFFICULTY_LABEL: Record<PackDifficulty, string> = {
@@ -121,6 +145,8 @@ export function isThemeId(value: string | undefined): value is ThemeId {
     value === "dog" ||
     value === "fairy" ||
     value === "color" ||
-    value === "fruit"
+    value === "fruit" ||
+    value === "letter" ||
+    value === "number"
   );
 }

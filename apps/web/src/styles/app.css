@@ -185,6 +185,18 @@ button {
   color: var(--orange-deep);
 }
 
+.pack-diff-easy {
+  color: var(--green-deep);
+}
+
+.pack-diff-medium {
+  color: var(--orange-deep);
+}
+
+.pack-diff-hard {
+  color: #000;
+}
+
 .pack-tag {
   margin: 0 0 8px;
   color: var(--muted);

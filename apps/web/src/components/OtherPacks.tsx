@@ -111,7 +111,9 @@ export function OtherPacks({
               </div>
               <div className="pack-copy">
                 <h3 className="pack-title">{theme.label}</h3>
-                <p className="pack-diff">{difficultyLabel(theme.difficulty)}</p>
+                <p className={`pack-diff pack-diff-${theme.difficulty}`}>
+                  {difficultyLabel(theme.difficulty)}
+                </p>
                 <p className="pack-tag">{theme.findLine}</p>
               </div>
             </Link>
